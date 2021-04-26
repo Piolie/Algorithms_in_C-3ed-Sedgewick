@@ -1,0 +1,14 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 1.26
+------------------------------------------------------------------------
+Answer Exercise 1.25 for the case where we use an algorithm that
+requires N instructions.
+--------------------------------------------------------------------- */
+
+    T2     k1/10 * 10 * N1
+   ---- = -----------------
+    T1          k1*N1
+
+        =  1
+
+Which means the new computer takes the same time to finish.

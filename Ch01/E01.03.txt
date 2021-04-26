@@ -1,0 +1,12 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 1.3
+------------------------------------------------------------------------
+Describe a simple method for counting the number of sets remaining after
+using the union and find operations to solve the connectivity problem as
+described in the text.
+--------------------------------------------------------------------- */
+
+The process starts with as many sets as there are elements. Call it T.
+Each time a union occurs, the number of set decreases by 1. Let's call
+U to the total number of unions performed.
+The number of sets remaining after the process ends is S = T - U.

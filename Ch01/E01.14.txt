@@ -1,0 +1,45 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 1.14
+------------------------------------------------------------------------
+Give a sequence of input pairs that causes the weighted quick-union
+algorithm (Program 1.4) to produce a path of length 4.
+--------------------------------------------------------------------- */
+
+We know from Exercise 1.12 that a worst-case tree for the weighted
+quick-union algorithm that includes  a path of length 4 has at least
+2^4 = 16 elements. To construct such a tree we can use the sequence:
+
+0  1
+2  3
+4  5
+6  7
+8  9
+10 11
+12 13
+14 15
+0  2
+4  6
+8  10
+12 14
+0  4
+8  12
+0  8
+
+The id[] output of Exercise 1.6 for the last pair of the sequence is:
+
+node: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+id:   0 0 0 2 0 4 4 6 0 8  8 10  8 12 12 14
+
+More graphically, the tree is:
+
+   0------------------
+  / \      \          \
+ 1   2      4          8-------
+      \    / \        / \      \
+       3  5   6      9  10     12
+               \          \    / \ 
+                7         11 13  14
+                                   \
+                                   15
+
+The only path of length 4 is: 15-14-12-8-0.

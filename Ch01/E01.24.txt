@@ -1,0 +1,38 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 1.24
+------------------------------------------------------------------------
+Give an approximate formula for the number of random edges that is
+required to connect N objects, as a function of N.
+--------------------------------------------------------------------- */
+
+Let's inspect the output of exercise 1.22:
+    N = 10^3 -> 3695
+    N = 10^4 -> 48764
+    N = 10^5 -> 601638
+    N = 10^6 -> 7484813
+
+Could it be linear growth? Let's try NRE = k*N, with k = 3.7:
+    N = 10^3 -> 3700
+    N = 10^4 -> 37000
+    N = 10^5 -> 370000
+    N = 10^6 -> 3700000
+it seems to track the order of magnitude correctly, but starts to
+underestimate the number of edges quickly as N increases.
+
+What about logarithmic growth? Let's try NRE = k*lg N, with k = 370:
+    N = 10^3 -> 3687
+    N = 10^4 -> 4916
+    N = 10^5 -> 6146
+    N = 10^6 -> 7375
+it seems to track the figures closely, but underestimate the order of
+magnitude.
+
+Combining these two aproaches with NRE = 0.375*N*lg(N) yields much
+better results:
+    N = 10^3 -> 3737    (1.1% off)
+    N = 10^4 -> 49829   (2.2% off)
+    N = 10^5 -> 622862  (3.5% off)
+    N = 10^6 -> 7474338 (0.1% off)
+
+This is called near-linear growth. The value we've got is close to the
+theoretical ½ N lg N.

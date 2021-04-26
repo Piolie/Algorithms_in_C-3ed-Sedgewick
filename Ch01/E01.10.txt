@@ -1,0 +1,38 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 1.10
+------------------------------------------------------------------------
+Estimate the minimum amount of time (in days) that would be required for
+quick find (Program 1.1) to solve a problem with 10^6 objects and 10^9
+input pairs, on a computer capable of executing 10^9 instructions per
+second. Assume that each iteration of the while loop requires at least
+10 [machine] instructions.
+--------------------------------------------------------------------- */
+
+We will invoke
+    Property 1.1: The quick-find algorithm executes at least MN
+    instructions to solve a connectivity problem with M pairs of N
+    objects.
+
+    For each of the M pairs, we iterate the for loop N times. Each
+    iteration requires at least one instruction (if only to check
+    whether the loop is finished).
+
+Let be:
+    TNI: total number of instructions;
+    IpL: instructions per loop;
+    IpS: instructions per second;
+    LAT: least amount of time.
+
+Then:
+    TNI = M*N*IpL
+        = 10^9 * 10^6 * 10
+        = 10^16
+
+and:
+    LAT = TNI/IpS
+        = 10^16/10^9
+        = 10^7 seconds
+
+Each day has 60*60*24 = 86400 seconds, so:
+    LAT = 10^7/86400
+        = 115.7 days

@@ -1,0 +1,47 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 1.12
+------------------------------------------------------------------------
+Compute the average distance from a node to the root in a worst-case
+tree of 2^n nodes built by the weighted quick-union algorithm.
+--------------------------------------------------------------------- */
+
+The depth of a node in a tree is the number of links on the path from it
+to the root. Thus, we are looking for the average depth.
+
+The book states without proof that the worst case is when the sets to be
+merged in the union operation are always equal (and a power of 2).
+
+We will state that the number of nodes at each level in the worst-case
+trees built by the weighted quick-union algorithm are binomial
+coefficients. (See [CSTE] for a proof of this statement.) That is, for a
+worst-case tree with N = 2^n elements, the number of nodes at level i
+is:
+    /n\       n!
+    | | = ----------
+    \i/   i!(n - i)!
+
+Now that we know the number of nodes in each level, we can calculate the
+average depth. (Each node in level i has depth i.)
+
+                i = n
+             1   ---
+    Avg_d = ---  \   (level depth) * (number of nodes in that level)
+            2^n  /
+                 ---
+                i = 0
+
+                i = n
+             1   ---     /n\
+          = ---  \   i * | |
+            2^n  /       \i/
+                 ---
+                i = 0
+             1
+          = --- * n * 2^(n - 1) (see [Wiki] for this result)
+            2^n
+
+          = n/2
+
+References:
+    - [CSTE]: https://cs.stackexchange.com/questions/101616/
+    - [Wiki]: https://en.wikipedia.org/wiki/Binomial_coefficient#Sums_of_the_binomial_coefficients
