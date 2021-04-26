@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Ch01/E01.26.txt
 /* ---------------------------------------------------------------------
                               EXERCISE 1.26
 ------------------------------------------------------------------------
@@ -12,3 +13,21 @@ requires N instructions.
         =  1
 
 Which means the new computer takes the same time to finish.
+=======
+/* ---------------------------------------------------------------------
+                              EXERCISE 1.26
+------------------------------------------------------------------------
+Answer Exercise 1.25 for the case where we use an algorithm that
+requires N^3 instructions.
+--------------------------------------------------------------------- */
+
+Just like in exercise 25:
+
+    T2     k1/10 * (10 * N1)^3
+   ---- = ---------------------
+    T1          k1*N1^3
+
+        =  100
+
+Which means the new computer takes 100 times _more_ to finish.
+>>>>>>> c8299f5 (Fix excercise 1.26):Ch01/E1.26_cubed_running_time.txt
