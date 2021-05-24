@@ -30,7 +30,7 @@ Some C programming notes:
 #define N 1000000
 #define RUNS 100
 
-unsigned long long llrand()
+unsigned long long llrand(void)
 {
     unsigned long long r = 0;
 
