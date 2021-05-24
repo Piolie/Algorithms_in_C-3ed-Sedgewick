@@ -1,0 +1,22 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.23
+------------------------------------------------------------------------
+Show that N ln N = O(N^(3/2)).
+--------------------------------------------------------------------- */
+
+Remember that the O notation gives only an upper bound, not necessarily
+the best one. For, example, f(N) = N is O(g(N) = 2N) because
+we can choose c_0 and N_0, such that:
+    N < c_0 2N, for N > N_0 (for example c_0 = 1 and N_0 = 1)
+But it is also true that
+    N < c_1 N^2, for c_1 = 1 and N > 1
+which means that f(N) = N is also O(N^2).
+
+N ln N = O(N ln N)
+means that for some c_0 and N_0:
+    N ln N < c_0 N ln N, for N > N_0
+but it since
+    N ln N < N^(3/2), for N > 0
+it is also true that
+    N ln N < c_0 N^(3/2), for N > 0
+which means N ln N is O(N^(3/2)).

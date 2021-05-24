@@ -1,0 +1,10 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.45
+------------------------------------------------------------------------
+Consider the family of recurrences like Formula 2.1, where we allow
+N/2 to be interpreted as floor[N/2] or ceil[N/2], and we require only
+that the recurrence hold for N > c_0 with C_N = O(1) for N <= c_0. Prove
+that lg N + O(1) is the solution to all such recurrences.
+--------------------------------------------------------------------- */
+
+MISSING!

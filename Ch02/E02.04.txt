@@ -1,0 +1,20 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.4
+------------------------------------------------------------------------
+Develop an expression that accurately describes the running time of
+Program 1.1 in terms of M and N.
+--------------------------------------------------------------------- */
+
+I'm not sure if this exercise is supposed to be solved just like the
+previous one, i.e., assuming that a polynomial in M and N of some degree
+with to-be-determined coefficients is "accurate" enough.
+
+If that's the case, then we could simply replace billion counting
+program in exercise 2.2 with the quick-find algorithm (Program 1.1) and
+calculate the parameters that better fit our data, just like we did
+in 2.3.
+
+Otherwise, some theoretical calculation could be done. But I haven't yet
+seen enough information in the book to solve it like that.
+
+I'm probably missing something.

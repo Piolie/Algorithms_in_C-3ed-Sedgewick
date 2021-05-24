@@ -1,0 +1,16 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.31
+------------------------------------------------------------------------
+You are given the information that the running time of one algorithm is
+always proportional to N log N and that the running time of another
+algorithm is always proportional to N^3. What does this statement imply
+about the relative performance of the algorithms?
+--------------------------------------------------------------------- */
+
+It implies that the first algorithm always performs much better than the
+second.
+
+The book defines "proportional" like this:
+    In a similar vein, we sometimes say that the running time of an
+    algorithm is proportional to f(N) when we can prove that it is equal
+    to cf(N) + g(N) with g(N) asymptotically smaller than f(N).

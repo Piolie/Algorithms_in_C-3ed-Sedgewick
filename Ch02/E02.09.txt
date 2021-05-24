@@ -1,0 +1,16 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.9
+------------------------------------------------------------------------
+Prove that ceil[lg N] is the number of bits required to represent N in
+binary.
+--------------------------------------------------------------------- */
+
+Let's suppose N requires n bits for its binary representation. Then:
+    N = b_0 * 2^0 + b_1 * 2^1 + ... + b_(n-2) * 2^(n-2) + 2^(n-1)
+
+This means that:
+    2^(n-1) <= N < 2^n
+applying lg to all: (remember lg 2^i = i)
+    n-1 <= lg N < n
+since n is an integer, it means that:
+    n = ceil[lg N]

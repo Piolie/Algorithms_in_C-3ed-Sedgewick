@@ -1,0 +1,56 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.24
+------------------------------------------------------------------------
+Show that N^M = O(a^N) for any M and any constant a > l.
+--------------------------------------------------------------------- */
+
+There are many ways to prove that, for large enough N, the exponential
+is always greater than any polynomial.
+
+One, intuitive way is to inspect how both functions vary when N is
+incremented by 1. The polynomial:
+    (N+1)^M/N^M = ((N + 1)/N)^M
+The exponential:
+    a^(N+1)/a^N = a
+For large enough N, the polynomial increases by a factor of 1, since
+    (N + 1)/N = 1, for large N, and 1^M = 1
+while the exponential always increases by a factor of a > 1. Thus the
+exponential values eventually surpass the polynomial values.
+------------------------------------------------------------------------
+
+Another, more formal way is to use the power series representation of
+the exponential:
+          inf
+          ---
+    a^N = \   (ln(a) * N)^n
+          /   -------------
+          ---       n!
+          n=0
+
+it's clear that, for large enough N:
+    M+1
+    ---
+    \   (ln(a) * N)^n
+    /   ------------- < a^N
+    ---       n!
+    n=0
+also for large enough N:
+          M+1
+          ---
+    N^M < \   (ln(a) * N)^n
+          /   -------------
+          ---       n!
+          n=0
+so:
+    N^M < a^N, for N > N_0 (c_0 = 1)
+which means that N^M is O(a^N).
+------------------------------------------------------------------------
+
+We could also take the logarithm on both sides:
+        n^M ? a^N
+    ln(N^M) ? ln(a^N)
+    M ln(N) ? N ln(a)
+If we are willing to accept without proof that ln(N) < N for large
+enough N, then
+    M ln(N) < N ln a, for N > N_0
+and thus N^M is O(a^N).

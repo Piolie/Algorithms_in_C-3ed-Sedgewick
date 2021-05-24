@@ -1,0 +1,12 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.30
+------------------------------------------------------------------------
+You are given the information that the running time of one algorithm is
+always about N log N and that the running time of another algorithm is
+always about N^3. What does this statement imply about the relative
+performance of the algorithms?
+--------------------------------------------------------------------- */
+
+It implies that the first algorithm always performs much better than the
+second.
+

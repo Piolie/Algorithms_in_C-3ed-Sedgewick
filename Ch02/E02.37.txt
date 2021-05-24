@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.37
+------------------------------------------------------------------------
+State and prove generalized versions of Formulas 2.3 through 2.5 that
+are analogous to the generalized version of Formula 2.2 in Exercise
+2.36.
+--------------------------------------------------------------------- */
+
+MISSING!

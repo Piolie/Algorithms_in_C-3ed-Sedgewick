@@ -1,0 +1,14 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.28
+------------------------------------------------------------------------
+You are given the information that the running time of one algorithm is
+O(N log N) and that the running time of another algorithm is O(N^3).
+What does this statement imply about the relative performance of the
+algorithms?
+--------------------------------------------------------------------- */
+
+Not much, really. It means that the first algorithm performs not worse
+than O(N log N), while the second one does it not worse than O(N^3). It
+could be the case that the second algorithm always performs better than
+the first, since these are just upper bounds.
+

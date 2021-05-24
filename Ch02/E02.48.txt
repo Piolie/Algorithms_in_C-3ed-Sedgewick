@@ -1,0 +1,41 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.48
+------------------------------------------------------------------------
+Estimate the probability that at least one of M random 10-digit numbers
+matches one of a set of N given values, for M = 10, 100, and 1000 and
+N = 10^3, 10^4, 10^5, and 10^6.
+--------------------------------------------------------------------- */
+
+Some assumptions:
+    - all the numbers are positive;
+    - the distribution of the random numbers is uniform in the range
+        [0, 10^10) = [0, 9999999999];
+    - all M random numbers are different;
+    - all N random numbers are different;
+
+Let:
+    - p be the probability that a random 10-digit number matches one of
+        a set of N given values.
+    - P(none) be the probability that _none_ of M random 10-digit
+        numbers matches any of a set of N given values.
+    - P(at least one) be the probability that _at least one_ of M random
+        10-digit numbers matches one of a set of N given values.
+Then:
+    p = N/10^10
+
+    P(none) = P(the 1st doesn't match)*...*P(the Mth doesn't match)
+            = (1 - p)*(1 - p)*...*(1 - p)
+            = (1 - p)^M
+
+    P(at least one) = 1 - P(none)
+                    = 1 - (1-p)^M
+                    = 1 - (1 - N/10^10)^M
+
+With these formulas we can build the following table:
+  \ M    10      100     1000
+ N \
+------------------------------
+10^3    ~1e-6   ~1e-5   ~1e-4
+10^4    ~1e-5   ~1e-4   ~1e-3
+10^5    ~1e-4   ~1e-3   ~1e-2
+10^6    ~1e-3   ~1e-2   ~1e-1

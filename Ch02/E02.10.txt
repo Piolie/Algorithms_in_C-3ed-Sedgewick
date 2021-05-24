@@ -1,0 +1,31 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.10
+------------------------------------------------------------------------
+Add columns to Table 2.1 for N(lg N)^2 and N^(3/2).
+--------------------------------------------------------------------- */
+
+Let be:
+    PS: the problem size (either 10^6 or 10^9)
+    OpS: the number of operations per second (10^6, 10^9 or 10^12)
+    C: the algorithm complexity
+    T: time it takes
+
+The basic operation we have to do to fill the table is:
+    T = C(PS)/OpS
+
+For example, in the first entry we have
+    PS = 10^6
+    OpS: 10^6
+    C: N
+    T = 10^6/10^6 = 1 second ~ seconds
+
+For the second entry it is:
+    T = 10^6*lg (10^6)/10^6 = 6 lg 10 = 20 seconds ~ minutes
+
+                  1 million               1 billion
+           ---------------------- + ----------------------
+     Ops  | N(lg N)^2 |  N^(3/2)  | N(lg N)^2 |  N^(3/2)
+    ------+-----------+---------- + ----------+-----------
+    10^6  |  minutes  |   hours   |   days    |   years
+    10^9  |  seconds  |  seconds  |   hours   |   hours
+    10^12 |  instant  |  instant  |  seconds  |  minutes

@@ -1,0 +1,13 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.15
+------------------------------------------------------------------------
+How many bits are there in the binary representation of lg(N!)?
+--------------------------------------------------------------------- */
+
+N! = 1 * 2 * 3 * ... * (N-1) * N
+
+The number of digits is ceil[lg N!].
+    digits = ceil[lg N!]
+
+using Stirling's formula:
+           ~= ceil[N*lg N - N*lg e + lg sqrt(2*pi*N)]

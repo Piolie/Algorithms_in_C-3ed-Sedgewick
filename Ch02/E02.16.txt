@@ -1,0 +1,18 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 2.16
+------------------------------------------------------------------------
+How many bits are there in the binary representation of H_N?
+--------------------------------------------------------------------- */
+
+      k=N
+      ---   1
+H_N = \    ---  ~= ln N + gamma + 1/(12N)
+      /     k
+      ---
+      k=1
+
+The number of digits is ceil[lg H_N].
+    digits = ceil[lg H_N]
+
+using the approximation:
+           ~= ceil[ln N + gamma + 1/(12N)]
