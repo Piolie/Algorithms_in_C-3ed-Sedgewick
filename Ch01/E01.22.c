@@ -9,9 +9,9 @@ generated for each value of N.
 --------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------
-It seems to me that what the problem is asking it's not very clear:
+It seems to me that what the problem is asking is not very clear:
 after N - 1 effective union operations, all nodes will be connected and
-and the number of edges will of course be N - 1.
+the number of edges will of course be N - 1.
 I'll instead loop until N - 1 unions are performed and print the number
 of _attempts_ made. I'll also do 100 runs and take the average. For 10^6
 elements, this can take a couple minutes.
@@ -26,8 +26,6 @@ Some C programming notes:
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#define N 1000000
 #define RUNS 100
 
 unsigned long long llrand(void)
@@ -43,69 +41,69 @@ unsigned long long llrand(void)
 
 int main(void)
 {
-    int total = 0;
-    srand((unsigned int) time(NULL));
-    for (int run=0; run < RUNS; run++)
+    for(int N = 1000; N <= 1000000; N*=10)
     {
-        int i, j, p, q, *id, *sz, attempts, union_counter;
-
-        id = malloc(N*sizeof(int));
-        sz = malloc(N*sizeof(int));
-
-        union_counter = 0;
-        attempts = 0;
-        for (i = 0; i < N; i++)
+        int total = 0;
+        for (int run = 0; run < RUNS; run++)
         {
-            id[i] = i;
-            sz[i] = 1;
-        }
-        while (union_counter < N - 1)
-        {
-            attempts++;
-            p = llrand() % N;
-            q = llrand() % N;
-            for (i = p; i != id[i]; i = id[i])
-            {
-                int t = i;
-                i = id[id[t]];
-                id[t] = i;
-            }
-            for (j = q; j != id[j]; j = id[j])
-            {
-                int t = j;
-                j = id[id[t]];
-                id[t] = j;
-            }
-            if (i == j)
-                continue;
-            union_counter++;
-            if (sz[i] < sz[j])
-            {
-                id[i] = j;
-                sz[j] += sz[i];
-            }
-            else
-            {
-                id[j] = i;
-                sz[i] += sz[j];
-            }
-        }
+            int i, j, p, q, *id, *sz, attempts, union_counter;
 
-        free(id);
-        free(sz);
-        total += attempts;
+            id = malloc(N*sizeof(*id));
+            sz = malloc(N*sizeof(*sz));
+
+            union_counter = 0;
+            attempts = 0;
+            for (i = 0; i < N; i++)
+            {
+                id[i] = i;
+                sz[i] = 1;
+            }
+            while (union_counter < N - 1)
+            {
+                attempts++;
+                p = llrand() % N;
+                q = llrand() % N;
+                for (i = p; i != id[i]; i = id[i])
+                {
+                    int t = i;
+                    i = id[id[t]];
+                    id[t] = i;
+                }
+                for (j = q; j != id[j]; j = id[j])
+                {
+                    int t = j;
+                    j = id[id[t]];
+                    id[t] = j;
+                }
+                if (i == j)
+                    continue;
+                union_counter++;
+                if (sz[i] < sz[j])
+                {
+                    id[i] = j;
+                    sz[j] += sz[i];
+                }
+                else
+                {
+                    id[j] = i;
+                    sz[i] += sz[j];
+                }
+            }
+
+            free(id);
+            free(sz);
+            total += attempts;
+        }
+        printf("average attempts for N = %d: %.f\n", N, (double)total/RUNS);
     }
-    printf("average attempts = %e\n", (double)total/RUNS);
 }
 
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-For each value of N, the programs does RUNS runs and prints the average:
-
-For N = 10^3: attempts = 3695
-For N = 10^4: attempts = 48764
-For N = 10^5: attempts = 601638
-For N = 10^6: attempts = 7484813
+average attempts for N = 1000: 3662
+average attempts for N = 10000: 48194
+average attempts for N = 100000: 604954
+average attempts for N = 1000000: 7103127
 
 --------------------------------------------------------------------- */

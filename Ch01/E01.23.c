@@ -7,12 +7,11 @@ needed to connect N items, for 100 <= N <= 1000.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #define N_MIN 100
-#define N_MAX 1001
+#define N_MAX 1000
 #define RUNS 100
 
-unsigned long long llrand()
+unsigned long long llrand(void)
 {
     unsigned long long r = 0;
 
@@ -34,8 +33,7 @@ void print_attempts(int attempts, int N)
 
 int main(void)
 {
-    srand((unsigned int) time(NULL));
-    for(int N = N_MIN; N < N_MAX; N++)
+    for(int N = N_MIN; N <= N_MAX; N++)
     {
         int total = 0;
         for (int run=0; run < RUNS; run++)
@@ -91,15 +89,3 @@ int main(void)
         print_attempts(total/RUNS, N);
     }
 }
-
-/* ---------------------------------------------------------------------
-                                 OUTPUT
-------------------------------------------------------------------------
-For each value of N, the programs does RUNS runs and prints the average:
-
-For N = 10^3: attempts = 3695
-For N = 10^4: attempts = 48764
-For N = 10^5: attempts = 601638
-For N = 10^6: attempts = 7484813
-
---------------------------------------------------------------------- */
