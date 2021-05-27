@@ -25,13 +25,10 @@ The following sequence of pairs produces a path of length 4:
 
 More graphically, the tree is:
 
-      8--+--+--+--+--+--+--+
-     /   |  |  |  |  |  |  |
-    /    9  10 11 12 13 14 15
-   0
-   |
-+--+--+--+
-|  |  |  |
+       8 --------------------
+      /    \  \  \  \  \  \  \
+  -- 0 --   9 10 11 12 13 14 15
+ /  / \  \
 1  2  3  4
         / \
        5   6
