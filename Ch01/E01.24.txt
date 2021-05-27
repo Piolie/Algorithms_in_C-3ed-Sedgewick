@@ -6,10 +6,10 @@ required to connect N objects, as a function of N.
 --------------------------------------------------------------------- */
 
 Let's inspect the output of exercise 1.22:
-    N = 10^3 -> 3695
-    N = 10^4 -> 48764
-    N = 10^5 -> 601638
-    N = 10^6 -> 7484813
+    N = 10^3 -> 3662
+    N = 10^4 -> 48194
+    N = 10^5 -> 604954
+    N = 10^6 -> 7103127
 
 Could it be linear growth? Let's try NRE = k*N, with k = 3.7:
     N = 10^3 -> 3700
@@ -29,10 +29,10 @@ magnitude.
 
 Combining these two aproaches with NRE = 0.375*N*lg(N) yields much
 better results:
-    N = 10^3 -> 3737    (1.1% off)
-    N = 10^4 -> 49829   (2.2% off)
-    N = 10^5 -> 622862  (3.5% off)
-    N = 10^6 -> 7474338 (0.1% off)
+    N = 10^3 -> 3737    (2.0% off)
+    N = 10^4 -> 49829   (3.4% off)
+    N = 10^5 -> 622862  (3.0% off)
+    N = 10^6 -> 7474338 (5.2% off)
 
 This is called near-linear growth. The value we've got is close to the
 theoretical ½ N lg N.
