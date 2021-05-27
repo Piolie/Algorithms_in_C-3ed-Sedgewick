@@ -7,6 +7,6 @@ described in the text.
 --------------------------------------------------------------------- */
 
 The process starts with as many sets as there are elements. Call it T.
-Each time a union occurs, the number of set decreases by 1. Let's call
+Each time a union occurs, the number of sets decreases by 1. Let's call
 U to the total number of unions performed.
 The number of sets remaining after the process ends is S = T - U.

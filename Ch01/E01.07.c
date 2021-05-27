@@ -1,8 +1,8 @@
 /* ---------------------------------------------------------------------
                               EXERCISE 1.7
 ------------------------------------------------------------------------
-Do Exercise 1.4, but use the weighted quick-union algorithm
-(Program 1.3).
+Do Exercise 1.4, but use the weighted quick-union algorithm (Program
+1.3).
 --------------------------------------------------------------------- */
 
 #include <stdio.h>

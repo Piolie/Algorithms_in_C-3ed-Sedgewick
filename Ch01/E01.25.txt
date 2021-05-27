@@ -10,7 +10,7 @@ than it took the old one to finish the old job?
 It is not very clear to me what "process a certain amount of
 connections" means in this context. I'm going to assume it refers to the
 number of "follow pointers until the root is reached" operations, as
-refered to in Property 1.3.
+referred to in Property 1.3.
 
 Let's call T1 to the time it takes the old computer to process N1
 connections using the weighted quick union algorithm. From Property 1.3

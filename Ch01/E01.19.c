@@ -22,7 +22,6 @@ int find(int id[], int i)
     if (i == id[i])
         return i;
     return id[i] = find(id, id[i]);
-    
 }
 
 int main(void)
@@ -49,7 +48,7 @@ int main(void)
 ------------------------------------------------------------------------
 The sequence 0-1, 1-2, 2-3, ... produces the longest path, because the
 new single-node tree is always added as a root, so the compression never
-engages.
+kicks in.
 ------------------------------------------------------------------------
 0 1
 id = 1 1 2 3 4 5 6 7 8 9
@@ -80,4 +79,3 @@ id = 1 2 3 4 5 6 7 8 9 9 ...
  8 9
 
 --------------------------------------------------------------------- */
-

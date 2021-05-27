@@ -24,7 +24,6 @@ int find(int id[], int i)
     if (i == id[i])
         return i;
     return id[i] = find(id, id[i]);
-    
 }
 
 int main(void)
@@ -74,23 +73,23 @@ Notes:
 0 2
 id = 0 1 0 3 4 5 6 7 8 9 ...
  0 2
-Number of accesses = 5   
+Number of accesses = 5
 1 4
 id = 0 1 0 3 1 5 6 7 8 9 ...
  1 4
-Number of accesses = 10  
+Number of accesses = 10
 2 5
 id = 0 1 0 3 1 0 6 7 8 9 ...
  2 5
-Number of accesses = 16  
+Number of accesses = 16
 3 6
 id = 0 1 0 3 1 0 3 7 8 9 ...
  3 6
-Number of accesses = 21  
+Number of accesses = 21
 0 4
 id = 0 0 0 3 1 0 3 7 8 9 ...
  0 4
-Number of accesses = 27  
+Number of accesses = 27
 6 0
 id = 0 0 0 0 1 0 3 7 8 9 ...
  6 0

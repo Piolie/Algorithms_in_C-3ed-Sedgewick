@@ -39,7 +39,6 @@ int find(int id[], int i)
     if (i == id[i])
         return i;
     return id[i] = find(id, id[i]);
-    
 }
 
 int main(void)
