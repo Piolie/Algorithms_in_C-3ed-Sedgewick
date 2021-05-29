@@ -1,7 +1,7 @@
 /* ---------------------------------------------------------------------
                               EXERCISE 2.17
 ------------------------------------------------------------------------
-Give a simple expression for floor[lg F_N]
+Give a simple expression for floor[lg F_N].
 --------------------------------------------------------------------- */
 
 The Fibonacci numbers can be calculated as:

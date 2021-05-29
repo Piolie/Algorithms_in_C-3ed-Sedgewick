@@ -33,4 +33,4 @@ solves the second.
 
 It could very well be the case that a specific algorithm for the first
 problem has worst-case running time of N^5, while a specific algorithm
-for the second problem has a worst-case running time N^3.
+for the second problem has a worst-case running time of N^3.

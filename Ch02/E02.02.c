@@ -67,5 +67,4 @@ With compiler optimizations (-O1):
     - N = 100; RUNS = 100       : 0.37 milliseconds
     - N = 1000; RUNS = 10       : 0.24 seconds
 
-
 --------------------------------------------------------------------- */

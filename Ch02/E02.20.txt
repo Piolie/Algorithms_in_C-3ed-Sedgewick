@@ -4,8 +4,8 @@
 Prove that O(1) is the same as O(2).
 --------------------------------------------------------------------- */
 
-Definition 2.1 A function g(N) is said to be O(f(N)) if there exist
-constants c_0 and N_0 such that g(N) < c_0 f(N), for all N > N_0.
+    Definition 2.1 A function g(N) is said to be O(f(N)) if there exist
+    constants c_0 and N_0 such that g(N) < c_0 f(N), for all N > N_0.
 
 Thus, a function g(N) is O(1) if there exist constants c_0 and N_0 such
 that g(N) < c_0 * 1, for all N > N_0.

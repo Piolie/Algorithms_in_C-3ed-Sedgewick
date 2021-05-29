@@ -19,14 +19,14 @@ for some numbers in this order of magnitude.
 
 int main(void)
 {
-    unsigned long long n;
+    unsigned long long N;
     double f;
-    for (n = 1; n < ULLONG_MAX; n++)
+    for (N = 1; N < ULLONG_MAX; N++)
     {
-        f = log(log(n));
+        f = log(log(N));
         if (f > 8)
         {
-            printf("Bingo!: %llu\n", n);
+            printf("Bingo!: %llu\n", N);
             break;
         }
     }
@@ -35,6 +35,6 @@ int main(void)
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-Bingo!: (LIES!)
+Bingo!: (LIES! ;-))
 
 --------------------------------------------------------------------- */

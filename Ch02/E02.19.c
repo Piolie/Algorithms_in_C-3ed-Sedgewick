@@ -13,7 +13,7 @@ execute 10^9 instructions per second, then the time that it will take is
 simply:
     T = f(N)/10^9
 
-I think what the exercise is asking doesn't make much sense.
+I think that what the exercise is asking doesn't make much sense.
 Theoretically, there is no "largest value of N". However, we already
 know that for some f(N), the time could be longer than the remaining
 life of the universe, even for moderately large N.
