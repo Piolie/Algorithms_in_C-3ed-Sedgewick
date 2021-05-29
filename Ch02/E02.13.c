@@ -11,7 +11,7 @@ If
 then
     n >= lg lg N
 so, we need to find the smallest integer n such that
-    2^(2^n) >= N.
+    2^(2^n) >= N
 --------------------------------------------------------------------- */
 
 #include <stdio.h>

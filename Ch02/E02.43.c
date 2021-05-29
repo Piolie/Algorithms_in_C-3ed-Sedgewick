@@ -22,7 +22,6 @@ C_N = C_(2^n)
     = 1
 
 ------------------------------------------------------------------------
-
 We would have to apply induction to formally prove it.
 (This one is easy.)
 
@@ -31,15 +30,15 @@ We would have to apply induction to formally prove it.
 #include <stdio.h>
 #include <math.h>
 
-unsigned C_N(unsigned N)
+unsigned int C_N(unsigned int N)
 {
     if(N == 1)
         return 1;
 
-    return (unsigned)pow(C_N(N/2), 2);
+    return (unsigned int)pow(C_N(N/2), 2);
 }
 
-unsigned C_2pown_formula(unsigned n)
+unsigned int C_2pown_formula(unsigned int n)
 {
     return 1;
 }
@@ -48,13 +47,13 @@ int main(void)
 {
     printf("N\tC_N (rec.)\tC_N (form.)\tEqual?\n");
     printf("----------------------------------------------\n");
-    unsigned N, n;
-    for (N = 1, n = 0; N < 100000; n++, N = (unsigned)(exp2(n)))
+    unsigned int N, n;
+    for (N = 1, n = 0; N < 100000; n++, N = (unsigned int)(exp2(n)))
     {
-        unsigned CN_recurrence = C_N(N);
-        unsigned CN_formula = C_2pown_formula(n);
+        unsigned int CN_recurrence = C_N(N);
+        unsigned int CN_formula = C_2pown_formula(n);
         int equal = (CN_recurrence == CN_formula);
-        printf("%u\t%u\t\t%u\t\t%d\n", N, CN_recurrence, CN_formula, equal);
+        printf("%u\t%u\t\t%u\t\t%s\n", N, CN_recurrence, CN_formula, equal ? "TRUE" : "FALSE");
     }
 }
 
@@ -63,22 +62,22 @@ int main(void)
 ------------------------------------------------------------------------
 N       C_N (rec.)      C_N (form.)     Equal?
 ----------------------------------------------
-1       1               1               1
-2       1               1               1
-4       1               1               1
-8       1               1               1
-16      1               1               1
-32      1               1               1
-64      1               1               1
-128     1               1               1
-256     1               1               1
-512     1               1               1
-1024    1               1               1
-2048    1               1               1
-4096    1               1               1
-8192    1               1               1
-16384   1               1               1
-32768   1               1               1
-65536   1               1               1
+1       1               1               TRUE
+2       1               1               TRUE
+4       1               1               TRUE
+8       1               1               TRUE
+16      1               1               TRUE
+32      1               1               TRUE
+64      1               1               TRUE
+128     1               1               TRUE
+256     1               1               TRUE
+512     1               1               TRUE
+1024    1               1               TRUE
+2048    1               1               TRUE
+4096    1               1               TRUE
+8192    1               1               TRUE
+16384   1               1               TRUE
+32768   1               1               TRUE
+65536   1               1               TRUE
 
 --------------------------------------------------------------------- */

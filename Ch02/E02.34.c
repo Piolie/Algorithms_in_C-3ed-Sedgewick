@@ -91,7 +91,7 @@ compute the table, and checks that the values are equal.
 #include <stdio.h>
 #include <math.h>
 
-unsigned C_N_ceil(double N)
+unsigned int C_N_ceil(double N)
 {
     if(N == 1)
         return 1;
@@ -104,12 +104,12 @@ int main(void)
 {
     printf("N\tC_N (rec.)\tC_N (form.)\tEqual?\n");
     printf("----------------------------------------------\n");
-    for (unsigned N = 3; N < 33; N++)
+    for (unsigned int N = 2; N < 33; N++)
     {
-        unsigned CN_recurrence = C_N_ceil(N);
-        unsigned CN_formula = (unsigned)floor(log(N-1)/log(2)) + 2;
+        unsigned int CN_recurrence = C_N_ceil(N);
+        unsigned int CN_formula = (unsigned int)floor(log(N-1)/log(2)) + 2;
         int equal = (CN_recurrence == CN_formula);
-        printf("%u\t%u\t\t%u\t\t%d\n", N, CN_recurrence, CN_formula, equal);
+        printf("%u\t%u\t\t%u\t\t%s\n", N, CN_recurrence, CN_formula, equal ? "TRUE" : "FALSE");
     }
 }
 
@@ -118,36 +118,36 @@ int main(void)
 ------------------------------------------------------------------------
 N       C_N (rec.)      C_N (form.)     Equal?
 ----------------------------------------------
-2       2               2               1
-3       3               3               1
-4       3               3               1
-5       4               4               1
-6       4               4               1
-7       4               4               1
-8       4               4               1
-9       5               5               1
-10      5               5               1
-11      5               5               1
-12      5               5               1
-13      5               5               1
-14      5               5               1
-15      5               5               1
-16      5               5               1
-17      6               6               1
-18      6               6               1
-19      6               6               1
-20      6               6               1
-21      6               6               1
-22      6               6               1
-23      6               6               1
-24      6               6               1
-25      6               6               1
-26      6               6               1
-27      6               6               1
-28      6               6               1
-29      6               6               1
-30      6               6               1
-31      6               6               1
-32      6               6               1
+2       2               2               TRUE
+3       3               3               TRUE
+4       3               3               TRUE
+5       4               4               TRUE
+6       4               4               TRUE
+7       4               4               TRUE
+8       4               4               TRUE
+9       5               5               TRUE
+10      5               5               TRUE
+11      5               5               TRUE
+12      5               5               TRUE
+13      5               5               TRUE
+14      5               5               TRUE
+15      5               5               TRUE
+16      5               5               TRUE
+17      6               6               TRUE
+18      6               6               TRUE
+19      6               6               TRUE
+20      6               6               TRUE
+21      6               6               TRUE
+22      6               6               TRUE
+23      6               6               TRUE
+24      6               6               TRUE
+25      6               6               TRUE
+26      6               6               TRUE
+27      6               6               TRUE
+28      6               6               TRUE
+29      6               6               TRUE
+30      6               6               TRUE
+31      6               6               TRUE
+32      6               6               TRUE
 
 --------------------------------------------------------------------- */

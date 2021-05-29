@@ -37,4 +37,7 @@ int main(void)
 ------------------------------------------------------------------------
 Bingo!: (LIES! ;-))
 
+(The number is so large that no unsigned long long is enough to find it.
+long double might not be enough either...)
+
 --------------------------------------------------------------------- */

@@ -106,7 +106,7 @@ int main(void)
         unsigned CN_recurrence = C_N_floor(N);
         unsigned CN_formula = (unsigned)floor(log(N)/log(2)) + 1;
         int equal = (CN_recurrence == CN_formula);
-        printf("%u\t%u\t\t%u\t\t%d\n", N, CN_recurrence, CN_formula, equal);
+        printf("%u\t%u\t\t%u\t\t%s\n", N, CN_recurrence, CN_formula, equal ? "TRUE" : "FALSE");
     }
 }
 
@@ -115,37 +115,37 @@ int main(void)
 ------------------------------------------------------------------------
 N       C_N (rec.)      C_N (form.)     Equal?
 ----------------------------------------------
-1       1               1               1
-2       2               2               1
-3       2               2               1
-4       3               3               1
-5       3               3               1
-6       3               3               1
-7       3               3               1
-8       4               4               1
-9       4               4               1
-10      4               4               1
-11      4               4               1
-12      4               4               1
-13      4               4               1
-14      4               4               1
-15      4               4               1
-16      5               5               1
-17      5               5               1
-18      5               5               1
-19      5               5               1
-20      5               5               1
-21      5               5               1
-22      5               5               1
-23      5               5               1
-24      5               5               1
-25      5               5               1
-26      5               5               1
-27      5               5               1
-28      5               5               1
-29      5               5               1
-30      5               5               1
-31      5               5               1
-32      6               6               1
+1       1               1               TRUE
+2       2               2               TRUE
+3       2               2               TRUE
+4       3               3               TRUE
+5       3               3               TRUE
+6       3               3               TRUE
+7       3               3               TRUE
+8       4               4               TRUE
+9       4               4               TRUE
+10      4               4               TRUE
+11      4               4               TRUE
+12      4               4               TRUE
+13      4               4               TRUE
+14      4               4               TRUE
+15      4               4               TRUE
+16      5               5               TRUE
+17      5               5               TRUE
+18      5               5               TRUE
+19      5               5               TRUE
+20      5               5               TRUE
+21      5               5               TRUE
+22      5               5               TRUE
+23      5               5               TRUE
+24      5               5               TRUE
+25      5               5               TRUE
+26      5               5               TRUE
+27      5               5               TRUE
+28      5               5               TRUE
+29      5               5               TRUE
+30      5               5               TRUE
+31      5               5               TRUE
+32      6               6               TRUE
 
 --------------------------------------------------------------------- */

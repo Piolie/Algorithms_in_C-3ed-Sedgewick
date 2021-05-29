@@ -21,7 +21,7 @@ I'm compiling with GCC using either:
     gcc -m64 -std=c99
     gcc -m64 -O1 -std=c99
 
-(Using -O2 or -O3 result in instant finishing times.)
+(Using -O2 or -O3 results in instant finishing times.)
 
 Also, since the standard clock in C is not very accurate, we'll be
 accumulating several (RUNS) runs and taking the average to get a better

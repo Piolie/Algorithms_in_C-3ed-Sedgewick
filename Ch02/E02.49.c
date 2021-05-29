@@ -14,7 +14,6 @@ assume *four* digit integers.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <math.h>
 
 #define MAX_RANDOM 999  /* 10^4 - 1 */
@@ -42,8 +41,6 @@ int search(unsigned long array[], int value, int left, int right)
 
 int main(void)
 {
-    srand((unsigned int) time(NULL));
-
     int counts[] = {10, 100, 1000};
     size_t size = (sizeof counts)/(sizeof counts[0]);
 
