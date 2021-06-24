@@ -1,0 +1,17 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 3.29
+------------------------------------------------------------------------
+Give the running time of Program 3.9, within a constant factor, as a
+function of Iv1 and N.
+--------------------------------------------------------------------- */
+
+The first (for) loop runs N - 1 times, one for each node that is added
+to the list.
+
+The second (while) loop runs N - 1 times. This is evident form the fact
+that each iteration deletes one node, and runs until only one node is
+left. It has an inner for loop that runs M - 1 times, so as to skip as
+many nodes.
+
+Thus,
+    T = c0 + c1*N + c2*N*M

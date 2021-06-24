@@ -1,0 +1,12 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 3.16
+------------------------------------------------------------------------
+Analyze Program 3.5 to explain the effect that you observed in Exercise
+3.15.
+--------------------------------------------------------------------- */
+
+The block guarded by the if takes i and sets all its multiples' entries
+to 0 in the array, so as to mark them "not prime". But it only makes
+sense to do this if i is known to be prime itself. By removing the
+guard, the program does extra work, setting to 0 many entries which
+have already been cleared by factors of non-prime i.
