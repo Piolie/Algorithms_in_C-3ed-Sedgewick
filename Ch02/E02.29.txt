@@ -20,4 +20,4 @@ The book defines "about" like this:
     mathematical precision we gain in clarity, for we are more
     interested in the performance of algorithms than in mathematical
     details. In such cases, we can rest assured that, for large N
-    (if not for all N), the quantity in question will be close to f(N). 
+    (if not for all N), the quantity in question will be close to f(N).
