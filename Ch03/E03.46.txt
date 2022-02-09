@@ -1,0 +1,30 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 3.46
+------------------------------------------------------------------------
+Give an entry for Table 3.1 for a circular list that has a dummy node,
+which serves as both head and tail.
+--------------------------------------------------------------------- */
+
+## Circular list, dummy head/tail node
+
+initialize:
+
+    dummy = malloc(sizeof *dummy);
+    dummy->next = dummy;
+
+insert t after x:
+
+    t->next = x->next;
+    x->next = t;
+
+delete after x:
+
+    x->next = x->next->next;
+
+traversal loop:
+
+    for (t = dummy->next; t =! dummy; t = t->next)
+
+test if empty:
+
+    if (dummy->next == dummy)

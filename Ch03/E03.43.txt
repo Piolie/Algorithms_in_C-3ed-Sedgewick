@@ -1,0 +1,10 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 3.43
+------------------------------------------------------------------------
+Implement a version of Program 3.9 that uses a head node.
+--------------------------------------------------------------------- */
+
+Table 3.1 lists 5 conventions (only 4, in fact) for working with linked
+lists. "Circular" and "Dummy head node" are two such conventions, so I'm
+not sure how a circular list with a head node would be. Consider that
+Program 3.9 is literally called "Circular list example".
