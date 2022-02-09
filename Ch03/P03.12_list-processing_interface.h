@@ -14,8 +14,14 @@ dependence upon implementation details.
 --------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------
-The author forgot to typedef itemType. The usage in Program 3.14 implies
-it is an int, so I'll add it to this interface file.
+The book says (p. 91):
+    We assume that another part of the program uses `typedef` or some
+    other mechanism to allow us to declare variables of type `Item`.
+
+(It should probably say "type `itemType`".)
+
+The usage in Program 3.14 suggests `itemType` should be an int for these
+programs and exercises, so I'll add that to this interface file.
 --------------------------------------------------------------------- */
 
 typedef int itemType;
