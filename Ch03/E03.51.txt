@@ -1,0 +1,41 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 3.51
+------------------------------------------------------------------------
+Run empirical studies comparing the running times of the memory­
+allocation functions in Program 3.14 with malloc and free (see Exercise
+3.50) for Program 3.13 with M = 2 and N = 10^3, 10^4, 10^5, and 10^6.
+--------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------
+I'll be using the external time tool in MSYS2 to measure the running
+times. Like:
+    /usr/bin/time ./P03.13_list_allocation_for_the_Josephus_problem.exe 1000 2
+    /usr/bin/time ./E03.51.exe 1000 2
+
+An alternative is PowerShell's Measure-Command:
+    Measure-Command {./P03.13_list_allocation_for_the_Josephus_problem.exe 1000 2}
+    Measure-Command {./E03.51.exe 1000 2}
+
+------------------------------------------------------------------------
+(I have checked that both programs give the same results in all these
+cases.)
+
+                         M = 2
+          +----------------------------------
+      N   |  Program 3.13  |  Exercise 3.51
+    ------+--------------- + ----------------
+    10^3  |     00.12      |     00.10
+    10^4  |     00.08      |     00.08
+    10^5  |     00.10      |     00.10
+    10^6  |     00.24      |     00.21
+    10^7  |     00.43      |     01.51
+    10^8  |     03.62      |     38.21
+
+Either there is a huge difference or I am doing something wrong. Let's
+assume the former. To really find out where the bottleneck is, we should
+profile the program. The exercise doesn't ask for more, so I'll simply
+speculate that calling malloc and free, which ultimately rely on the
+underlying operating system, imposes a penalty much higher than moving
+nodes from/to freelist inside our program.
+
+--------------------------------------------------------------------- */
