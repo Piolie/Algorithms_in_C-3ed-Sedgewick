@@ -1,0 +1,22 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 3.53
+------------------------------------------------------------------------
+Suppose that you have a set of nodes with no null pointers (each node
+points to itself or to some other node in the set). Prove that you
+ultimately get into a cycle if you start at any given node and follow
+links.
+--------------------------------------------------------------------- */
+
+(It's assumed that the links don't change during traversal.)
+
+Suppose we have N nodes n1, n2, ..., nN (in any order). Then, n1 has to
+point to itself or to one of the others. If it points to itself, we are
+in a cycle of length 1. Let's suppose it points to another node, say,
+n2. Then, if n2 points to n1, we end in a cycle of length 2. If it
+doesn't, it has to point to another node, say, n3. n3 can point to n1 or
+n2, which results in a cycle of length 3 or 2, or to one of the
+others...
+If we continue this process further, we end up in the last node, nN,
+which can only point to one of the previous ones, thus forming a cycle.
+
+This is just a sketch, not formal proof. I'm not versed in graph theory.
