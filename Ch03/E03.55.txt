@@ -1,0 +1,15 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 3.55
+------------------------------------------------------------------------
+Under the conditions of Exercise 3.54, write a function that determines
+whether or not two given links, if followed, eventually end up on the
+same cycle.
+--------------------------------------------------------------------- */
+
+I won't solve this. See, for example:
+http://twistedoakstudios.com/blog/Post3280_intersecting-linked-lists-faster
+
+My approach would be to use Floyd's algorithm on each link, to make sure
+they both reach a cycle. Then, I would loop one link through its cycle
+and compare it with the other at each step. If at some point both links
+are equal, then they ended up in the same cycle.
