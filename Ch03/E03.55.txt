@@ -12,4 +12,5 @@ http://twistedoakstudios.com/blog/Post3280_intersecting-linked-lists-faster
 My approach would be to use Floyd's algorithm on each link, to make sure
 they both reach a cycle. Then, I would loop one link through its cycle
 and compare it with the other at each step. If at some point both links
-are equal, then they ended up in the same cycle.
+are equal, then they ended up in the same cycle. If the cycle is
+completed without a match, they ended up in different cycles.
