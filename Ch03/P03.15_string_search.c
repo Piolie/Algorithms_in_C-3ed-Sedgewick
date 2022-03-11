@@ -33,3 +33,20 @@ int main(int argc, char *argv[])
     }
     printf("\n");
   }
+
+/* ---------------------------------------------------------------------
+                                 OUTPUT
+------------------------------------------------------------------------
+I had to run this program from the windows console (or PowerShell).
+There, we can signal the end of the input by pressing Ctrl+Z in a new
+line and pressing Enter. This outputs ^Z and makes getchar() return EOF.
+In mintty the equivalent is supposedly Ctrl+D, but it wouldn't work for
+me.
+------------------------------------------------------------------------
+
+P03.15_string_search.exe long
+
+this a very long string
+^Z
+12
+--------------------------------------------------------------------- */
