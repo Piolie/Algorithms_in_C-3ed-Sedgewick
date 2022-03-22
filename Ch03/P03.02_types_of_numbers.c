@@ -71,7 +71,6 @@ int main(int argc, char *argv[])
                                  OUTPUT
 ------------------------------------------------------------------------
 P03.02_types_of_numbers.exe 1000
-
        Average: 16397.156250
 Std. deviation: 9442.030290
 
