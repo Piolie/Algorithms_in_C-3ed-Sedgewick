@@ -51,7 +51,6 @@ int main(int argc, char *argv[])
                                  OUTPUT
 ------------------------------------------------------------------------
 E03.22.exe 1000 0.5
-
 240981 edges shorter than 0.500000
 The shortest distance is: 0.000850, from point A = (0.049440, 0.656056)
 to point B = (0.048647, 0.655751)

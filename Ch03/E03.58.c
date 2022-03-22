@@ -79,7 +79,6 @@ int main(void)
                                  OUTPUT
 ------------------------------------------------------------------------
 E03.58.exe
-
 strcpy_ind_alloc1: String 1.
 strcpy_ind_alloc2: String 1.
 strcat_ind_alloc1: String 1.String 2.

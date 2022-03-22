@@ -41,7 +41,6 @@ int main(int argc, char *argv[])
                                  OUTPUT
 ------------------------------------------------------------------------
 E03.07.exe 0 0 1 1 0.5 0.5 2 3 5 6 -1 -1 -0.3 0.3 -5 -100
-
 The first point is: (0.000000, 0.000000)
 The closest point to the first is: (-0.300000, 0.300000)
 
