@@ -5,11 +5,11 @@ Modify Program 3.8 to perform the same computation in d dimensions.
 --------------------------------------------------------------------- */
 
 The statement doesn't say where d should come from or how the given
-data types should be modified to accomodate d dimensions. If we consider
-d to be user provided, then making it work is not trivial, because the
-distance function would have to accept point arguments with a variable
-number of dimensions. This could be done, but the typedef for point
-would have to be changed to something like this:
+data types should be modified to accommodate d dimensions. If we
+consider d to be user provided, then making it work is not trivial,
+because the distance function would have to accept point arguments with
+a variable number of dimensions. This could be done, but the typedef for
+point would have to be changed to something like this:
 
 typedef struct {
     int dimensions;
