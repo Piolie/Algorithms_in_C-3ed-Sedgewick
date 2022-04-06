@@ -14,10 +14,10 @@ function malloc2d is like the one in Program 3.16, but for objects of
 type link instead of int.
 --------------------------------------------------------------------- */
 
-#inelude <math.h>
-#inelude <stdio.h>
-#inelude <stdlib.h>
-#inelude "Point.h"
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "Point.h"
 
 typedef struct node* link;
 struct node
@@ -30,7 +30,7 @@ int G;
 float d;
 int cnt = 0;
 
-gridinsert(float x, float y)
+void gridinsert(float x, float y)
 {
     int i, j;
     link s;
@@ -42,21 +42,22 @@ gridinsert(float x, float y)
     for (i = X-1; i <= X+1; i++)
         for (j = Y-1; j <= Y+1; j++)
             for (s = grid[i][j]; s != NULL; s = s->next)
-                if (distance(s->p, t->p) < d) cnt++;
+                if (distance(s->p, t->p) < d)
+                    cnt++;
     t->next = grid[X][Y];
     grid[X][Y] = t;
 }
 
-int main(int arge, char *argv[])
+int main(int argc, char *argv[])
 {
-    int i, j, N = atoi(argv[l]);
+    int i, j, N = atoi(argv[1]);
     d = atof(argv[2]);
-    G = lid;
+    G = 1/d;
     grid = malloc2d(G+2, G+2);
     for (i = 0; i < G+2; i++)
         for (j = 0; j < G+2; j++)
             grid[i][j] = NULL;
     for (i = 0; i < N; i++)
-        gridinsert(randFloat(), randFloat();
-    printf("%d edges shorter than %f\n", ent, d);
+        gridinsert(randFloat(), randFloat());
+    printf("%d edges shorter than %f\n", cnt, d);
 }
