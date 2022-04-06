@@ -4,7 +4,7 @@
 ------------------------------------------------------------------------
                 PROGRAM 3.17 Sorting an array of strings
 ------------------------------------------------------------------------
-This program illustrates an an important string-processing function:
+This program illustrates an important string-processing function:
 rearranging a set of strings into sorted order. We read strings into a
 buffer large enough to hold them all, maintaining a pointer to each
 string in an array, then rearrange the pointers to put the pointer to
