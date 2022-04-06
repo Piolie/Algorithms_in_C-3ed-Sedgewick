@@ -4,7 +4,7 @@
 ------------------------------------------------------------------------
                 PROGRAM 1.4 PATH COMPRESSION BY HALVING
 ------------------------------------------------------------------------
-     (WEIGHTED QUICK-UNION WITH PATH COMPRESSION BY HALVING)
+        (WEIGHTED QUICK-UNION WITH PATH COMPRESSION BY HALVING)
 ------------------------------------------------------------------------
 If we replace the for loops in Program 1.3 by this code, we halve the
 length of any path that we traverse. The net result of this change is
