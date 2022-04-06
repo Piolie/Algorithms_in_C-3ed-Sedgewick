@@ -14,6 +14,16 @@ function malloc2d is like the one in Program 3.16, but for objects of
 type link instead of int.
 --------------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------------
+I have added the necessary auxiliary functions to compile and run the
+program. In particular, malloc2d has been modified as requested in the
+statement.
+
+Also, note that the assignments G = 1/d and similar ones risk invoking
+UB in case the assigned value (a float) doesn’t fit into the destination
+type (an int).
+--------------------------------------------------------------------- */
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,6 +39,26 @@ link **grid;
 int G;
 float d;
 int cnt = 0;
+
+link **malloc2d(int r, int c)
+{
+    int i;
+    link **t = malloc(r * sizeof(link *));
+    for (i = 0; i < r; i++)
+        t[i] = malloc(c * sizeof(link));
+    return t;
+}
+
+float randFloat(void)
+{
+    return 1.0*rand()/RAND_MAX;
+}
+
+float distance(point a, point b)
+{
+    float dx = a.x - b.x, dy = a.y - b.y;
+    return sqrt(dx*dx + dy*dy);
+}
 
 void gridinsert(float x, float y)
 {
@@ -50,6 +80,7 @@ void gridinsert(float x, float y)
 
 int main(int argc, char *argv[])
 {
+    (void)argc;
     int i, j, N = atoi(argv[1]);
     d = atof(argv[2]);
     G = 1/d;
@@ -61,3 +92,22 @@ int main(int argc, char *argv[])
         gridinsert(randFloat(), randFloat());
     printf("%d edges shorter than %f\n", cnt, d);
 }
+
+/* ---------------------------------------------------------------------
+                                 OUTPUT
+------------------------------------------------------------------------
+P03.20_a_two-dimensional_array_of_lists.exe 1000 1
+488477 edges shorter than 1.000000
+
+P03.20_a_two-dimensional_array_of_lists.exe 1000 0.1
+14293 edges shorter than 0.100000
+
+P03.20_a_two-dimensional_array_of_lists.exe 1000 0.01
+130 edges shorter than 0.010000
+
+P03.20_a_two-dimensional_array_of_lists.exe 1000 0.001
+2 edges shorter than 0.001000
+
+P03.20_a_two-dimensional_array_of_lists.exe 1000 0.0001
+0 edges shorter than 0.000100
+--------------------------------------------------------------------- */
