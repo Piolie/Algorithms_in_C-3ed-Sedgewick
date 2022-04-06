@@ -31,7 +31,7 @@ See [Makefile Tutorial](https://makefiletutorial.com/) for a nice introduction t
 It goes without saying that the solutions are not guaranteed to be good or even working. Feel free to open an issue or file a pull request if you believe there is an addition/improvement/correction to make.
 
 # License
-The code from the book, as stated in the [author's](https://www.cs.princeton.edu/~rs/Algs3.c1-4/code.txt) page, comes with some strings attached. See [COPYRIGHT](COPYRIGHT.md) for more information.
+The code from the book, as stated in the author's [(archived)](https://web.archive.org/web/20211221063054/https://www.cs.princeton.edu/~rs/Algs3.c1-4/code.txt) page, comes with some strings attached. See [COPYRIGHT](COPYRIGHT.md) for more information.
 
 I release my modifications and all original works made by me under the MIT License. See [LICENSE](LICENSE.md) for the details.
 
