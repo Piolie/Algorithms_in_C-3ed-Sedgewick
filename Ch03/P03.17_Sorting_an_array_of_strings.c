@@ -30,22 +30,25 @@ and searching functions (see Chapters 4 and 6).
 /* ---------------------------------------------------------------------
 The compiler complains that the arguments of the compare function are
 incompatible with what qsort expects:
-warning: passing argument 4 of 'qsort' from incompatible pointer type
-[-Wincompatible-pointer-types]
-    qsort(a, N, sizeof(char*), compare);
-                               ^~~~~~~
-                               |
-                               int (*)(void *, void *)
-note: expected 'int (*)(const void *, const void *)' but argument is of
-type 'int (*)(void *, void *)'
+    warning: passing argument 4 of 'qsort' from incompatible pointer
+    type [-Wincompatible-pointer-types]
+        qsort(a, N, sizeof(char*), compare);
+                                   ^~~~~~~
+                                   |
+                                   int (*)(void *, void *)
+    note: expected 'int (*)(const void *, const void *)' but argument is
+    of type 'int (*)(void *, void *)'
 
-Adding const to compare's arguments changes the warning to:
-warning: cast discards 'const' qualifier from pointer target type
-[-Wcast-qual]
-    return strcmp(*(char **)i, *(char **)j);
-                   ^            ^
+The correct usage of qsort for an array of strings is explained in the
+the following comp.lang.c FAQ question
+See the answer to the following SO question:
+    [Question 13.8](http://www.c-faq.com/lib/qsort1.html).
+Also interesting are the discussions in following SO question:
+    [What are the parameters in this C qsort function call?](https://stackoverflow.com/questions/2228695/what-are-the-parameters-in-this-c-qsort-function-call/2228754)
+and specially the following comp.lang.c FAQ question:
+    [Question 13.9](http://www.c-faq.com/lib/qsort2.html).
 
-See the answer to the following SO question: [What are the parameters in this C qsort function call?](https://stackoverflow.com/questions/2228695/what-are-the-parameters-in-this-c-qsort-function-call/2228754)
+See exercise E03.64 for an implementation of the 
 --------------------------------------------------------------------- */
 
 #include <stdio.h>
