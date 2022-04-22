@@ -19,7 +19,8 @@ independence from the type of object being sorted by blindly rearranging
 the blocks of data that represent objects (in this case string pointers)
 and by using a comparison function that takes pointers to void as
 argument. This code casts these back to type pointer to pointer to char
-for strcmp. To actually access the first character in a string for a comparison, we dereference three pointers: one to get the index (which
+for strcmp. To actually access the first character in a string for a
+comparison, we dereference three pointers: one to get the index (which
 is a pointer) into our array, one to get the pointer to the string
 (using the index), and one to get the character (using the pointer).
 
@@ -40,15 +41,14 @@ incompatible with what qsort expects:
     of type 'int (*)(void *, void *)'
 
 The correct usage of qsort for an array of strings is explained in the
-the following comp.lang.c FAQ question
-See the answer to the following SO question:
+the following comp.lang.c FAQ question:
     [Question 13.8](http://www.c-faq.com/lib/qsort1.html).
-Also interesting are the discussions in following SO question:
-    [What are the parameters in this C qsort function call?](https://stackoverflow.com/questions/2228695/what-are-the-parameters-in-this-c-qsort-function-call/2228754)
+Also interesting are the discussions in the following SO question:
+    [What are the parameters in this C qsort function call?](https://stackoverflow.com/questions/2228695/)
 and specially the following comp.lang.c FAQ question:
     [Question 13.9](http://www.c-faq.com/lib/qsort2.html).
 
-See exercise E03.64 for an implementation of the 
+See exercise E03.64 for an implementation that uses qsort correctly.
 --------------------------------------------------------------------- */
 
 #include <stdio.h>
