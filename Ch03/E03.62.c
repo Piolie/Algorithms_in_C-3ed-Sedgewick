@@ -8,7 +8,7 @@ the sequence of blanks increases.
 --------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------
-Ideas brought (stolen?) from https://stackoverflow.com/questions/2616932/algorithm-to-find-lenth-of-longest-sequence-of-blanks-in-a-given-string
+Ideas brought (stolen?) from [Algorithm to find lenth of longest sequence of blanks in a given string](https://stackoverflow.com/questions/2616932/).
 
 Suppose the longest sequence found thus far is of length M.
 0. If b > s_len - M, no longer sequence can fit in the remaining string,
