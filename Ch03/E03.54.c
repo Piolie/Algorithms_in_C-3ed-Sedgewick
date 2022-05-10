@@ -15,8 +15,8 @@ We have to follow the links until we are inside the cycle, and then
 count. The second part is easy. Figuring out when we have entered the
 cycle requires some ingenuity. Fortunately, this problem has already
 been solved. See:
-- https://en.wikipedia.org/wiki/Cycle_detection
-- https://stackoverflow.com/questions/2936213/how-does-finding-a-cycle-start-node-in-a-cycle-linked-list-work
+- [Cycle detection](https://en.wikipedia.org/wiki/Cycle_detection)
+- [How does finding a cycle start node in a cycle linked list work?](https://stackoverflow.com/questions/2936213/)
 
 I'll be copying Floyd's cycle-finding algorithm (also known as Floyd's
 tortoise and hare) implementation from the wikipedia, adapting it to C.
