@@ -19,9 +19,17 @@ I have added the necessary auxiliary functions to compile and run the
 program. In particular, malloc2d has been modified as requested in the
 statement.
 
-Also, note that the assignments G = 1/d and similar ones risk invoking
-UB in case the assigned value (a float) doesn’t fit into the destination
-type (an int).
+Note that the assignments G = 1/d and similar ones risk invoking UB in
+case the assigned value (a float) doesn’t fit into the destination type
+(an int).
+
+Also, in my system this program crashes if N is set to 19362 or more.
+That's because for that value, randFloat() produces 1.00000. This makes
+X in gridinsert equal to 10001, which makes it possible for the i
+variable inside the for loop to reach 10002 (i <= X+1), which then
+enables an attempt to access an out of bounds index in grid[i][j].
+I'd say the bug is in the definition of randFloat. Diving by
+(RAND_MAX + 1) instead of by RAND_MAX solves the issue.
 --------------------------------------------------------------------- */
 
 #include <math.h>
@@ -110,4 +118,11 @@ P03.20_a_two-dimensional_array_of_lists.exe 1000 0.001
 
 P03.20_a_two-dimensional_array_of_lists.exe 1000 0.0001
 0 edges shorter than 0.000100
+
+P03.20_a_two-dimensional_array_of_lists.exe 10000 0.0001
+3 edges shorter than 0.000100
+
+P03.20_a_two-dimensional_array_of_lists.exe 100000 0.0001
+kaput! see note at the beggining
+
 --------------------------------------------------------------------- */
