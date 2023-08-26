@@ -10,6 +10,10 @@ graph is an array of lists, one for each vertex, where the jth list
 contains a linked list of the nodes connected to the jth vertex.
 --------------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------------
+The description should read adjacency-list, not adjacency-matrix.
+--------------------------------------------------------------------- */
+
 #include <stdio.h>
 #include <stdlib.h>
 
