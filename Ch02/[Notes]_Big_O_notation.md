@@ -3,7 +3,7 @@ BIG O NOTATION NOTES
 
 I think the book doesn't do a very good job at defining and explaining this notation. All we have is:
 
-<code>**Definition 2.1**  A function g(N) is said to be O(f(N)) if there exist constants c<sub>0</sub> and N<sub>0</sub> such that g(N) < c<sub>0</sub> f(N), for all N > N<sub>0</sub>.</code>
+>**Definition 2.1**  A function g(N) is said to be O(f(N)) if there exist constants c<sub>0</sub> and N<sub>0</sub> such that g(N) < c<sub>0</sub> f(N), for all N > N<sub>0</sub>.
 
 This is all nice and good, but there is no definition of what kO(f(N)) or the sum O(f(N)) + O(g(N)) mean, for example. It's one thing to say that a "function _is_ O(f(N))", it's quite another to write "g(N) = O(f(N))" and replace it in equations and inequalities, at least with no additional definitions or justifications.
 
@@ -11,7 +11,7 @@ The matter is much better explained in the book _Introduction to Algorithms_, Th
 
 >For a given function g(n), we denote by O(g(n)) (pronounced "big-oh of g of n" or sometimes just "oh of g of n") the set of functions
 
-><code>O(g(n)) = {f(n) : there exist positive constants c and n<sub>0</sub> such that 0 < f(n) < cg(n) for all n > n<sub>0</sub>}.</code>
+>O(g(n)) = {f(n) : there exist positive constants c and n<sub>0</sub> such that 0 < f(n) < cg(n) for all n > n<sub>0</sub>}.
 
 >We use O-notation to give an upper bound on a function, to within a constant factor. For all values n at and to the right of n<sub>0</sub>, the value of the function f(n) is on or below cg(n).
 

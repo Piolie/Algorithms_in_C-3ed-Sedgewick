@@ -16,4 +16,4 @@ Also, there are very interesting questions in StackOverflow:
 - [Correctly allocating multi-dimensional arrays](https://stackoverflow.com/questions/42094465/) and
 - [Function to dynamically allocate matrix](https://stackoverflow.com/questions/32050256/)
 
-which discourage using pointers-to-pointers. The book uses the wrong approach in several places, e.g., the malloc2d function in P3.16.
+which discourage using pointers-to-pointers. The book uses the wrong approach in several places, e.g., the `malloc2d` function in P3.16.
