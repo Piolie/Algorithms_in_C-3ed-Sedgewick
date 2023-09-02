@@ -29,12 +29,15 @@ int count_character(char c, char *s)
 
 int main(int argc, char *argv[])
 {
+    char *s = argv[1];
     printf("String: %s\n", s);
     printf("char count\n");
     printf("---- -----\n");
-    char *s = argv[1];
-    while (*s++)
+    while (*s)
+    {
         printf("%c    %d\n", *s, count_character(*s, argv[1]));
+        s++;
+    }
 }
 
 /* ---------------------------------------------------------------------
