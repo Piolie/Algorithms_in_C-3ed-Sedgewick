@@ -18,9 +18,8 @@ triangles with a very small angle when using floating-point arithmetic.
 (See the Numerical stability section in the Wikipedia article.)
 --------------------------------------------------------------------- */
 
-#include <math.h>
-#include "Point.h"
 #include "E03.10_triangle.h"
+#include <math.h>
 
 float area(triangle T) {
   float a = distance(T.A, T.B);

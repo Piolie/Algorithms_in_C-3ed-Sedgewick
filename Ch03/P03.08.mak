@@ -1,11 +1,11 @@
 CC = gcc
-CFLAGS = -m64 -std=c99 -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wstrict-prototypes
+CFLAGS = -g -m64 -std=c99 -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wstrict-prototypes
+TARGET = P03.08_closest-point_computation.exe
+OBJ = P03.08_closest-point_computation.o P03.04_point_data_type_implementation.o
+DEPS = Point.h P03.08_closest-point_computation.c P03.04_point_data_type_implementation.c
 
-all: P03.08.o point.o
-	$(CC) -o P03.08_closest-point_computation.exe P03.08.o point.o
+all: $(OBJ)
+	$(CC) -o $(TARGET) $(OBJ)
 
-P03.08.o: P03.08_closest-point_computation.c Point.h
-	$(CC) $(CFLAGS) -o P03.08.o -c P03.08_closest-point_computation.c
-
-point.o: P03.04_point_data_type_implementation.c Point.h
-	$(CC) $(CFLAGS) -o point.o -c P03.04_point_data_type_implementation.c
+%.o: %.c $(DEPS)
+	$(CC) $(CFLAGS) -c -o $@ $<

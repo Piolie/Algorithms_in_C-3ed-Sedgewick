@@ -1,12 +1,11 @@
 CC = gcc
-CFLAGS = -m64 -std=c99 -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wstrict-prototypes
+CFLAGS = -g -m64 -std=c99 -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-qual -Wstrict-prototypes
+TARGET = E03.07.exe
+OBJ = E03.07.o P03.04_point_data_type_implementation.o
+DEPS = Point.h P03.04_point_data_type_implementation.c
 
-all: E03.07.o point.o
-	$(CC) -o E03.07.exe E03.07.o point.o
+all: $(OBJ)
+	$(CC) -o $(TARGET) $(OBJ)
 
-E03.07.o: E03.07.c Point.h
-	$(CC) $(CFLAGS) -c E03.07.c
-
-point.o: P03.04_point_data_type_implementation.c Point.h
-	$(CC) $(CFLAGS) -o point.o -c P03.04_point_data_type_implementation.c
-
+%.o: %.c $(DEPS)
+	$(CC) $(CFLAGS) -c -o $@ $<
