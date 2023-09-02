@@ -9,12 +9,13 @@ and answer Exercise 1.22 for your implementations.
 ------------------------------------------------------------------------
 I've chosen Python for the reimplementation.
 ------------------------------------------------------------------------
-                             QUICK-UNION
+         Weighted quick-union with path compression by halving
 ------------------------------------------------------------------------
 """
 
 N = 10000
 id = []
+sz = [1] * N
 
 for i in range(N):
     id.append(i)
@@ -25,14 +26,19 @@ while True:
 
     i = p
     while i != id[i]:
-        i = id[i]
+        id[i] = i = id[id[i]]
     j = q
     while j != id[j]:
-        j = id[j]
+        id[j] = j = id[id[j]]
 
     if i == j:
         continue
 
-    id[i] = j
+    if sz[i] < sz[j]:
+        id[i] = j
+        sz[j] += sz[i]
+    else:
+        id[j] = i
+        sz[i] += sz[j]
 
     print("", p, q)

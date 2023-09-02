@@ -12,73 +12,68 @@ function, specially to avoid memory leaks. Haven't tested it much
 though.
 --------------------------------------------------------------------- */
 
+#include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
 
 #define N 100
 
-link copy_list(link head)
-{
-    if (!head)
-        goto error;
+link copy_list(link head) {
+  if (!head)
+    goto error;
 
-    link temp, return_head = malloc(sizeof *return_head);
+  link temp, return_head = malloc(sizeof *return_head);
 
-    if (!return_head)
-        goto error;
+  if (!return_head)
+    goto error;
 
-    temp = return_head;
-    while (head->next)
-    {
-        temp->next = malloc(sizeof *temp);
-        temp = temp->next;
-        if (!temp)
-            goto error;
+  temp = return_head;
+  while (head->next) {
+    temp->next = malloc(sizeof *temp);
+    temp = temp->next;
+    if (!temp)
+      goto error;
 
-        head = head->next;
-        temp->item = head->item;
-    }
-    temp->next = NULL;
-    return return_head;
+    head = head->next;
+    temp->item = head->item;
+  }
+  temp->next = NULL;
+  return return_head;
 
-error:  // free all the previously allocated nodes and return NULL
-    temp = return_head;
-    while (temp)
-    {
-        temp = return_head->next;
-        free(return_head);
-        return_head = temp;
-    }
-    return NULL;
+error: // free all the previously allocated nodes and return NULL
+  temp = return_head;
+  while (temp) {
+    temp = return_head->next;
+    free(return_head);
+    return_head = temp;
+  }
+  return NULL;
 }
 
-int main(void)
-{
-    int i;
-    link head = malloc(sizeof *head);
-    head->next = NULL;
-    link t;
+int main(void) {
+  int i;
+  link head = malloc(sizeof *head);
+  head->next = NULL;
+  link t;
 
-    printf("Unsorted nodes:\n");
-    for (i = 0, t = head; i < N; i++)
-    {
-        t->next = malloc(sizeof *t);
-        t = t->next;
-        t->next = NULL;
-        t->item = rand() % 1000;
-        printf("%3d ", t->item);
-    }
+  printf("Unsorted nodes:\n");
+  for (i = 0, t = head; i < N; i++) {
+    t->next = malloc(sizeof *t);
+    t = t->next;
+    t->next = NULL;
+    t->item = rand() % 1000;
+    printf("%3d ", t->item);
+  }
 
-    link new_head = copy_list(head);
+  link new_head = copy_list(head);
 
-    // modify the first node in each list
-    new_head->next->item = -10;
-    head->next->item = 0;
+  // modify the first node in each list
+  new_head->next->item = -10;
+  head->next->item = 0;
 
-    printf("\n\nCopied list:\n");
-    for (t = new_head->next; t != NULL; t = t->next)
-        printf("%3d ", t->item);
+  printf("\n\nCopied list:\n");
+  for (t = new_head->next; t != NULL; t = t->next)
+    printf("%3d ", t->item);
 }
 
 /* ---------------------------------------------------------------------
@@ -99,5 +94,4 @@ Copied list:
  37 859 723 741 529 778 316  35 190 842 288 106  40 942 264 648 446 805
 890 729 370 350   6 101 393 548 629 623  84 954 756 840 966 376 931 308
 944 439 626 323 537 538 118  82 929 541
-
 --------------------------------------------------------------------- */

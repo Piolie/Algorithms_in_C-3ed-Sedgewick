@@ -2,7 +2,8 @@
         This code is from "Algorithms in C, Third Edition,
         by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
-                       PROGRAM 3.15 String search
+                              PROGRAM 3.15
+                             String search
 ------------------------------------------------------------------------
 This program discovers all occurrences of a word from the command line
 in a (presumably much larger) text string. We declare the text string as
@@ -18,22 +19,22 @@ position i of the occurrence of the word in the text.
 
 #include <stdio.h>
 #define N 10000
-int main(int argc, char *argv[])
-{
-    int i, j, t;
-    char a[N], *p = argv[1];
-    for (i = 0; i < N-1; a[i] = t, i++)
-        if ((t = getchar()) == EOF)
-            break;
-    a[i] = 0;
-    for (i = 0; a[i] != 0; i++)
-    {
-        for (j = 0; p[j] != 0; j++)
-            if (a[i+j] != p[j])
-                break;
-        if (p[j] == 0) printf("%d ", i);
-    }
-    printf("\n");
+int main(int argc, char *argv[]) {
+  int i, j, t;
+  (void)argc;
+  char a[N], *p = argv[1];
+  for (i = 0; i < N - 1; a[i] = t, i++)
+    if ((t = getchar()) == EOF)
+      break;
+  a[i] = 0;
+  for (i = 0; a[i] != 0; i++) {
+    for (j = 0; p[j] != 0; j++)
+      if (a[i + j] != p[j])
+        break;
+    if (p[j] == 0)
+      printf("%d ", i);
+  }
+  printf("\n");
 }
 
 /* ---------------------------------------------------------------------
@@ -45,10 +46,8 @@ line and pressing Enter. This outputs ^Z and makes getchar() return EOF.
 In mintty the equivalent is supposedly Ctrl+D, but it wouldn't work for
 me.
 ------------------------------------------------------------------------
-
 P03.15_string_search.exe long
 this is a very long string
 ^Z
 15
-
 --------------------------------------------------------------------- */

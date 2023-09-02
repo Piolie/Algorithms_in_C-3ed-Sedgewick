@@ -9,27 +9,25 @@ log_10 (log_10 (N)) > 8
 log_10 (N) > 10^8
 N > 10^(10^8)
 
-This is, like, a big number. See: https://en.wikipedia.org/wiki/Orders_of_magnitude_(numbers)#101000_to_1010100_(one_googolplex)
+This is, like, a big number. See:
+   https://en.wikipedia.org/wiki/Orders_of_magnitude_(numbers)#101000_to_1010100_(one_googolplex)
 for some numbers in this order of magnitude.
 --------------------------------------------------------------------- */
 
-#include <stdio.h>
 #include <limits.h>
 #include <math.h>
+#include <stdio.h>
 
-int main(void)
-{
-    unsigned long long N;
-    double f;
-    for (N = 1; N < ULLONG_MAX; N++)
-    {
-        f = log(log(N));
-        if (f > 8)
-        {
-            printf("Bingo!: %llu\n", N);
-            break;
-        }
+int main(void) {
+  unsigned long long N;
+  double f;
+  for (N = 1; N < ULLONG_MAX; N++) {
+    f = log(log(N));
+    if (f > 8) {
+      printf("Bingo!: %llu\n", N);
+      break;
     }
+  }
 }
 
 /* ---------------------------------------------------------------------
@@ -37,7 +35,6 @@ int main(void)
 ------------------------------------------------------------------------
 Bingo!: (LIES! ;-))
 
-(The number is so large that no unsigned long long is enough to find it.
-long double might not be enough either...)
-
+(The number is so large that no unsigned long long is enough to find
+it.)
 --------------------------------------------------------------------- */

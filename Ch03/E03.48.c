@@ -5,52 +5,46 @@ Write a program that frees the nodes in positions that are divisible by
 5 in a linked list (the fifth, tenth, fifteenth, and so forth).
 --------------------------------------------------------------------- */
 
+#include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
 
 #define N 100
 #define M 5
 
-int main(void)
-{
-    int i;
-    link head = malloc(sizeof *head);
-    head->next = NULL;
-    link t;
+int main(void) {
+  int i;
+  link head = malloc(sizeof *head);
+  head->next = NULL;
+  link t;
 
-    printf("Unsorted nodes:\n");
-    for (i = 0, t = head; i < N; i++)
-    {
-        t->next = malloc(sizeof *t);
-        t = t->next;
+  printf("Unsorted nodes:\n");
+  for (i = 0, t = head; i < N; i++) {
+    t->next = malloc(sizeof *t);
+    t = t->next;
+    t->next = NULL;
+    t->item = rand() % 1000;
+    printf("%3d ", t->item);
+  }
+
+  // free every Mth node
+  link temp;
+  i = 1;
+  for (t = head->next; t != NULL; t = t->next) {
+    if (i % (M - 1) == 0) {
+      temp = t->next;
+      if (temp) {
+        t->next = temp->next;
+        free(temp);
+      } else
         t->next = NULL;
-        t->item = rand() % 1000;
-        printf("%3d ", t->item);
     }
+    i++;
+  }
 
-    // free every Mth node
-    link temp;
-    i = 1;
-    for (t = head->next; t != NULL; t = t->next)
-    {
-        if (i % (M-1) == 0)
-        {
-            temp = t->next;
-            if (temp)
-            {
-                t->next = temp->next;
-                free(temp);
-            }
-            else
-                t->next = NULL;
-        }
-        i++;
-    }
-
-    printf("\n\nPruned list:\n");
-    for (t = head->next; t != NULL; t = t->next)
-        printf("%3d ", t->item);
+  printf("\n\nPruned list:\n");
+  for (t = head->next; t != NULL; t = t->next)
+    printf("%3d ", t->item);
 }
 
 /* ---------------------------------------------------------------------
@@ -69,7 +63,6 @@ Pruned list:
 827 --- 391 604 902 153 --- 382 421 716 718 --- 447 726 771 538 --- 912
 667 299  35 --- 703 811 322 333 --- 664 141 711 253 --- 547 644 662 757
     859 723 741 529 --- 316  35 190 842 --- 106  40 942 264 --- 446 805
-890 729 --- 350   6 101 393 --- 629 623  84 954 --- 840 966 376 931 --- 
+890 729 --- 350   6 101 393 --- 629 623  84 954 --- 840 966 376 931 ---
 944 439 626 323 --- 538 118  82 929 ---
-
 --------------------------------------------------------------------- */

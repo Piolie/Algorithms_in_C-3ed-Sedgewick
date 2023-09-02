@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.36
+                             EXERCISE 2.36
 ------------------------------------------------------------------------
 Suppose that f_N is proportional to a constant and that
     C_N = C_(N/2) + f_N, for N >= t with 0 <= C_N < c for N < t,

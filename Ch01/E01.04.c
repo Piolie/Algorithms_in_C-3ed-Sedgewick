@@ -8,49 +8,44 @@ give the number of times the program accesses the id array for each
 input pair.
 --------------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------------
+Notes:
+  - only shows first 10 entries of id;
+  - the access counter ignores the initialization and print_id steps;
+  - lvalue assignments are _not_ considered accesses:
+      id[i] = id[q] -> 1 access;
+--------------------------------------------------------------------- */
+
 #include <stdio.h>
 #define N 10
 
-void print_id(int id[])
-{
-    printf("id = ");
-    for (int i = 0; i < 10; i++)
-        printf("%d ", id[i]);
-    printf("...\n");
+void print_id(int id[]) {
+  printf("id = ");
+  for (int i = 0; i < 10; i++)
+    printf("%d ", id[i]);
+  printf("...\n");
 }
 
-int main(void)
-{
-    int i, p, q, t, id[N], access_count;
-    for (i = 0; i < N; i++)
-        id[i] = i;
-    while (scanf("%d %d", &p, &q) == 2)
-    {
-        access_count = 2;
-        if (id[p] == id[q])
-            continue;
-        for (access_count++, t = id[p], i = 0; i < N; i++)
-        {
-            access_count++;
-            if (id[i] == t)
-            {
-                access_count += 1;
-                id[i] = id[q];
-            }
-        }
-        print_id(id);
-        printf(" %d %d\n", p, q);
-        printf("Number of accesses = %d\n", access_count);
+int main(void) {
+  int i, p, q, t, id[N], access_count;
+  for (i = 0; i < N; i++)
+    id[i] = i;
+  while (scanf("%d %d", &p, &q) == 2) {
+    access_count = 2;
+    if (id[p] == id[q])
+      continue;
+    for (access_count++, t = id[p], i = 0; i < N; i++) {
+      access_count++;
+      if (id[i] == t) {
+        access_count += 1;
+        id[i] = id[q];
+      }
     }
+    print_id(id);
+    printf(" %d %d\n", p, q);
+    printf("Number of accesses = %d\n", access_count);
+  }
 }
-
-/* ---------------------------------------------------------------------
-Notes:
-    - only shows first 10 entries of id;
-    - the access counter ignores the initialization and print_id steps;
-    - lvalue assignments are _not_ considered accesses:
-        id[i] = id[q] -> 1 access;
---------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------
                                  OUTPUT
@@ -80,5 +75,4 @@ id = 4 4 4 4 4 4 4 7 8 9 ...
  6 0
 Number of accesses = 10005
 1 3
-
 --------------------------------------------------------------------- */

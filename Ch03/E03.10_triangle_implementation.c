@@ -22,11 +22,12 @@ triangles with a very small angle when using floating-point arithmetic.
 #include "Point.h"
 #include "E03.10_triangle.h"
 
-float area(triangle T)
-{
-    float a = distance(T.A, T.B);
-    float b = distance(T.B, T.C);
-    float c = distance(T.C, T.A);
+float area(triangle T) {
+  float a = distance(T.A, T.B);
+  float b = distance(T.B, T.C);
+  float c = distance(T.C, T.A);
 
-    return sqrt(4*pow(a, 2)*pow(b, 2) - pow((pow(a, 2) + pow(b, 2) - pow(c, 2)), 2))/4;
+  return sqrt(4 * pow(a, 2) * pow(b, 2) -
+              pow((pow(a, 2) + pow(b, 2) - pow(c, 2)), 2)) /
+         4;
 }

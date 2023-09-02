@@ -1,25 +1,25 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.11
+                             EXERCISE 2.11
 ------------------------------------------------------------------------
 Add rows to Table 2.1 for 10^7 and 10^8 instructions per second.
 --------------------------------------------------------------------- */
 
-                   1 million
-       ---------------------------------
- Ops  |     N     |  N lg N  |   N^2
-------+-----------+----------+----------
-10^6  |  seconds  |  hours   |  months
-10^7  |  instant  | seconds  |   days
-10^8  |  instant  | seconds  |  hours
-10^9  |  instant  | instant  |  hours
-10^12 |  instant  | instant  | seconds
+                     1 million
+        ----------------------------------
+   Ops  |     N     |  N lg N  |   N^2
+  ------+-----------+----------+----------
+  10^6  |  seconds  |  hours   |  months
+  10^7  |  instant  | seconds  |   days
+  10^8  |  instant  | seconds  |  hours
+  10^9  |  instant  | instant  |  hours
+  10^12 |  instant  | instant  | seconds
 
-                   1 billion
-       ---------------------------------
- Ops  |     N     |  N lg N  |   N^2
-------+-----------+----------+----------
-10^6  |   hours   |  hours   |  never
-10^7  |  minutes  |  hours   | millennia
-10^8  |  minutes  |  minutes | centuries
-10^9  |  seconds  |  minutes | centuries
-10^12 |  instant  |  instant |  months
+                     1 billion
+        ----------------------------------
+   Ops  |     N     |  N lg N  |   N^2
+  ------+-----------+----------+----------
+  10^6  |   hours   |  hours   |  never
+  10^7  |  minutes  |  hours   | millennia
+  10^8  |  minutes  |  minutes | centuries
+  10^9  |  seconds  |  minutes | centuries
+  10^12 |  instant  |  instant |  months

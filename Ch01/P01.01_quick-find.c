@@ -2,7 +2,8 @@
         This code is from "Algorithms in C, Third Edition,
         by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
-        PROGRAM 1.1 QUICK-FIND SOLUTION TO CONNECTIVITY PROBLEM
+                              PROGRAM 1.1
+              Quick-find solution to connectivity problem
 ------------------------------------------------------------------------
 This program reads a sequence of pairs of nonnegative integers less than
 N from standard input (interpreting the pair p q to mean "connect object
@@ -16,18 +17,17 @@ the id array dynamically (see Section 3.2).
 
 #include <stdio.h>
 #define N 10000
-int main(void)
-{
-    int i, p, q, t, id[N];
-    for (i = 0; i < N; i++)
-        id[i] = i;
-    while (scanf("%d %d", &p, &q) == 2)
-    {
-        if (id[p] == id[q])
-            continue;
-        for (t = id[p], i = 0; i < N; i++)
-            if (id[i] == t)
-                id[i] = id[q];
-        printf(" %d %d\n", p, q);
-    }
+
+int main(void) {
+  int i, j, p, q, id[N];
+  for (i = 0; i < N; i++)
+    id[i] = i;
+  while (scanf("%d %d", &p, &q) == 2) {
+    if (id[p] == id[q])
+      continue;
+    for (j = id[p], i = 0; i < N; i++)
+      if (id[i] == j)
+        id[i] = id[q];
+    printf(" %d %d\n", p, q);
+  }
 }

@@ -2,7 +2,8 @@
         This code is from "Algorithms in C, Third Edition,
         by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
-                   PROGRAM 3.6 Sieve of Eratosthenes
+                              PROGRAM 3.6
+                         Sieve of Eratosthenes
 ------------------------------------------------------------------------
 To change the value of the maximum prime computed in Program 3.5, we
 need to recompile the program. Instead, we can take the maximum desired
@@ -30,24 +31,24 @@ Using unsigned long int for i and j works for argument 1000000.
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[])
-{
-    long int i, j, N = atoi(argv[1]);
-    int *a = malloc(N*sizeof(int));
-    if (a == NULL)
-    {
-        printf("Insufficient memory.\n");
-        return 1;
-    }
-    for (i = 2; i < N; i++)
-        a[i] = 1;
-    for (i = 2; i < N; i++)
-        if (a[i])
-            for (j = i; i*j < N; j++)
-                a[i*j] = 0;
-    for (i = 2; i < N; i++)
-        if (a[i]) printf("%4ld ", i);
-    printf("\n");
+int main(int argc, char *argv[]) {
+  (void)argc;
+  long int i, j, N = atoi(argv[1]);
+  int *a = malloc(N * sizeof(int));
+  if (a == NULL) {
+    printf("Insufficient memory.\n");
+    return 1;
+  }
+  for (i = 2; i < N; i++)
+    a[i] = 1;
+  for (i = 2; i < N; i++)
+    if (a[i])
+      for (j = i; i * j < N; j++)
+        a[i * j] = 0;
+  for (i = 2; i < N; i++)
+    if (a[i])
+      printf("%4ld ", i);
+  printf("\n");
 }
 
 /* ---------------------------------------------------------------------
@@ -66,5 +67,4 @@ P03.06_dynamic_memory_allocation_for_an_array.exe 1000
 709  719  727  733  739  743  751  757  761  769  773  787  797  809
 811  821  823  827  829  839  853  857  859  863  877  881  883  887
 907  911  919  929  937  941  947  953  967  971  977  983  991  997
-
 --------------------------------------------------------------------- */

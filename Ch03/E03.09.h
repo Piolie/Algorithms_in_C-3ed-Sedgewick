@@ -6,5 +6,6 @@ coordinates instead of Cartesian coordinates.
 --------------------------------------------------------------------- */
 
 typedef struct {
-    float r; float phi;
-    } point;
+  float r;
+  float phi;
+} point;

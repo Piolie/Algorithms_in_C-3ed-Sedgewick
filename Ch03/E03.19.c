@@ -16,28 +16,24 @@ tries needed.
 
 #define N 1000
 
-int main(void)
-{
-    char array[N] = {0};
-    int number, numbers_left, tries = 0;
+int main(void) {
+  char array[N] = {0};
+  int number, numbers_left, tries = 0;
 
-    for (numbers_left = N; numbers_left > 0;)
-    {
-        number = rand() % N;
-        tries++;
-        // printf("number = %d\n", number);
-        if (!array[number])
-        {
-            array[number] = 1;
-            numbers_left--;
-        }
+  for (numbers_left = N; numbers_left > 0;) {
+    number = rand() % N;
+    tries++;
+    // printf("number = %d\n", number);
+    if (!array[number]) {
+      array[number] = 1;
+      numbers_left--;
     }
-    printf("Number of tries before getting all ints < %d = %d\n", N, tries);
+  }
+  printf("Number of tries before getting all ints < %d = %d\n", N, tries);
 }
 
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
 Number of tries before getting all ints < 1000 = 8565
-
 --------------------------------------------------------------------- */

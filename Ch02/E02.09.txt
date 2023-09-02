@@ -6,13 +6,13 @@ in binary.
 --------------------------------------------------------------------- */
 
 Let's suppose N requires n bits for its binary representation. Then:
-    N = b_0 * 2^0 + b_1 * 2^1 + ... + b_(n-2) * 2^(n-2) + 1 * 2^(n-1)
+  N = b_0 * 2^0 + b_1 * 2^1 + ... + b_(n-2) * 2^(n-2) + 1 * 2^(n-1)
 
 Note that b_(n-1) must be 1; all the others are either 0 or 1.
 
 This means that:
-    2^(n-1) <= N < 2^n
+  2^(n-1) <= N < 2^n
 applying lg to all members of the inequalities: (remember lg 2^i = i)
-    n-1 <= lg N < n
+  n-1 <= lg N < n
 since n is an integer, it means that:
-    n = floor[lg N] + 1
+  n = floor[lg N] + 1

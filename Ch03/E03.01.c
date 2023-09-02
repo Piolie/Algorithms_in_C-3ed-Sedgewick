@@ -5,26 +5,25 @@ Find the largest and smallest numbers that you can represent with
 types int, long int, short int, float, and double in your programming
 environment.
 --------------------------------------------------------------------- */
-#include <stdio.h>
-#include <limits.h>
-#include <float.h>
 
-int main(void)
-{
-    printf("%d \t<= int \t\t<= %d\n", INT_MIN, INT_MAX);
-    printf("%ld \t<= long int \t<= %ld\n", LONG_MIN, LONG_MAX);
-    printf("%d \t\t<= short int \t<= %d\n", SHRT_MIN, SHRT_MAX);
-    printf("%f \t<= float \t<= %f\n", FLT_MIN, FLT_MAX);
-    printf("%f \t<= double \t<= %f\n", DBL_MIN, DBL_MAX);
+#include <float.h>
+#include <limits.h>
+#include <stdio.h>
+
+int main(void) {
+  printf("%d\t<= int\t\t<= %d\n", INT_MIN, INT_MAX);
+  printf("%ld\t<= long int\t<= %ld\n", LONG_MIN, LONG_MAX);
+  printf("%d\t\t<= short int\t<= %d\n", SHRT_MIN, SHRT_MAX);
+  printf("%e\t<= float\t\t<= %e\n", FLT_MIN, FLT_MAX);
+  printf("%e\t<= double\t\t<= %e\n", DBL_MIN, DBL_MAX);
 }
 
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
--2147483648     <= int          <= 2147483647
--2147483648     <= long int     <= 2147483647
--32768          <= short int    <= 32767
-0.000000        <= float        <= 340282346638528859811704183484516925440.000000
-0.000000        <= double       <= 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
-
+-2147483648    <= int        <= 2147483647
+-2147483648    <= long int   <= 2147483647
+-32768         <= short int  <= 32767
+1.175494e-38   <= float      <= 3.402823e+38
+2.225074e-308  <= double     <= 1.797693e+308
 --------------------------------------------------------------------- */

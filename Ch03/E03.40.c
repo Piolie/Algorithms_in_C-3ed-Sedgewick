@@ -14,58 +14,50 @@ I'll assume that we have to leave the given list unmodified and generate
 a new list with copies of the nodes nodes for which aux_func is true.
 --------------------------------------------------------------------- */
 
+#include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
 
 #define N 100
 
-link prune_list(link head, int (*aux_func)(link))
-{
-    link t, return_head = malloc(sizeof *return_head);
+link prune_list(link head, int (*aux_func)(link)) {
+  link t, return_head = malloc(sizeof *return_head);
 
-    t = return_head;
-    while (head->next)
-    {
-        head = head->next;
-        if (aux_func(head))
-        {
-            t->next = malloc(sizeof *t);
-            t = t->next;
-            t->item = head->item;
-        }
+  t = return_head;
+  while (head->next) {
+    head = head->next;
+    if (aux_func(head)) {
+      t->next = malloc(sizeof *t);
+      t = t->next;
+      t->item = head->item;
     }
+  }
+  t->next = NULL;
+  return return_head;
+}
+
+int aux_func(link l) { return l->item >= 500; }
+
+int main(void) {
+  int i;
+  link head = malloc(sizeof *head);
+  head->next = NULL;
+  link t;
+
+  printf("Unsorted nodes:\n");
+  for (i = 0, t = head; i < N; i++) {
+    t->next = malloc(sizeof *t);
+    t = t->next;
     t->next = NULL;
-    return return_head;
-}
+    t->item = rand() % 1000;
+    printf("%3d ", t->item);
+  }
 
-int aux_func(link l)
-{
-    return l->item >= 500;
-}
+  link new_head = prune_list(head, aux_func);
 
-int main(void)
-{
-    int i;
-    link head = malloc(sizeof *head);
-    head->next = NULL;
-    link t;
-
-    printf("Unsorted nodes:\n");
-    for (i = 0, t = head; i < N; i++)
-    {
-        t->next = malloc(sizeof *t);
-        t = t->next;
-        t->next = NULL;
-        t->item = rand() % 1000;
-        printf("%3d ", t->item);
-    }
-
-    link new_head = prune_list(head, aux_func);
-
-    printf("\n\nRemoved nodes:\n");
-    for (t = new_head->next; t != NULL; t = t->next)
-        printf("%3d ", t->item);
+  printf("\n\nRemoved nodes:\n");
+  for (t = new_head->next; t != NULL; t = t->next)
+    printf("%3d ", t->item);
 }
 
 /* ---------------------------------------------------------------------
@@ -86,5 +78,4 @@ Removed nodes:
     859 723 741 529 778             842             942     648     805
 890 729                     548 629 623     954 756 840 966     931
 944     626     537 538         929 541
-
 --------------------------------------------------------------------- */

@@ -15,8 +15,8 @@ dependence upon implementation details.
 
 /* ---------------------------------------------------------------------
 The book says (p. 91):
-    We assume that another part of the program uses `typedef` or some
-    other mechanism to allow us to declare variables of type `Item`.
+  We assume that another part of the program uses `typedef` or some
+  other mechanism to allow us to declare variables of type `Item`.
 
 (It should probably say "type `itemType`".)
 
@@ -25,10 +25,10 @@ programs and exercises, so I'll add that to this interface file.
 --------------------------------------------------------------------- */
 
 typedef int itemType;
-typedef struct node* link;
+typedef struct node *link;
 struct node {
-    itemType item;
-    link next;
+  itemType item;
+  link next;
 };
 typedef link Node;
 void initNodes(int);
@@ -37,4 +37,4 @@ void freeNode(link);
 void insertNext(link, link);
 link deleteNext(link);
 link Next(link);
- int Item(link);
+int Item(link);

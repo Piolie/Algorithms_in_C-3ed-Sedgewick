@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 1.21
+                             EXERCISE 1.21
 ------------------------------------------------------------------------
 Show that Property 1.3 holds for the algorithm described in Exercise
 1.20.
@@ -26,13 +26,13 @@ Observation: since the height of a tree is, by definition, the maximum
              depth among its nodes, P(Ti) = i and P(Tj) = j.
 
 If i < j the resulting tree will have height j. Thus:
-    P(Ti+Tj) = j = P(Tj)
+  P(Ti+Tj) = j = P(Tj)
 But we know that P(Tj) <= lg Nj, and that lg Nj <= lg (Ni + Nj) = lg N:
-    P(Ti+Tj) <= lg N
+  P(Ti+Tj) <= lg N
 
 If i = j the resulting tree will have height 1 + j. Thus:
-    P(Ti+Tj) = 1 + j = 1 + P(Tj)
+  P(Ti+Tj) = 1 + j = 1 + P(Tj)
 But we know that P(Tj) <= lg Nj, so:
-    P(Ti+Tj) <= 1 + lg Nj = lg (Nj + Nj) = lg N
+  P(Ti+Tj) <= 1 + lg Nj = lg (Nj + Nj) = lg N
 
 So in both cases the property is preserved. ■

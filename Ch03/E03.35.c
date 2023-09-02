@@ -13,9 +13,9 @@ beginning of the list.
 
 The function follows the "Dummy head node, null tail" convention. There
 are some corner cases that it needs to consider:
-    - null head;
-    - empty list;
-    - first node is the smallest;
+  - null head;
+  - empty list;
+  - first node is the smallest;
 
 For the first two cases there is an if guard that checks both head and
 head->next for nullness. In either case it returns doing nothing.
@@ -24,65 +24,61 @@ The last case is handled by checking whether the min node is already the
 first. If that's the case then the function returns doing nothing.
 --------------------------------------------------------------------- */
 
+#include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
 
 #define N 100
 
-void smallest_to_first(link head)
-{
-    if (!head || !(head->next))
-        return;
+void smallest_to_first(link head) {
+  if (!head || !(head->next))
+    return;
 
-    link x = head, t = head->next;
-    link prev_node_ptr = x, min_node_ptr = t;
+  link x = head, t = head->next;
+  link prev_node_ptr = x, min_node_ptr = t;
 
-    // find smallest item; keep reference to that node and the previous one
-    for(int min = t->item; t != NULL; x = t, t = t->next)
-    {
-        if (t->item < min)
-        {
-            min = t->item;
-            prev_node_ptr = x;
-            min_node_ptr = t;
-        }
+  // find smallest item; keep reference to that node and the previous one
+  for (int min = t->item; t != NULL; x = t, t = t->next) {
+    if (t->item < min) {
+      min = t->item;
+      prev_node_ptr = x;
+      min_node_ptr = t;
     }
+  }
 
-    // if head->next == min_node_ptr then the min node is already at the beginning
-    if (head->next == min_node_ptr)
-        return;
+  // if head->next == min_node_ptr then the min node is already at the beginning
+  if (head->next == min_node_ptr)
+    return;
 
-    // skip min node
-    prev_node_ptr->next = min_node_ptr->next;
+  // skip min node
+  prev_node_ptr->next = min_node_ptr->next;
 
-    // set min node link to head->next and append min node to the beginning of the list
-    min_node_ptr->next = head->next;
-    head->next = min_node_ptr;
+  // set min node link to head->next and append min node to the beginning of the
+  // list
+  min_node_ptr->next = head->next;
+  head->next = min_node_ptr;
 }
 
-int main(void)
-{
-    int i;
-    link head = malloc(sizeof *head);
-    head->next = NULL;
-    link t;
+int main(void) {
+  int i;
+  link head = malloc(sizeof *head);
+  head->next = NULL;
+  link t;
 
-    printf("Unsorted nodes:\n");
-    for (i = 0, t = head; i < N; i++)
-    {
-        t->next = malloc(sizeof *t);
-        t = t->next;
-        t->next = NULL;
-        t->item = rand() % 1000;
-        printf("%3d ", t->item);
-    }
+  printf("Unsorted nodes:\n");
+  for (i = 0, t = head; i < N; i++) {
+    t->next = malloc(sizeof *t);
+    t = t->next;
+    t->next = NULL;
+    t->item = rand() % 1000;
+    printf("%3d ", t->item);
+  }
 
-    smallest_to_first(head);
+  smallest_to_first(head);
 
-    printf("\n\nSmallest to first:\n");
-    for (t = head->next; t != NULL; t = t->next)
-        printf("%3d ", t->item);
+  printf("\n\nSmallest to first:\n");
+  for (t = head->next; t != NULL; t = t->next)
+    printf("%3d ", t->item);
 }
 
 /* ---------------------------------------------------------------------
@@ -103,5 +99,4 @@ Smallest to first:
 757  37 859 723 741 529 778 316  35 190 842 288 106  40 942 264 648 446
 805 890 729 370 350 101 393 548 629 623  84 954 756 840 966 376 931 308
 944 439 626 323 537 538 118  82 929 541
-
 --------------------------------------------------------------------- */

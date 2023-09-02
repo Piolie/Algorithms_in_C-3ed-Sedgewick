@@ -4,29 +4,25 @@
 Do Exercise 3.2 for r = 2, 4, and 16.
 --------------------------------------------------------------------- */
 
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main(void)
-{
-    for (int r = 2; r <= 16; r *= 2)
-    {
-        printf("r = %d:\n", r);
-        for (int N = 1000; N <= 1000000; N *= 10)
-        {
-            float m1 = 0, m2 = 0;
-            printf("\tN = %d:\n", N);
-            for (int i = 0; i < N; i++)
-            {
-                int x = rand() % r;
-                m1 += ((float)x)/N;
-                m2 += ((float)x*x)/N;
-            }
-            printf("\t\t     Avg.: %f\n", m1);
-            printf("\t\tStd. dev.: %f\n", sqrt(m2 - m1*m1));
-        }
+int main(void) {
+  for (int r = 2; r <= 16; r *= 2) {
+    printf("r = %d:\n", r);
+    for (int N = 1000; N <= 1000000; N *= 10) {
+      float m1 = 0, m2 = 0;
+      printf("\tN = %d:\n", N);
+      for (int i = 0; i < N; i++) {
+        int x = rand() % r;
+        m1 += ((float)x) / N;
+        m2 += ((float)x * x) / N;
+      }
+      printf("\t\t     Avg.: %f\n", m1);
+      printf("\t\tStd. dev.: %f\n", sqrt(m2 - m1 * m1));
     }
+  }
 }
 
 /* ---------------------------------------------------------------------
@@ -84,7 +80,6 @@ r = 16:
         N = 1000000:
                      Avg.: 7.478677
                 Std. dev.: 4.627225
-
 ------------------------------------------------------------------------
 If the distribution of rand is uniform in the interval [0, r-1], then
 the theoretical values are:
@@ -107,5 +102,4 @@ r = 8:
 r = 16:
          Avg.: 7.5
     Std. dev.: 4.610
-
 --------------------------------------------------------------------- */

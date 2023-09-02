@@ -13,9 +13,9 @@ the three vertices of the triangle.
 --------------------------------------------------------------------- */
 
 typedef struct {
-    point A;
-    point B;
-    point C;
-    } triangle;
+  point A;
+  point B;
+  point C;
+} triangle;
 
 float area(triangle T);

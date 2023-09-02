@@ -9,13 +9,12 @@ and answer Exercise 1.22 for your implementations.
 ------------------------------------------------------------------------
 I've chosen Python for the reimplementation.
 ------------------------------------------------------------------------
-                        WEIGHTED QUICK-UNION
+                               Quick-find
 ------------------------------------------------------------------------
 """
 
 N = 10000
 id = []
-sz = [1]*N
 
 for i in range(N):
     id.append(i)
@@ -24,21 +23,11 @@ while True:
     pair = input()
     p, q = [int(x) for x in pair.split()]
 
-    i = p
-    while i != id[i]:
-        i = id[i]
-    j = q
-    while j != id[j]:
-        j = id[j]
-
-    if i == j:
+    if id[p] == id[q]:
         continue
 
-    if sz[i] < sz[j]:
-        id[i] = j
-        sz[j] += sz[i]
-    else:
-        id[j] = i
-        sz[i] += sz[j]
-
+    t = id[p]
+    for i in range(N):
+        if id[i] == t:
+            id[i] = id[q]
     print("", p, q)

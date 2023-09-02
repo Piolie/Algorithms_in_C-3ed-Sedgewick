@@ -19,39 +19,34 @@ Wikipedia: https://en.wikipedia.org/wiki/Euclidean_algorithm
 #define ROWS 10
 #define COLUMNS 10
 
-void print_array(char a[][COLUMNS], int rows, int columns)
-{
-    for (int r = 0; r < rows; r++)
-    {
-        for (int c = 0; c < columns; c++)
-            printf(" %d", a[r][c]);
-        printf("\n");
-    }
+void print_array(char a[][COLUMNS], int rows, int columns) {
+  for (int r = 0; r < rows; r++) {
+    for (int c = 0; c < columns; c++)
+      printf(" %d", a[r][c]);
+    printf("\n");
+  }
 }
 
-int gcd(int a, int b)
-{
-    int t;
-    while (b != 0)
-    {
-        t = b;
-        b = a % b;
-        a = t;
-    }
-    return a;
+int gcd(int a, int b) {
+  int t;
+  while (b != 0) {
+    t = b;
+    b = a % b;
+    a = t;
+  }
+  return a;
 }
 
-int main(void)
-{
-    char a[ROWS][COLUMNS];
-    int r, c;
-    for (r = 0; r < ROWS; r++)
-        for (c = r; c < COLUMNS; c++)
-            if (gcd(r, c) == 1)
-                a[r][c] = a[c][r] = 1;
-            else
-                a[r][c] = a[c][r] = 0;
-    print_array(a, ROWS, COLUMNS);
+int main(void) {
+  char a[ROWS][COLUMNS];
+  int r, c;
+  for (r = 0; r < ROWS; r++)
+    for (c = r; c < COLUMNS; c++)
+      if (gcd(r, c) == 1)
+        a[r][c] = a[c][r] = 1;
+      else
+        a[r][c] = a[c][r] = 0;
+  print_array(a, ROWS, COLUMNS);
 }
 
 /* ---------------------------------------------------------------------
@@ -68,5 +63,4 @@ E03.65.exe
  0 1 1 1 1 1 1 0 1 1
  0 1 0 1 0 1 0 1 0 1
  0 1 1 0 1 1 0 1 1 0
-
 --------------------------------------------------------------------- */

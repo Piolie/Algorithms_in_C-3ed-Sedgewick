@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.51
+                             EXERCISE 2.51
 ------------------------------------------------------------------------
 You are given the information that the time complexity of one problem is
 N log N and that the time complexity of another problem is N^3. What
@@ -8,18 +8,18 @@ algorithms that solve the problems?
 --------------------------------------------------------------------- */
 
 The book states:
-    The field of computational complexity is the branch of analysis of
-    algorithms that helps us to understand the fundamental limitations
-    that we can expect to encounter when designing algorithms. The
-    overall goal is to determine the worst-case running time of the best
-    algorithm to solve a given problem, to within a constant factor.
-    This function is called the complexity of the problem.
+  The field of computational complexity is the branch of analysis of
+  algorithms that helps us to understand the fundamental limitations
+  that we can expect to encounter when designing algorithms. The
+  overall goal is to determine the worst-case running time of the best
+  algorithm to solve a given problem, to within a constant factor.
+  This function is called the complexity of the problem.
 
-    When we can prove that the worst-case running time of an algorithm
-    to solve a certain problem is O(f(N)), we say that f(N) is an upper
-    bound on the complexity of the problem. In other words, the running
-    time of the best algorithm to solve a problem is no higher than the
-    running time of any particular algorithm to solve the problem.
+  When we can prove that the worst-case running time of an algorithm
+  to solve a certain problem is O(f(N)), we say that f(N) is an upper
+  bound on the complexity of the problem. In other words, the running
+  time of the best algorithm to solve a problem is no higher than the
+  running time of any particular algorithm to solve the problem.
 
 For the first problem, no algorithm that solves it will have a better
 worst-case running time than N log N.

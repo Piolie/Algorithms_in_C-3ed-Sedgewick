@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.38
+                             EXERCISE 2.38
 ------------------------------------------------------------------------
 Give a table of the values of C_N in Formula 2.4 for 1 <= N <= 32, for
 the following three cases: (i) interpret N/2 to mean floor[N/2];
@@ -9,48 +9,43 @@ C_floor[N/2] + C_ceil[N/2].
 
 /* ---------------------------------------------------------------------
 Formula 2.4:
-    C_N = 2C_(N/2) + N, for N <= 2 with C_1 = 0.
-
+  C_N = 2C_(N/2) + N, for N <= 2 with C_1 = 0.
 --------------------------------------------------------------------- */
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
-unsigned C_N_floor(unsigned N)
-{
-    if(N == 1)
-        return 0;
+unsigned C_N_floor(unsigned N) {
+  if (N == 1)
+    return 0;
 
-    return 2*C_N_floor(floor(N/2.0)) + N;
+  return 2 * C_N_floor(floor(N / 2.0)) + N;
 }
 
-unsigned C_N_ceil(double N)
-{
-    if(N == 1)
-        return 0;
+unsigned C_N_ceil(double N) {
+  if (N == 1)
+    return 0;
 
-    return 2*C_N_ceil(ceil(N/2.0)) + N;
+  return 2 * C_N_ceil(ceil(N / 2.0)) + N;
 }
 
-unsigned C_N_floor_ceil(double N)
-{
-    if(N == 1)
-        return 0;
+unsigned C_N_floor_ceil(double N) {
+  if (N == 1)
+    return 0;
 
-    return C_N_floor_ceil(floor(N/2.0)) + C_N_floor_ceil(ceil(N/2.0)) + N;
+  return C_N_floor_ceil(floor(N / 2.0)) + C_N_floor_ceil(ceil(N / 2.0)) + N;
 }
 
-int main(void)
-{
-    printf("N\tC_N (i)\t\tC_N (ii)\tC_N (iii)\n");
-    printf("----------------------------------------------\n");
-    for (unsigned N = 3; N < 33; N++)
-    {
-        unsigned CN_recurrence1 = C_N_floor(N);
-        unsigned CN_recurrence2 = C_N_ceil(N);
-        unsigned CN_recurrence3 = C_N_floor_ceil(N);
-        printf("%u\t%u\t\t%u\t\t%u\n", N, CN_recurrence1, CN_recurrence2, CN_recurrence3);
-    }
+int main(void) {
+  printf("N\tC_N (i)\t\tC_N (ii)\tC_N (iii)\n");
+  printf("----------------------------------------------\n");
+  for (unsigned N = 3; N < 33; N++) {
+    unsigned CN_recurrence1 = C_N_floor(N);
+    unsigned CN_recurrence2 = C_N_ceil(N);
+    unsigned CN_recurrence3 = C_N_floor_ceil(N);
+    printf("%u\t%u\t\t%u\t\t%u\n", N, CN_recurrence1, CN_recurrence2,
+           CN_recurrence3);
+  }
 }
 
 /* ---------------------------------------------------------------------
@@ -88,6 +83,4 @@ N       C_N (i)         C_N (ii)        C_N (iii)
 30      112             156             148
 31      113             159             154
 32      160             160             160
-
 --------------------------------------------------------------------- */
-

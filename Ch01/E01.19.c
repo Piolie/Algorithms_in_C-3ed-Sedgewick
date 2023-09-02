@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 1.19
+                             EXERCISE 1.19
 ------------------------------------------------------------------------
 Give an example showing that modifying quick union (Program 1.2) to
 implement full path compression (see Exercise 1.16) is not sufficient to
@@ -9,38 +9,34 @@ ensure that the trees have no long paths.
 #include <stdio.h>
 #define N 10000
 
-void print_id(int id[])
-{
-    printf("id = ");
-    for (int i = 0; i < 10; i++)
-        printf("%d ", id[i]);
-    printf("...\n");
+void print_id(int id[]) {
+  printf("id = ");
+  for (int i = 0; i < 10; i++)
+    printf("%d ", id[i]);
+  printf("...\n");
 }
 
-int find(int id[], int i)
-{
-    if (i == id[i])
-        return i;
-    return id[i] = find(id, id[i]);
+int find(int id[], int i) {
+  if (i == id[i])
+    return i;
+  return id[i] = find(id, id[i]);
 }
 
-int main(void)
-{
-    int i, p, q, j, id[N];
-    for (i = 0; i < N; i++)
-        id[i] = i;
-    while (scanf("%d %d", &p, &q) == 2)
-    {
-        i = find(id, p);
-        j = find(id, q);
-        if (i == j)
-            continue;
+int main(void) {
+  int i, p, q, j, id[N];
+  for (i = 0; i < N; i++)
+    id[i] = i;
+  while (scanf("%d %d", &p, &q) == 2) {
+    i = find(id, p);
+    j = find(id, q);
+    if (i == j)
+      continue;
 
-        id[i] = j;
+    id[i] = j;
 
-        print_id(id);
-        printf(" %d %d\n", p, q);
-    }
+    print_id(id);
+    printf(" %d %d\n", p, q);
+  }
 }
 
 /* ---------------------------------------------------------------------
@@ -77,5 +73,4 @@ id = 1 2 3 4 5 6 7 8 8 9 ...
 8 9
 id = 1 2 3 4 5 6 7 8 9 9 ...
  8 9
-
 --------------------------------------------------------------------- */

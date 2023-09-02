@@ -2,7 +2,8 @@
         This code is from "Algorithms in C, Third Edition,
         by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
-                   PROGRAM 3.5 Sieve of Eratosthenes
+                              PROGRAM 3.5
+                         Sieve of Eratosthenes
 ------------------------------------------------------------------------
 The goal of this program is to set a[i] to 1 if i is prime, and to 0 if
 i is not prime. First, it sets to 1 all array elements, to indicate that
@@ -22,19 +23,18 @@ huge, or we could allocate it dynamically (see Program 3.6).
 
 #define N 10000
 
-int main(void)
-{
-    int i, j, a[N];
-    for (i = 2; i < N; i++)
-        a[i] = 1;
-    for (i = 2; i < N; i++)
-        if (a[i])
-            for (j = i; i*j < N; j++)
-                a[i*j] = 0;
-    for (i = 2; i < N; i++)
-        if (a[i])
-            printf("%4d ", i);
-    printf("\n");
+int main(void) {
+  int i, j, a[N];
+  for (i = 2; i < N; i++)
+    a[i] = 1;
+  for (i = 2; i < N; i++)
+    if (a[i])
+      for (j = i; i * j < N; j++)
+        a[i * j] = 0;
+  for (i = 2; i < N; i++)
+    if (a[i])
+      printf("%4d ", i);
+  printf("\n");
 }
 
 /* ---------------------------------------------------------------------
@@ -128,5 +128,4 @@ int main(void)
 9643 9649 9661 9677 9679 9689 9697 9719 9721 9733 9739 9743 9749 9767
 9769 9781 9787 9791 9803 9811 9817 9829 9833 9839 9851 9857 9859 9871
 9883 9887 9901 9907 9923 9929 9931 9941 9949 9967 9973
-
 --------------------------------------------------------------------- */

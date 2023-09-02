@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.46
+                             EXERCISE 2.46
 ------------------------------------------------------------------------
 Develop generalized recurrences and solutions similar to Exercise 2.45
 for Formulas 2.2 through 2.5.

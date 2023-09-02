@@ -1,38 +1,38 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.17
+                             EXERCISE 2.17
 ------------------------------------------------------------------------
 Give a simple expression for floor[lg F_N].
 --------------------------------------------------------------------- */
 
 The Fibonacci numbers can be calculated as:
-    F_N = [f]
+  F_N = [f]
 where
-    f = phi^5/sqrt 5
+  f = phi^5/sqrt 5
 and [ ] denotes rounding to the closest integer.
 
 Suppose f lies between the integers k and k+1. There are three
 possibilities:
 
 1) f is closer to k, that is k < f < k + 1/2
-   ----- k ----- f ----- k+1/2 ----- f+1/2 ----- k+1 -----
+  ----- k ----- f ----- k+1/2 ----- f+1/2 ----- k+1 -----
 This implies that
-    k < f + 1/2 < k + 1
+  k < f + 1/2 < k + 1
 so
-    F_N = [f] = k = floor[f + 1/2]
+  F_N = [f] = k = floor[f + 1/2]
 
 2) f is closer to k+1, that is k + 1/2 < f < k + 1
-   ----- k ---------- k+1/2 ----- f ----- k+1 ----- f+1/2
+  ----- k ---------- k+1/2 ----- f ----- k+1 ----- f+1/2
 This implies that
-    k + 1 < f + 1/2 < k + 2
+  k + 1 < f + 1/2 < k + 2
 so
-    F_N = [f] = k + 1 = floor[f + 1/2]
+  F_N = [f] = k + 1 = floor[f + 1/2]
 
 3) f is lies exactly in the middle, that is f  = k + 1/2
-   ----- k --------------- f --------------- k+1 -----
+  ----- k --------------- f --------------- k+1 -----
 I'm not sure this is even possible. There are many rounding strategies
 for dealing with cases like these. All arbitrary. See:
 https://en.wikipedia.org/wiki/Rounding#Rounding_to_the_nearest_integer
 
 Ignoring this anomalous case, we can see that a simple expression for
 F_N is:
-    F_N = floor[phi^5/sqrt 5 + 1/2]
+  F_N = floor[phi^5/sqrt 5 + 1/2]

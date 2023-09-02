@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 1.25
+                             EXERCISE 1.25
 ------------------------------------------------------------------------
 Suppose that we use weighted quick union to process 10 times as many
 connections on a new computer that is 10 times as fast as an old one.
@@ -15,34 +15,34 @@ referred to in Property 1.3.
 Let's call T1 to the time it takes the old computer to process N1
 connections using the weighted quick union algorithm. From Property 1.3
 we know that:
-    T1 = k1*lg N1
+  T1 = k1*lg N1
 The second computer takes:
-    T2 = k2*lg N2
+  T2 = k2*lg N2
 Since it works on 10 times as many connections: N2 = 10*N1, and since
 it's 10 times faster: k2 = k1/10. Substituting:
-    T2 = k1/10*lg (10*N1)
+  T2 = k1/10*lg (10*N1)
 
 Taking the quotient:
-    T2    k1/10*lg (10*N1)
-   ---- = ----------------
-    T1       k1*lg N1
+   T2    k1/10*lg (10*N1)
+  ---- = ----------------
+   T1       k1*lg N1
 
-            lg 10 + lg N1
-        = ------------------
-              10 lg N1
+          lg 10 + lg N1
+       = ----------------
+             10 lg N1
 
-             lg 10       1
-        = ----------- + ----
-           10 lg N1      10
+            lg 10       1
+       = ----------- + ----
+          10 lg N1      10
 
 If N1 is a very large number, then:
-       lg 10
-    ----------- ~ 0
-     10 lg N1
+     lg 10
+  ----------- ~ 0
+   10 lg N1
 
 Finally:
-          T1
-    T2 ~ ----
-          10
+        T1
+  T2 ~ ----
+        10
 
 Which means the new computer takes 10 times _less_ to finish.

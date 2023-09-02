@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.45
+                             EXERCISE 2.45
 ------------------------------------------------------------------------
 Consider the family of recurrences like Formula 2.1, where we allow
 N/2 to be interpreted as floor[N/2] or ceil[N/2], and we require only

@@ -12,34 +12,33 @@ circular list is. Also the exercise doesn't state that we have to end
 with a circular list as a result of the "inserting operation". For what
 I know, we could simply do x->next = t and be done with it.
 
-   x           t                x          t
-   *           *                * -------- *
- /   \       /   \            /          /   \
-*     *     *     *          *     *    *     *
-|     |     |     |    -->   |     |    |     |
-*     *     *     *          *     *    *     *
- \   /       \   /            \   /      \   /
-   *           *                *          *
+     x           t                x          t
+     *           *                * -------- *
+   /   \       /   \            /          /   \
+  *     *     *     *          *     *    *     *
+  |     |     |     |    -->   |     |    |     |
+  *     *     *     *          *     *    *     *
+   \   /       \   /            \   /      \   /
+     *           *                *          *
 
 I guess the author was thinking more of a solution like this:
 
-   x           t                x          t
-   *           *                * -------- *
- /   \       /   \            /              \
-*     *     *     *          *     * -- *     *
-|     |     |     |    -->   |     |    |     |
-*     *     *     *          *     *    *     *
- \   /       \   /            \   /      \   /
-   *           *                *          *
+     x           t                x          t
+     *           *                * -------- *
+   /   \       /   \            /              \
+  *     *     *     *          *     * -- *     *
+  |     |     |     |    -->   |     |    |     |
+  *     *     *     *          *     *    *     *
+   \   /       \   /            \   /      \   /
+     *           *                *          *
 
 Here, we end with a big circular list and the sequence of nodes from
 each list is preserved.
-
 --------------------------------------------------------------------- */
 
 link last = x->next;
 link temp = t;
 x->next = t;
 while (temp->next != t)
-    temp = temp->next;
+  temp = temp->next;
 temp->next = last;

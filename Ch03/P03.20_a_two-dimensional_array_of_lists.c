@@ -2,7 +2,8 @@
         This code is from "Algorithms in C, Third Edition,
         by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
-             PROGRAM 3.20 A two-dimensional array of lists
+                              PROGRAM 3.20
+                    A two-dimensional array of lists
 ------------------------------------------------------------------------
 This program illustrates the effectiveness of proper data-structure
 choice, for the geometric computation of Program 3.8. It divides the
@@ -32,73 +33,65 @@ I'd say the bug is in the definition of randFloat. Diving by
 (RAND_MAX + 1) instead of by RAND_MAX solves the issue.
 --------------------------------------------------------------------- */
 
+#include "Point.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "Point.h"
 
-typedef struct node* link;
-struct node
-{
-    point p;
-    link next;
+typedef struct node *link;
+struct node {
+  point p;
+  link next;
 };
 link **grid;
 int G;
 float d;
 int cnt = 0;
 
-link **malloc2d(int r, int c)
-{
-    int i;
-    link **t = malloc(r * sizeof(link *));
-    for (i = 0; i < r; i++)
-        t[i] = malloc(c * sizeof(link));
-    return t;
+link **malloc2d(int r, int c) {
+  int i;
+  link **t = malloc(r * sizeof(link *));
+  for (i = 0; i < r; i++)
+    t[i] = malloc(c * sizeof(link));
+  return t;
 }
 
-float randFloat(void)
-{
-    return 1.0*rand()/RAND_MAX;
+float randFloat(void) { return 1.0 * rand() / RAND_MAX; }
+
+float distance(point a, point b) {
+  float dx = a.x - b.x, dy = a.y - b.y;
+  return sqrt(dx * dx + dy * dy);
 }
 
-float distance(point a, point b)
-{
-    float dx = a.x - b.x, dy = a.y - b.y;
-    return sqrt(dx*dx + dy*dy);
+void gridinsert(float x, float y) {
+  int i, j;
+  link s;
+  int X = x * G + 1;
+  int Y = y * G + 1;
+  link t = malloc(sizeof *t);
+  t->p.x = x;
+  t->p.y = y;
+  for (i = X - 1; i <= X + 1; i++)
+    for (j = Y - 1; j <= Y + 1; j++)
+      for (s = grid[i][j]; s != NULL; s = s->next)
+        if (distance(s->p, t->p) < d)
+          cnt++;
+  t->next = grid[X][Y];
+  grid[X][Y] = t;
 }
 
-void gridinsert(float x, float y)
-{
-    int i, j;
-    link s;
-    int X = x*G + 1;
-    int Y = y*G + 1;
-    link t = malloc(sizeof *t);
-    t->p.x = x;
-    t->p.y = y;
-    for (i = X-1; i <= X+1; i++)
-        for (j = Y-1; j <= Y+1; j++)
-            for (s = grid[i][j]; s != NULL; s = s->next)
-                if (distance(s->p, t->p) < d)
-                    cnt++;
-    t->next = grid[X][Y];
-    grid[X][Y] = t;
-}
-
-int main(int argc, char *argv[])
-{
-    (void)argc;
-    int i, j, N = atoi(argv[1]);
-    d = atof(argv[2]);
-    G = 1/d;
-    grid = malloc2d(G+2, G+2);
-    for (i = 0; i < G+2; i++)
-        for (j = 0; j < G+2; j++)
-            grid[i][j] = NULL;
-    for (i = 0; i < N; i++)
-        gridinsert(randFloat(), randFloat());
-    printf("%d edges shorter than %f\n", cnt, d);
+int main(int argc, char *argv[]) {
+  (void)argc;
+  int i, j, N = atoi(argv[1]);
+  d = atof(argv[2]);
+  G = 1 / d;
+  grid = malloc2d(G + 2, G + 2);
+  for (i = 0; i < G + 2; i++)
+    for (j = 0; j < G + 2; j++)
+      grid[i][j] = NULL;
+  for (i = 0; i < N; i++)
+    gridinsert(randFloat(), randFloat());
+  printf("%d edges shorter than %f\n", cnt, d);
 }
 
 /* ---------------------------------------------------------------------
@@ -123,6 +116,5 @@ P03.20_a_two-dimensional_array_of_lists.exe 10000 0.0001
 3 edges shorter than 0.000100
 
 P03.20_a_two-dimensional_array_of_lists.exe 100000 0.0001
-kaput! see note at the beggining
-
+kaput! see note at the beginning
 --------------------------------------------------------------------- */

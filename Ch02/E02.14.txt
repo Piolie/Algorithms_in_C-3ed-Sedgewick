@@ -1,28 +1,28 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.14
+                             EXERCISE 2.14
 ------------------------------------------------------------------------
 How many digits are there in the decimal representation of 1 million
 factorial?
 --------------------------------------------------------------------- */
 
 The factorial is defined as:
-    N! = 1 * 2 * 3 * ... * (N-1) * N
+  N! = 1 * 2 * 3 * ... * (N-1) * N
 Stirling's formula to approximate:
-    lg N! ~= N*lg N - N*lg e + lg sqrt(2*pi*N)
+  lg N! ~= N*lg N - N*lg e + lg sqrt(2*pi*N)
 
 The number of digits is ceil[log10 N!].
-    digits = ceil[log10 N!]
-           = ceil[lg N!/lg 10]
+  digits = ceil[log10 N!]
+         = ceil[lg N!/lg 10]
 
 using Stirling's formula:
-           ~= ceil[(N*lg N - N*lg e + lg sqrt(2*pi*N))/lg 10]
+         ~= ceil[(N*lg N - N*lg e + lg sqrt(2*pi*N))/lg 10]
 
 for very large N, as in our case, the first term dominates, so:
-           ~= ceil[(N*lg N)/lg 10]
-           ~= ceil[(10^6*lg 10^6)/lg 10]
-           ~= ceil[(10^6*6*lg 10)/lg 10]
-           ~= ceil[10^6*6]
-           ~= 6*10^6
-           ~= 6 000 000
+         ~= ceil[(N*lg N)/lg 10]
+         ~= ceil[(10^6*lg 10^6)/lg 10]
+         ~= ceil[(10^6*6*lg 10)/lg 10]
+         ~= ceil[10^6*6]
+         ~= 6*10^6
+         ~= 6 000 000
 
 Around 6 million digits!

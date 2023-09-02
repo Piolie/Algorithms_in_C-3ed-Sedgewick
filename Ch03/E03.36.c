@@ -16,7 +16,7 @@ next and references are kept to the first even and last odd. In the end,
 we assign head to the first odd, link the last odd to the first even and
 are done:
 
-head >>> 0 >>> 1 >>> 2 >>> 3 >>> 4 >>> 5
+  head >>> 0 >>> 1 >>> 2 >>> 3 >>> 4 >>> 5
 
     >>>>>>>>>>>>>>>>   >>>>>>>>>  NULL
    /                \ /         \ /
@@ -38,69 +38,64 @@ simply use odd at the end of the function. Also, the first else could
 just be a break.
 --------------------------------------------------------------------- */
 
+#include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
 
 #define N 100
 
-void rearrange_list_odd_even(link head)
-{
-    if (!head || !(head->next) || !(head->next->next))
-        return;
+void rearrange_list_odd_even(link head) {
+  if (!head || !(head->next) || !(head->next->next))
+    return;
 
-    link first_even = head->next;
-    link first_odd = head->next->next;
-    link last_odd = first_odd;
-    link even = first_even;
-    link odd = first_odd;
+  link first_even = head->next;
+  link first_odd = head->next->next;
+  link last_odd = first_odd;
+  link even = first_even;
+  link odd = first_odd;
 
-    for (;; odd = odd->next, even = even->next)
-        if (odd->next)
-        {
-            even->next = odd->next;
-            if (odd->next->next)
-                odd->next = odd->next->next;
-            else  // odd number of nodes
-            {
-                odd->next = NULL;
-                last_odd = odd;
-                break;
-            }
-        }
-        else  // even number of nodes
-        {
-            even->next = NULL;
-            last_odd = odd;
-            break;
-        }
-
-    head->next = first_odd;
-    last_odd->next = first_even;
-}
-
-int main(void)
-{
-    int i;
-    link head = malloc(sizeof *head);
-    head->next = NULL;
-    link t;
-
-    printf("Unsorted nodes:\n");
-    for (i = 0, t = head; i < N; i++)
+  for (;; odd = odd->next, even = even->next)
+    if (odd->next) {
+      even->next = odd->next;
+      if (odd->next->next)
+        odd->next = odd->next->next;
+      else // odd number of nodes
+      {
+        odd->next = NULL;
+        last_odd = odd;
+        break;
+      }
+    } else // even number of nodes
     {
-        t->next = malloc(sizeof *t);
-        t = t->next;
-        t->next = NULL;
-        t->item = rand() % 1000;
-        printf("%3d ", t->item);
+      even->next = NULL;
+      last_odd = odd;
+      break;
     }
 
-    rearrange_list_odd_even(head);
+  head->next = first_odd;
+  last_odd->next = first_even;
+}
 
-    printf("\n\nEvens after odds:\n");
-    for (t = head->next; t != NULL; t = t->next)
-        printf("%3d ", t->item);
+int main(void) {
+  int i;
+  link head = malloc(sizeof *head);
+  head->next = NULL;
+  link t;
+
+  printf("Unsorted nodes:\n");
+  for (i = 0, t = head; i < N; i++) {
+    t->next = malloc(sizeof *t);
+    t = t->next;
+    t->next = NULL;
+    t->item = rand() % 1000;
+    printf("%3d ", t->item);
+  }
+
+  rearrange_list_odd_even(head);
+
+  printf("\n\nEvens after odds:\n");
+  for (t = head->next; t != NULL; t = t->next)
+    printf("%3d ", t->item);
 }
 
 /* ---------------------------------------------------------------------
@@ -121,5 +116,4 @@ Evens after odds:
 962 705 281 961 995 827 391 902 292 421 718 447 771 869 667  35 703 322
 673 141 253 547 662  37 723 529 316 190 288  40 264 446 890 370   6 393
 629  84 756 966 931 944 626 537 118 929
-
 --------------------------------------------------------------------- */

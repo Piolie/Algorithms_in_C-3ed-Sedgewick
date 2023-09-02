@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.44
+                             EXERCISE 2.44
 ------------------------------------------------------------------------
 Solve the recurrence
     C_N = (2 + 1/lg N)*C_(N/2), for N >= 2 with C_1 = 1
@@ -30,38 +30,35 @@ We would have to apply induction to formally prove it.
 
 --------------------------------------------------------------------- */
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
-double C_N(double N)
-{
-    if(N == 1)
-        return 1;
+double C_N(double N) {
+  if (N == 1)
+    return 1;
 
-    return (2 + 1.0/log2(N))*C_N(N/2);
+  return (2 + 1.0 / log2(N)) * C_N(N / 2);
 }
 
-unsigned int C_2pown_formula(unsigned int n)
-{
-    double result = 1;
-    for (unsigned int i=1; i < n+1; i++)
-        result *= (2 + 1.0/i);
+unsigned int C_2pown_formula(unsigned int n) {
+  double result = 1;
+  for (unsigned int i = 1; i < n + 1; i++)
+    result *= (2 + 1.0 / i);
 
-    return (unsigned int)result;
+  return (unsigned int)result;
 }
 
-int main(void)
-{
-    printf("N\tC_N (rec.)\tC_N (form.)\tEqual?\n");
-    printf("----------------------------------------------\n");
-    unsigned int N, n;
-    for (N = 1, n = 0; N < 10000000; n++, N = (unsigned int)(exp2(n)))
-    {
-        unsigned int CN_recurrence = C_N(N);
-        unsigned int CN_formula = C_2pown_formula(n);
-        int equal = (CN_recurrence == CN_formula);
-        printf("%u\t%u\t\t%u\t\t%s\n", N, CN_recurrence, CN_formula, equal ? "TRUE" : "FALSE");
-    }
+int main(void) {
+  printf("N\tC_N (rec.)\tC_N (form.)\tEqual?\n");
+  printf("----------------------------------------------\n");
+  unsigned int N, n;
+  for (N = 1, n = 0; N < 10000000; n++, N = (unsigned int)(exp2(n))) {
+    unsigned int CN_recurrence = C_N(N);
+    unsigned int CN_formula = C_2pown_formula(n);
+    int equal = (CN_recurrence == CN_formula);
+    printf("%u\t%u\t\t%u\t\t%s\n", N, CN_recurrence, CN_formula,
+           equal ? "TRUE" : "FALSE");
+  }
 }
 
 /* ---------------------------------------------------------------------
@@ -93,5 +90,4 @@ N       C_N (rec.)      C_N (form.)     Equal?
 2097152 11036438        11036438        TRUE
 4194304 22574532        22574532        TRUE
 8388608 46130567        46130567        TRUE
-
 --------------------------------------------------------------------- */

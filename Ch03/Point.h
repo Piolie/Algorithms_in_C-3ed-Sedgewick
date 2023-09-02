@@ -10,8 +10,8 @@ function that computes the distance between two points.
 --------------------------------------------------------------------- */
 
 typedef struct {
-    float x;
-    float y;
+  float x;
+  float y;
 } point;
 
 float distance(point, point);

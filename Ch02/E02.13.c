@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.13
+                             EXERCISE 2.13
 ------------------------------------------------------------------------
 Write an efficient C function that computes ceil[lg lg N]. Do not use a
 library function.
@@ -7,40 +7,11 @@ library function.
 
 /* ---------------------------------------------------------------------
 If
-    n = ceil[lg lg N]
+  n = ceil[lg lg N]
 then
-    n >= lg lg N
+  n >= lg lg N
 so, we need to find the smallest integer n such that
-    2^(2^n) >= N
---------------------------------------------------------------------- */
-
-#include <stdio.h>
-
-unsigned long long power(unsigned int base, unsigned char exponent)
-{
-    /* warning: 0^0 is undefined; however, we will still return 1 */
-    if (exponent == 0)
-        return 1;
-    else
-        return base*power(base, exponent-1);
-}
-
-unsigned long long ceil_lg_lg(unsigned int n)
-{
-    unsigned long long ceil;
-    for (ceil = 0; power(2, power(2, ceil)) < n; ceil++);
-    return ceil;
-}
-
-int main(void)
-{
-    unsigned int N;
-    for (N = 2; N > 1; N*=2)
-        printf("ceil[lg lg %u] = %llu\n", N, ceil_lg_lg(N));
-}
-
-/* ---------------------------------------------------------------------
-                                 OUTPUT
+  2^(2^n) >= N
 ------------------------------------------------------------------------
 Note: the condition that ends the for loop, N > 1, works because N,
 being an unsigned int, wraps around when assigned a value greater than
@@ -48,10 +19,35 @@ being an unsigned int, wraps around when assigned a value greater than
 result ends up being 0, breaking the loop.
 
 Note that this might not happen if N was a signed int: strictly
-speaking, overflow of signed integers is undefined behavior.
+speaking, overflow of signed integers in C is undefined behavior.
+--------------------------------------------------------------------- */
 
+#include <stdio.h>
+
+unsigned long long power(unsigned int base, unsigned char exponent) {
+  // warning: 0^0 is undefined; however, we will still return 1
+  if (exponent == 0)
+    return 1;
+  else
+    return base * power(base, exponent - 1);
+}
+
+unsigned long long ceil_lg_lg(unsigned int n) {
+  unsigned long long ceil;
+  for (ceil = 0; power(2, power(2, ceil)) < n; ceil++)
+    ;
+  return ceil;
+}
+
+int main(void) {
+  unsigned int N;
+  for (N = 2; N > 1; N *= 2)
+    printf("ceil[lg lg %u] = %llu\n", N, ceil_lg_lg(N));
+}
+
+/* ---------------------------------------------------------------------
+                                 OUTPUT
 ------------------------------------------------------------------------
-
 ceil[lg lg 2] = 0
 ceil[lg lg 4] = 1
 ceil[lg lg 8] = 2
@@ -83,5 +79,4 @@ ceil[lg lg 268435456] = 5
 ceil[lg lg 536870912] = 5
 ceil[lg lg 1073741824] = 5
 ceil[lg lg 2147483648] = 5
-
 --------------------------------------------------------------------- */

@@ -2,7 +2,8 @@
         This code is from "Algorithms in C, Third Edition,
         by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
-                PROGRAM 3.17 Sorting an array of strings
+                              PROGRAM 3.17
+                      Sorting an array of strings
 ------------------------------------------------------------------------
 This program illustrates an important string-processing function:
 rearranging a set of strings into sorted order. We read strings into a
@@ -44,9 +45,9 @@ The correct usage of qsort for an array of strings is explained in the
 the following comp.lang.c FAQ question:
     [Question 13.8](http://www.c-faq.com/lib/qsort1.html).
 Also interesting are the discussions in the following SO question:
-    [What are the parameters in this C qsort function call?](https://stackoverflow.com/questions/2228695/)
-and specially the following comp.lang.c FAQ question:
-    [Question 13.9](http://www.c-faq.com/lib/qsort2.html).
+    [What are the parameters in this C qsort function
+call?](https://stackoverflow.com/questions/2228695/) and specially the following
+comp.lang.c FAQ question: [Question 13.9](http://www.c-faq.com/lib/qsort2.html).
 
 See exercise E03.64 for an implementation that uses qsort correctly.
 --------------------------------------------------------------------- */
@@ -54,29 +55,25 @@ See exercise E03.64 for an implementation that uses qsort correctly.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #define Nmax 1000
 #define Mmax 10000
 
 char buf[Mmax];
 int M = 0;
-int compare(void *i, void *j)
-{
-    return strcmp(*(char **)i, *(char **)j);
-}
-int main(void)
-{
-    int i, N;
-    char* a[Nmax] ;
-    for (N = 0; N < Nmax; N++)
-    {
-        a[N] = &buf[M];
-        if (scanf("%s", a[N]) == EOF)
-            break;
-        M += strlen(a[N]) + 1;
-    }
-    qsort(a, N, sizeof(char*), compare);
-    for (i = 0; i < N; i++)
-        printf("%s\n", a[i]);
+int compare(void *i, void *j) { return strcmp(*(char **)i, *(char **)j); }
+int main(void) {
+  int i, N;
+  char *a[Nmax];
+  for (N = 0; N < Nmax; N++) {
+    a[N] = &buf[M];
+    if (scanf("%s", a[N]) == EOF)
+      break;
+    M += strlen(a[N]) + 1;
+  }
+  qsort(a, N, sizeof(char *), compare);
+  for (i = 0; i < N; i++)
+    printf("%s\n", a[i]);
 }
 
 /* ---------------------------------------------------------------------
@@ -111,5 +108,4 @@ string
 test
 to
 yet
-
 --------------------------------------------------------------------- */

@@ -1,13 +1,13 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.22
+                             EXERCISE 2.22
 ------------------------------------------------------------------------
 Show that (N + 1)(H_N + O(1)) = N ln N + O(N).
 --------------------------------------------------------------------- */
 
 Since H_N = ln N + O(1):
-    (N + 1)(H_N + O(1)) = (N + 1)(ln N + O(1) + O(1))
-                        = (N + 1)(ln N + O(1))
-                        = N ln N + N O(1) + ln N + O(1)
-                        = N ln N + O(N)
+  (N + 1)(H_N + O(1)) = (N + 1)(ln N + O(1) + O(1))
+                      = (N + 1)(ln N + O(1))
+                      = N ln N + N O(1) + ln N + O(1)
+                      = N ln N + O(N)
 O(1) is just some constant, so N O(1) is O(N). The other terms we can
 drop in favor of the largest one.

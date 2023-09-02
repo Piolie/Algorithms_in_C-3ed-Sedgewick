@@ -1,15 +1,15 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.27
+                             EXERCISE 2.27
 ------------------------------------------------------------------------
 Suppose that lg(k!) = N. Give an approximate formula that expresses k as
 a function of N.
 --------------------------------------------------------------------- */
 
 Since lg(N!) ~= N lg N - N lg e + lg sqrt(2*pi*N):
-    lg(k!) ~= k lg k - k lg e + O(lg k) = N
+  lg(k!) ~= k lg k - k lg e + O(lg k) = N
 thus
-    k lg k - k lg e ~= N - O(lg k)
+  k lg k - k lg e ~= N - O(lg k)
 and
-    k lg k - k lg e ~= N
+  k lg k - k lg e ~= N
 
 This expression implicitly determines k for each value of N.

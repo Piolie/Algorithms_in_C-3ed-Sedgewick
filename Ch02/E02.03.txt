@@ -2,7 +2,7 @@
                               EXERCISE 2.3
 ------------------------------------------------------------------------
 Develop an expression of the form
-    c_0 + c_1 * N + c_2 * N^2 + c_3 * N^3
+  c_0 + c_1 * N + c_2 * N^2 + c_3 * N^3
 that accurately describes the running time of your program from
 Exercise 2.2. Compare the times predicted by this expression with actual
 times, for N = 10, 100, and 1000.
@@ -10,16 +10,16 @@ times, for N = 10, 100, and 1000.
 
 The solution is easy to set up. For each N, we have a corresponding
 running time from exercise 2.1:
-    T = c_0 + c_1 * N + c_2 * N^2 + c_3 * N^3
+  T = c_0 + c_1 * N + c_2 * N^2 + c_3 * N^3
 
 Since the expression has 4 unknowns (c_0, c_1, c_2 and c_3), we need to
 run the the program with 4 different values of N. With these we can
 write a 4x4 linear system of equations:
 
-    T1 = c_0 + c_1 * N1 + c_2 * N1^2 + c_3 * N1^3
-    T2 = c_0 + c_1 * N2 + c_2 * N2^2 + c_3 * N2^3
-    T3 = c_0 + c_1 * N3 + c_2 * N3^2 + c_3 * N3^3
-    T4 = c_0 + c_1 * N4 + c_2 * N4^2 + c_3 * N4^3
+  T1 = c_0 + c_1 * N1 + c_2 * N1^2 + c_3 * N1^3
+  T2 = c_0 + c_1 * N2 + c_2 * N2^2 + c_3 * N2^3
+  T3 = c_0 + c_1 * N3 + c_2 * N3^2 + c_3 * N3^3
+  T4 = c_0 + c_1 * N4 + c_2 * N4^2 + c_3 * N4^3
 
 and solve for c_0, c_1, c_2 and c_3. (I won't do it.)
 

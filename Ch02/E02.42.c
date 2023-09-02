@@ -1,8 +1,8 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.42
+                             EXERCISE 2.42
 ------------------------------------------------------------------------
 Solve the recurrence
-    C_N = a*C_(N/2), for N >= 2 with C_1 = 1
+  C_N = a*C_(N/2), for N >= 2 with C_1 = 1
 when N is a power of 2.
 --------------------------------------------------------------------- */
 
@@ -21,38 +21,34 @@ C_N = C_(2^n)
 
 ------------------------------------------------------------------------
 We would have to apply induction to formally prove it.
-
 --------------------------------------------------------------------- */
 
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
-unsigned int C_N(unsigned int a, unsigned int N)
-{
-    if(N == 1)
-        return 1;
+unsigned int C_N(unsigned int a, unsigned int N) {
+  if (N == 1)
+    return 1;
 
-    return a*C_N(a, N/2);
+  return a * C_N(a, N / 2);
 }
 
-unsigned int C_2pown_formula(unsigned int a, unsigned int n)
-{
-    return (unsigned int)pow(a, n);
+unsigned int C_2pown_formula(unsigned int a, unsigned int n) {
+  return (unsigned int)pow(a, n);
 }
 
-int main(void)
-{
-    printf("N\tC_N (rec.)\tC_N (form.)\tEqual?\n");
-    printf("----------------------------------------------\n");
-    unsigned int a = 3;
-    unsigned int N, n;
-    for (N = 1, n = 0; N < 100000; n++, N = (unsigned int)(exp2(n)))
-    {
-        unsigned int CN_recurrence = C_N(a, N);
-        unsigned int CN_formula = C_2pown_formula(a, n);
-        int equal = (CN_recurrence == CN_formula);
-        printf("%u\t%u\t\t%u\t\t%s\n", N, CN_recurrence, CN_formula, equal ? "TRUE" : "FALSE");
-    }
+int main(void) {
+  printf("N\tC_N (rec.)\tC_N (form.)\tEqual?\n");
+  printf("----------------------------------------------\n");
+  unsigned int a = 3;
+  unsigned int N, n;
+  for (N = 1, n = 0; N < 100000; n++, N = (unsigned int)(exp2(n))) {
+    unsigned int CN_recurrence = C_N(a, N);
+    unsigned int CN_formula = C_2pown_formula(a, n);
+    int equal = (CN_recurrence == CN_formula);
+    printf("%u\t%u\t\t%u\t\t%s\n", N, CN_recurrence, CN_formula,
+           equal ? "TRUE" : "FALSE");
+  }
 }
 
 /* ---------------------------------------------------------------------
@@ -77,5 +73,4 @@ N       C_N (rec.)      C_N (form.)     Equal?
 16384   4782969         4782969         TRUE
 32768   14348907        14348907        TRUE
 65536   43046721        43046721        TRUE
-
 --------------------------------------------------------------------- */

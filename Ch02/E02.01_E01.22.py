@@ -7,9 +7,9 @@ and answer Exercise 1.22 for your implementations.
 ------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
-I've chosen Python for the reimplementation.
+I've only run the tests for the weighted quick-union algorithm.
 ------------------------------------------------------------------------
-        WEIGHTED QUICK-UNION WITH PATH COMPRESSION BY HALVING
+         Weighted quick-union with path compression by halving
 ------------------------------------------------------------------------
 """
 
@@ -28,11 +28,11 @@ for N in [1000, 10000, 100000, 1000000]:
         id = []
         for i in range(N):
             id.append(i)
-        sz = [1]*N
+        sz = [1] * N
 
         while union_counter < N - 1:
             attempts += 1
-            p, q = int(N*random()), int(N*random())
+            p, q = int(N * random()), int(N * random())
 
             i = p
             while i != id[i]:
@@ -61,16 +61,16 @@ for N in [1000, 10000, 100000, 1000000]:
 ------------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-For N = 10^3: attempts = 3795
-For N = 10^4: attempts = 48227
-For N = 10^5: attempts = 600117
-For N = 10^6: attempts = 7189346
+average attempts for N = 3795
+average attempts for N = 48227
+average attempts for N = 600117
+average attempts for N = 7189346
+------------------------------------------------------------------------
 
 These results are consistent with the ones we got in exercise 1.22.
 
 Note: CPython took several minutes to finish the runs for N = 10^6 on
-my machine. Though this implementation is not optimized, C is king
+my machine. Though this implementation is not optimized, C is still king
 (performance-wise).
-
 ------------------------------------------------------------------------
 """

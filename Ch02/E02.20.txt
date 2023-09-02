@@ -1,15 +1,15 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.20
+                             EXERCISE 2.20
 ------------------------------------------------------------------------
 Prove that O(1) is the same as O(2).
 --------------------------------------------------------------------- */
 
-    Definition 2.1 A function g(N) is said to be O(f(N)) if there exist
-    constants c_0 and N_0 such that g(N) < c_0 f(N), for all N > N_0.
+  Definition 2.1 A function g(N) is said to be O(f(N)) if there exist
+  constants c_0 and N_0 such that g(N) < c_0 f(N), for all N > N_0.
 
 Thus, a function g(N) is O(1) if there exist constants c_0 and N_0 such
 that g(N) < c_0 * 1, for all N > N_0.
 
 The inequality also implies that:
-    g(N) < 2c_0 * 1 = c_0 * 2, for all N > N_0
+  g(N) < 2c_0 * 1 = c_0 * 2, for all N > N_0
 which is the definition of g(N) being O(2).

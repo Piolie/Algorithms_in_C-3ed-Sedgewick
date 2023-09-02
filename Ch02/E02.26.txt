@@ -1,14 +1,14 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.26
+                             EXERCISE 2.26
 ------------------------------------------------------------------------
 Suppose that H_k = N. Give an approximate formula that expresses k as a
 function of N.
 --------------------------------------------------------------------- */
 
 Since H_N ~= ln N + O(1):
-    H_k ~= ln k + O(1) = N
+  H_k ~= ln k + O(1) = N
 thus
-    ln k ~= N - O(1)
-         ~= N
+  ln k ~= N - O(1)
+       ~= N
 and
-    k ~= e^N
+  k ~= e^N

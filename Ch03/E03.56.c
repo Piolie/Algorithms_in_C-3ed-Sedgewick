@@ -10,34 +10,29 @@ character and its frequency of occurrence.
 I won't bother skipping already counted characters since the statement
 does not require it. Also, upper and lower case letters are considered
 different.
-
 --------------------------------------------------------------------- */
 
 #include <stdio.h>
 #include <string.h>
 
-int count_character(char c, char *s)
-{
-    int count = 0;
-    while (*s)
-    {
-        if (*s++ == c)
-            count++;
-    }
-    return count;
+int count_character(char c, char *s) {
+  int count = 0;
+  while (*s) {
+    if (*s++ == c)
+      count++;
+  }
+  return count;
 }
 
-int main(int argc, char *argv[])
-{
-    char *s = argv[1];
-    printf("String: %s\n", s);
-    printf("char count\n");
-    printf("---- -----\n");
-    while (*s)
-    {
-        printf("%c    %d\n", *s, count_character(*s, argv[1]));
-        s++;
-    }
+int main(int argc, char *argv[]) {
+  char *s = argv[1];
+  printf("String: %s\n", s);
+  printf("char count\n");
+  printf("---- -----\n");
+  while (*s) {
+    printf("%c    %d\n", *s, count_character(*s, argv[1]));
+    s++;
+  }
 }
 
 /* ---------------------------------------------------------------------
@@ -80,5 +75,4 @@ t    4
 e    3
 d    1
 .    1
-
 --------------------------------------------------------------------- */

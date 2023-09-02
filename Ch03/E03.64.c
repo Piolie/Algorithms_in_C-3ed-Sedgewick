@@ -21,26 +21,23 @@ respective references there.
 #define Nmax 1000
 #define MAX_LENGTH 100
 
-int compare(const void *i, const void *j)
-{
-    return strcmp(*(char * const *)i, *(char * const *)j);
+int compare(const void *i, const void *j) {
+  return strcmp(*(char *const *)i, *(char *const *)j);
 }
-int main(void)
-{
-    char buf[MAX_LENGTH];
-    int i, N, len;
-    char *a[Nmax] ;
-    for (N = 0; N < Nmax; N++)
-    {
-        if (scanf("%s", buf) == EOF)
-            break;
-        len = strlen(buf);
-        a[N] = malloc((len + 1) * sizeof(*a[N]));
-        strcpy(a[N], buf);
-    }
-    qsort(a, N, sizeof(char*), compare);
-    for (i = 0; i < N; i++)
-        printf("%s\n", a[i]);
+int main(void) {
+  char buf[MAX_LENGTH];
+  int i, N, len;
+  char *a[Nmax];
+  for (N = 0; N < Nmax; N++) {
+    if (scanf("%s", buf) == EOF)
+      break;
+    len = strlen(buf);
+    a[N] = malloc((len + 1) * sizeof(*a[N]));
+    strcpy(a[N], buf);
+  }
+  qsort(a, N, sizeof(char *), compare);
+  for (i = 0; i < N; i++)
+    printf("%s\n", a[i]);
 }
 
 /* ---------------------------------------------------------------------
@@ -75,5 +72,4 @@ string
 test
 to
 yet
-
 --------------------------------------------------------------------- */

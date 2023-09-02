@@ -16,24 +16,21 @@ random ints needed.
 
 #define N 1000
 
-int main(void)
-{
-    char array[N] = {0};
-    int number, count;
+int main(void) {
+  char array[N] = {0};
+  int number, count;
 
-    for (;;)
-    {
-        number = rand() % N;
-        printf("number = %d\n", number);
-        if (array[number])
-            break;
-        else
-        {
-            array[number] = 1;
-            count++;
-        }
+  for (;;) {
+    number = rand() % N;
+    printf("number = %d\n", number);
+    if (array[number])
+      break;
+    else {
+      array[number] = 1;
+      count++;
     }
-    printf("Number of unique random ints less than %d = %d\n", N, count);
+  }
+  printf("Number of unique random ints less than %d = %d\n", N, count);
 }
 
 /* ---------------------------------------------------------------------
@@ -59,5 +56,4 @@ number = 995
 number = 942
 number = 827
 Number of unique random ints less than 1000 = 18
-
 --------------------------------------------------------------------- */

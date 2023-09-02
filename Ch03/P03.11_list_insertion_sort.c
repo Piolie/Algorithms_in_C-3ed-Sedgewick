@@ -2,7 +2,8 @@
         This code is from "Algorithms in C, Third Edition,
         by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
-                    PROGRAM 3.11 List insertion sort
+                              PROGRAM 3.11
+                          List insertion sort
 ------------------------------------------------------------------------
 This code generates N random integers between 0 and 999, builds a linked
 list with one number per node (first for loop), and then rearranges the
@@ -19,23 +20,21 @@ into the output list goes at the beginning would involve extra code.
 struct node heada, headb;
 link t, u, x, a = &heada, b;
 
-for (i = 0, t = a; i < N; i++)
-{
-    t->next = malloc(sizeof *t);
-    t = t->next;
-    t->next = NULL;
-    t->item = rand() % 1000;
+for (i = 0, t = a; i < N; i++) {
+  t->next = malloc(sizeof *t);
+  t = t->next;
+  t->next = NULL;
+  t->item = rand() % 1000;
 }
 
 b = &headb;
 b->next = NULL;
 
-for (t = a->next; t != NULL; t = u)
-{
-    u = t->next;
-    for (x = b; x->next != NULL; x = x->next)
-        if (x->next->item > t->item)
-            break;
-    t->next = x->next;
-    x->next = t;
+for (t = a->next; t != NULL; t = u) {
+  u = t->next;
+  for (x = b; x->next != NULL; x = x->next)
+    if (x->next->item > t->item)
+      break;
+  t->next = x->next;
+  x->next = t;
 }

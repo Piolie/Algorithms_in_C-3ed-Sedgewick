@@ -2,7 +2,8 @@
         This code is from "Algorithms in C, Third Edition,
         by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
-                    PROGRAM 3.1 Function definition
+                              PROGRAM 3.1
+                          Function definition
 ------------------------------------------------------------------------
 The mechanism that we use in C to implement new operations on data is
 the function definition, illustrated here.
@@ -42,18 +43,17 @@ definition of lg before the definition of main and omit its declaration.
 
 int lg(int);
 
-void main(void)
-{
-    int i, N;
-    for (i = 1, N = 10; i <= 6; i++, N *= 10)
-        printf("%7d %2d %9d\n", N, lg(N) , N*lg(N));
+int main(void) {
+  int i, N;
+  for (i = 1, N = 10; i <= 6; i++, N *= 10)
+    printf("%7d %2d %9d\n", N, lg(N), N * lg(N));
 }
 
-int lg(int N)
-{
-    int i;
-    for (i = 0; N > 0; i++, N /= 2);
-    return i;
+int lg(int N) {
+  int i;
+  for (i = 0; N > 0; i++, N /= 2)
+    ;
+  return i;
 }
 
 /* ---------------------------------------------------------------------

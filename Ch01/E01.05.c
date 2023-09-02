@@ -4,44 +4,43 @@
 Do Exercise 1.4, but use the quick-union algorithm (Program 1.2).
 --------------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------------
+Notes:
+  - only shows first 10 entries of id;
+  - the access counter ignores the initialization and print_id steps;
+  - lvalue assignments are _not_ considered accesses:
+      id[i] = id[q] -> 1 access;
+--------------------------------------------------------------------- */
+
 #include <stdio.h>
 #define N 10000
 
-void print_id(int id[])
-{
-    printf("id = ");
-    for (int i = 0; i < 10; i++)
-        printf("%d ", id[i]);
-    printf("...\n");
+void print_id(int id[]) {
+  printf("id = ");
+  for (int i = 0; i < 10; i++)
+    printf("%d ", id[i]);
+  printf("...\n");
 }
 
-int main(void)
-{
-    int i, p, q, j, id[N], access_count;
-    for (i = 0; i < N; i++)
-        id[i] = i;
-    while (scanf("%d %d", &p, &q) == 2)
-    {
-        for (i = p, access_count++; i != id[i]; access_count += 2, i = id[i]);
-        for (j = q, access_count++; j != id[j]; access_count += 2, j = id[j]);
-        if (i == j)
-            continue;
+int main(void) {
+  int i, p, q, j, id[N], access_count;
+  for (i = 0; i < N; i++)
+    id[i] = i;
+  while (scanf("%d %d", &p, &q) == 2) {
+    for (i = p, access_count++; i != id[i]; access_count += 2, i = id[i])
+      ;
+    for (j = q, access_count++; j != id[j]; access_count += 2, j = id[j])
+      ;
+    if (i == j)
+      continue;
 
-        id[i] = j;
+    id[i] = j;
 
-        print_id(id);
-        printf(" %d %d\n", p, q);
-        printf("Number of accesses = %d\n", access_count);
-    }
+    print_id(id);
+    printf(" %d %d\n", p, q);
+    printf("Number of accesses = %d\n", access_count);
+  }
 }
-
-/* ---------------------------------------------------------------------
-Notes:
-    - only shows first 10 entries of id;
-    - the access counter ignores the initialization and print_id steps;
-    - lvalue assignments are _not_ considered accesses:
-        id[i] = id[q] -> 1 access;
---------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------
                                  OUTPUT
@@ -71,5 +70,4 @@ id = 2 4 5 6 4 4 4 7 8 9 ...
  6 0
 Number of accesses = 22
 1 3
-
 --------------------------------------------------------------------- */

@@ -9,52 +9,46 @@ Write a program that frees the nodes in even positions in a linked list
 This exercise is identical to 3.48, we just change M for 2.
 --------------------------------------------------------------------- */
 
+#include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
 
 #define N 100
 #define M 2
 
-int main(void)
-{
-    int i;
-    link head = malloc(sizeof *head);
-    head->next = NULL;
-    link t;
+int main(void) {
+  int i;
+  link head = malloc(sizeof *head);
+  head->next = NULL;
+  link t;
 
-    printf("Unsorted nodes:\n");
-    for (i = 0, t = head; i < N; i++)
-    {
-        t->next = malloc(sizeof *t);
-        t = t->next;
+  printf("Unsorted nodes:\n");
+  for (i = 0, t = head; i < N; i++) {
+    t->next = malloc(sizeof *t);
+    t = t->next;
+    t->next = NULL;
+    t->item = rand() % 1000;
+    printf("%3d ", t->item);
+  }
+
+  // free every Mth node
+  link temp;
+  i = 1;
+  for (t = head->next; t != NULL; t = t->next) {
+    if (i % (M - 1) == 0) {
+      temp = t->next;
+      if (temp) {
+        t->next = temp->next;
+        free(temp);
+      } else
         t->next = NULL;
-        t->item = rand() % 1000;
-        printf("%3d ", t->item);
     }
+    i++;
+  }
 
-    // free every Mth node
-    link temp;
-    i = 1;
-    for (t = head->next; t != NULL; t = t->next)
-    {
-        if (i % (M-1) == 0)
-        {
-            temp = t->next;
-            if (temp)
-            {
-                t->next = temp->next;
-                free(temp);
-            }
-            else
-                t->next = NULL;
-        }
-        i++;
-    }
-
-    printf("\n\nPruned list:\n");
-    for (t = head->next; t != NULL; t = t->next)
-        printf("%3d ", t->item);
+  printf("\n\nPruned list:\n");
+  for (t = head->next; t != NULL; t = t->next)
+    printf("%3d ", t->item);
 }
 
 /* ---------------------------------------------------------------------
@@ -69,11 +63,10 @@ Unsorted nodes:
 944 439 626 323 537 538 118  82 929 541
 
 Pruned list:
- 41 --- 334 --- 169 --- 478 --- 962 --- 705 --- 281 --- 961 --- 995 --- 
-827 --- 391 --- 902 --- 292 --- 421 --- 718 --- 447 --- 771 --- 869 --- 
-667 ---  35 --- 703 --- 322 --- 673 --- 141 --- 253 --- 547 --- 662 --- 
- 37 --- 723 --- 529 --- 316 --- 190 --- 288 ---  40 --- 264 --- 446 --- 
-890 --- 370 ---   6 --- 393 --- 629 ---  84 --- 756 --- 966 --- 931 --- 
+ 41 --- 334 --- 169 --- 478 --- 962 --- 705 --- 281 --- 961 --- 995 ---
+827 --- 391 --- 902 --- 292 --- 421 --- 718 --- 447 --- 771 --- 869 ---
+667 ---  35 --- 703 --- 322 --- 673 --- 141 --- 253 --- 547 --- 662 ---
+ 37 --- 723 --- 529 --- 316 --- 190 --- 288 ---  40 --- 264 --- 446 ---
+890 --- 370 ---   6 --- 393 --- 629 ---  84 --- 756 --- 966 --- 931 ---
 944 --- 626 --- 537 --- 118 --- 929 ---
-
 --------------------------------------------------------------------- */

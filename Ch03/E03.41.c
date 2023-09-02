@@ -5,15 +5,15 @@ Implement a version of Program 3.10 that uses a head node.
 --------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------
-I think the book has a little inconsistency in its implementation of 
+I think the book has a little inconsistency in its implementation of
 dummy head nodes. Notice that program 3.11, which declares to be using
 "head nodes", allocates them  in the stack:
-    struct node heada, headb;
+  struct node heada, headb;
 
 However, Table 3.1 states that in the case of dummy head nodes, these
 should be allocated in the heap using malloc:
-    head = malloc(sizeof *head);
-    head->next = NULL;
+  head = malloc(sizeof *head);
+  head->next = NULL;
 
 It's no big deal to account for the differences. Just keep them in mind.
 
@@ -23,47 +23,43 @@ need to check for x == NULL. The reverse reuses the head node, so it has
 no need to return anything.
 --------------------------------------------------------------------- */
 
+#include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
 
 #define N 100
 
-void reverse(link x)
-{
-    link t, y = x->next, r = NULL;
-    while (y != NULL)
-    {
-        t = y->next;
-        y->next = r;
-        r = y;
-        y = t;
-    }
-    x->next = r;  // make head node's next point to new first node
+void reverse(link x) {
+  link t, y = x->next, r = NULL;
+  while (y != NULL) {
+    t = y->next;
+    y->next = r;
+    r = y;
+    y = t;
+  }
+  x->next = r; // make head node's next point to new first node
 }
 
-int main(void)
-{
-    int i;
-    link head = malloc(sizeof *head);
-    head->next = NULL;
-    link t;
+int main(void) {
+  int i;
+  link head = malloc(sizeof *head);
+  head->next = NULL;
+  link t;
 
-    printf("Unsorted nodes:\n");
-    for (i = 0, t = head; i < N; i++)
-    {
-        t->next = malloc(sizeof *t);
-        t = t->next;
-        t->next = NULL;
-        t->item = rand() % 1000;
-        printf("%3d ", t->item);
-    }
+  printf("Unsorted nodes:\n");
+  for (i = 0, t = head; i < N; i++) {
+    t->next = malloc(sizeof *t);
+    t = t->next;
+    t->next = NULL;
+    t->item = rand() % 1000;
+    printf("%3d ", t->item);
+  }
 
-    reverse(head);
+  reverse(head);
 
-    printf("\n\nReversed list:\n");
-    for (t = head->next; t != NULL; t = t->next)
-        printf("%3d ", t->item);
+  printf("\n\nReversed list:\n");
+  for (t = head->next; t != NULL; t = t->next)
+    printf("%3d ", t->item);
 }
 
 /* ---------------------------------------------------------------------
@@ -84,5 +80,4 @@ Reversed list:
 664 673 333 322 811 703 894  35 299 667 912 869 538 771 726 447 895 718
 716 421 382 292 153 902 604 391 436 827 942 995 491 961 827 281 145 705
 464 962 358 478 724 169 500 334 467  41
-
 --------------------------------------------------------------------- */

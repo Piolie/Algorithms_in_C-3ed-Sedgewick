@@ -8,8 +8,8 @@ square.
 --------------------------------------------------------------------- */
 
 typedef struct {
-    float x;
-    float y;
+  float x;
+  float y;
 } point;
 
 float distance(point A, point B);

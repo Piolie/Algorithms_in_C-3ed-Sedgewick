@@ -7,29 +7,25 @@ and standard deviation for r = 10, 100, and 1000 and N = 10^3 , 10^4,
 10^5, and 10^6.
 --------------------------------------------------------------------- */
 
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int main(void)
-{
-    for (int r = 10; r <= 1000; r *= 10)
-    {
-        printf("r = %d:\n", r);
-        for (int N = 1000; N <= 1000000; N *= 10)
-        {
-            float m1 = 0, m2 = 0;
-            printf("\tN = %d:\n", N);
-            for (int i = 0; i < N; i++)
-            {
-                int x = rand() % r;
-                m1 += ((float)x)/N;
-                m2 += ((float)x*x)/N;
-            }
-            printf("\t\t     Avg.: %f\n", m1);
-            printf("\t\tStd. dev.: %f\n", sqrt(m2 - m1*m1));
-        }
+int main(void) {
+  for (int r = 10; r <= 1000; r *= 10) {
+    printf("r = %d:\n", r);
+    for (int N = 1000; N <= 1000000; N *= 10) {
+      float m1 = 0, m2 = 0;
+      printf("\tN = %d:\n", N);
+      for (int i = 0; i < N; i++) {
+        int x = rand() % r;
+        m1 += ((float)x) / N;
+        m2 += ((float)x * x) / N;
+      }
+      printf("\t\t     Avg.: %f\n", m1);
+      printf("\t\tStd. dev.: %f\n", sqrt(m2 - m1 * m1));
     }
+  }
 }
 
 /* ---------------------------------------------------------------------
@@ -74,7 +70,6 @@ r = 1000:
         N = 1000000:
                      Avg.: 497.298157
                 Std. dev.: 287.621034
-
 ------------------------------------------------------------------------
 If the distribution of rand is uniform in the interval [0, r-1], then
 the theoretical values are:
@@ -95,5 +90,4 @@ r = 100:
     Std. dev.: 288.7
 
 stdlib's rand() is famous for actually not being very random.
-
 --------------------------------------------------------------------- */

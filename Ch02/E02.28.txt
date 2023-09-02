@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.28
+                             EXERCISE 2.28
 ------------------------------------------------------------------------
 You are given the information that the running time of one algorithm is
 O(N log N) and that the running time of another algorithm is O(N^3).

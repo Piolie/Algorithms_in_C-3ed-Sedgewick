@@ -11,54 +11,45 @@ I used an auxiliary function that checks whether the item is >= 500.
 prune_list removes all such nodes.
 --------------------------------------------------------------------- */
 
+#include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
 
 #define N 100
 
-void prune_list(link head, int (*aux_func)(link))
-{
-    while (head->next)
-    {
-        if (aux_func(head->next))
-        {
-            link temp = head->next;
-            head->next = head->next->next;
-            free(temp);
-        }
-        else
-            head = head->next;
-    }
+void prune_list(link head, int (*aux_func)(link)) {
+  while (head->next) {
+    if (aux_func(head->next)) {
+      link temp = head->next;
+      head->next = head->next->next;
+      free(temp);
+    } else
+      head = head->next;
+  }
 }
 
-int aux_func(link l)
-{
-    return l->item >= 500;
-}
+int aux_func(link l) { return l->item >= 500; }
 
-int main(void)
-{
-    int i;
-    link head = malloc(sizeof *head);
-    head->next = NULL;
-    link t;
+int main(void) {
+  int i;
+  link head = malloc(sizeof *head);
+  head->next = NULL;
+  link t;
 
-    printf("Unsorted nodes:\n");
-    for (i = 0, t = head; i < N; i++)
-    {
-        t->next = malloc(sizeof *t);
-        t = t->next;
-        t->next = NULL;
-        t->item = rand() % 1000;
-        printf("%3d ", t->item);
-    }
+  printf("Unsorted nodes:\n");
+  for (i = 0, t = head; i < N; i++) {
+    t->next = malloc(sizeof *t);
+    t = t->next;
+    t->next = NULL;
+    t->item = rand() % 1000;
+    printf("%3d ", t->item);
+  }
 
-    prune_list(head, aux_func);
+  prune_list(head, aux_func);
 
-    printf("\n\nPruned list:\n");
-    for (t = head->next; t != NULL; t = t->next)
-        printf("%3d ", t->item);
+  printf("\n\nPruned list:\n");
+  for (t = head->next; t != NULL; t = t->next)
+    printf("%3d ", t->item);
 }
 
 /* ---------------------------------------------------------------------
@@ -79,5 +70,4 @@ Pruned list:
  37                     316  35 190     288 106  40     264     446
         370 350   6 101 393              84                 376     308
     439     323         118  82
-
 --------------------------------------------------------------------- */

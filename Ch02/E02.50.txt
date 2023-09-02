@@ -1,11 +1,11 @@
 /* ---------------------------------------------------------------------
-                              EXERCISE 2.50
+                             EXERCISE 2.50
 ------------------------------------------------------------------------
 State and prove a property analogous to Property 2.3 for binary search.
 --------------------------------------------------------------------- */
 
-    Property 2.3: Binary search never examines more than floor[lg N] + 1
-    numbers.
+  Property 2.3: Binary search never examines more than floor[lg N] + 1
+  numbers.
 
 Property 2.3 is exactly about binary search. I don't know what the
 problem statement should really be.

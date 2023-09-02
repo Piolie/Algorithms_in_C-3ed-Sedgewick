@@ -6,10 +6,9 @@ Implement a version of Program 3.11 that does not use head nodes.
 
 /* ---------------------------------------------------------------------
 Corner cases:
-    - empty list (== null head);
-    - insert at the beginning;
-    - insert at the end.
-
+  - empty list (== null head);
+  - insert at the beginning;
+  - insert at the end.
 ------------------------------------------------------------------------
 Figure 3.8 Linked-list sort
 This diagram depicts one step in transforming an unordered linked list
@@ -23,64 +22,60 @@ node, and increase the length of b by one node, keeping b in order
 in b.
 --------------------------------------------------------------------- */
 
+#include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
 
 #define N 100
 
-link insertion_sort(link heada)
-{
-    if (!heada)  // if the list is empty there is nothing to do
-        return heada;
+link insertion_sort(link heada) {
+  if (!heada) // if the list is empty there is nothing to do
+    return heada;
 
-    link headb = heada, a, next_a, b, prev_b;
+  link headb = heada, a, next_a, b, prev_b;
 
-    for (a = heada; a != NULL; a = next_a)
-    {
-        next_a = a->next;
-        prev_b = headb;
-        for (b = headb; b != NULL; prev_b = b, b = b->next)
-            if (b->item > a->item)
-                break;
+  for (a = heada; a != NULL; a = next_a) {
+    next_a = a->next;
+    prev_b = headb;
+    for (b = headb; b != NULL; prev_b = b, b = b->next)
+      if (b->item > a->item)
+        break;
 
-        if (b == headb)  // insert node at the beginning
-            headb = a;
-        else
-            prev_b->next = a;
+    if (b == headb) // insert node at the beginning
+      headb = a;
+    else
+      prev_b->next = a;
 
-        if (!b)  // insert node at the end
-            a->next = NULL;
-        else
-            a->next = b;
-    }
-    return headb;
+    if (!b) // insert node at the end
+      a->next = NULL;
+    else
+      a->next = b;
+  }
+  return headb;
 }
 
-int main(void)
-{
-    int i;
-    link head = malloc(sizeof *head);
-    head->next = NULL;
-    link t;
+int main(void) {
+  int i;
+  link head = malloc(sizeof *head);
+  head->next = NULL;
+  link t;
 
-    printf("Unsorted nodes:\n");
-    for (i = 0, t = head; i < N; i++)
-    {
-        t->next = malloc(sizeof *t);
-        t = t->next;
-        t->next = NULL;
-        t->item = rand() % 1000;
-        printf("%3d ", t->item);
-    }
+  printf("Unsorted nodes:\n");
+  for (i = 0, t = head; i < N; i++) {
+    t->next = malloc(sizeof *t);
+    t = t->next;
+    t->next = NULL;
+    t->item = rand() % 1000;
+    printf("%3d ", t->item);
+  }
 
-    head = head->next;  // skip dummy head node
+  head = head->next; // skip dummy head node
 
-    link new_head = insertion_sort(head);
+  link new_head = insertion_sort(head);
 
-    printf("\n\nSorted nodes:\n");
-    for (t = new_head; t != NULL; t = t->next)
-        printf("%3d ", t->item);
+  printf("\n\nSorted nodes:\n");
+  for (t = new_head; t != NULL; t = t->next)
+    printf("%3d ", t->item);
 }
 
 /* ---------------------------------------------------------------------
@@ -101,5 +96,4 @@ Sorted nodes:
 626 629 644 648 662 664 667 673 703 705 711 716 718 723 724 726 729 741
 756 757 771 778 805 811 827 827 840 842 859 868 869 890 894 895 902 912
 929 931 942 942 944 954 961 962 966 995
-
 --------------------------------------------------------------------- */
