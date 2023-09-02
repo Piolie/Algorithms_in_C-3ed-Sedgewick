@@ -33,6 +33,8 @@ It goes without saying that the solutions are not guaranteed to be good or even 
 # License
 The code from the book, as stated in the author's [(archived)](https://web.archive.org/web/20211221063054/https://www.cs.princeton.edu/~rs/Algs3.c1-4/code.txt) page, comes with some strings attached. See [COPYRIGHT](COPYRIGHT.md) for more information.
 
+All programs were slightly modified and formatted for consistency, and code to make them compilable was added where needed (and made sense).
+
 I release my modifications and all original works made by me under the MIT License. See [LICENSE](LICENSE.md) for the details.
 
 **IANAL:** Since some of the exercises consist of modifying the supplied programs, I think it's permitted to share and reuse those modifications for the purposes explained in the copyright notice, though I cannot guarantee it.
