@@ -16,6 +16,7 @@ Exercise 3.72).
 
 #include <stdio.h>
 #include <stdlib.h>
+
 int main(void) {
   int i, j, adj[V][V];
   for (i = 0; i < V; i++)
@@ -23,7 +24,7 @@ int main(void) {
       adj[i][j] = 0;
   for (i = 0; i < V; i++)
     adj[i][i] = 1;
-  while (scanf("%d%d\n", &i, &j) == 2) {
+  while (scanf("%d %d\n", &i, &j) == 2) {
     adj[i][j] = 1;
     adj[j][i] = 1;
   }
