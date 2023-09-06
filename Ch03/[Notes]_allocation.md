@@ -11,9 +11,10 @@ Given the book states in p. 93 that:
 
 I don't pay too much attention to clean memory management. Particularly, I generally don't check for nullnes after malloc. However, in exercise 3.38 I experimented with some error handling using goto statements.
 
-Also, there are very interesting questions in StackOverflow:
+Also, there are very interesting answers in StackOverflow:
 
+- [How do I work with dynamic multi-dimensional arrays in C?](https://stackoverflow.com/questions/917783/);
 - [Correctly allocating multi-dimensional arrays](https://stackoverflow.com/questions/42094465/) and
 - [Function to dynamically allocate matrix](https://stackoverflow.com/questions/32050256/)
 
-which discourage using pointers-to-pointers. The book uses the wrong approach in several places, e.g., the `malloc2d` function in P3.16.
+which discourage using pointers-to-pointers for allocating multidimensional arrays. The book uses the wrong approach in several places, e.g., the `malloc2d` function in P03.16. Given it was published in 1998, before the appearance of C99, we can forgive that it doesn't use the most up to date constructs.
