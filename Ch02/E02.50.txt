@@ -4,8 +4,27 @@
 State and prove a property analogous to Property 2.3 for binary search.
 --------------------------------------------------------------------- */
 
+  Property 2.1: Sequential search examines N numbers for each
+  unsuccessful search and about N/2 numbers for each successful search
+  on the average.
+
+  Property 2.2: Sequential search in an ordered table examines N numbers
+  for each search in the worst case and about N/2 numbers for each
+  search on the average.
+
   Property 2.3: Binary search never examines more than floor[lg N] + 1
   numbers.
 
-Property 2.3 is exactly about binary search. I don't know what the
-problem statement should really be.
+Considering all properties stated in this chapter, I guess the exercise
+is in fact asking for a property analogous to Property 2.2 for binary
+search. So, the new property would be:
+
+  Property 2.4: Binary search examines floor[lg N] + 1 numbers for each
+  search in the worst case and about lg N - 1 numbers for each
+  successful search on the average.
+
+The proof can be found in:
+  Knuth, Donald (1998). Sorting and searching. The Art of Computer
+  Programming. Vol. 3 (2nd ed.). Reading, MA: Addison-Wesley
+  Professional. ISBN 978-0-201-89685-5. §6.2.1 ("Searching an ordered
+  table"), subsection "Further analysis of binary search". pp. 413-414.
