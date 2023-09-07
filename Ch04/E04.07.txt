@@ -1,0 +1,44 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 4.7
+------------------------------------------------------------------------
+Using the conventions of Exercise 4.6, give a way to insert asterisks
+in the sequence E A S Y so that the sequence of values returned by the
+pop operations is (i) E A S Y; (ii) Y S A E; (iii) A S Y E;
+(iv) A Y E S; or, in each instance, prove that no such sequence exists.
+--------------------------------------------------------------------- */
+
+Using the method outlined in figure 4.1:
+(i)
+  E       E
+  *   E
+  A       A
+  *   A
+  S       S
+  *   S
+  Y       Y
+  *   Y
+
+(ii)
+  E       E
+  A       EA
+  S       EAS
+  Y       EASY
+  *   Y   EAS
+  *   S   EA
+  *   A   E
+  *   E
+
+(iii)
+  E       E
+  A       EA
+  *   A   E
+  S       ES
+  *   S   E
+  Y       EY
+  *   Y   E
+  *   E
+
+(iv)
+This one can't be done, because for the Y to be popped first, we have
+to, after pushing E and A and popping A, first push S and Y. But since
+this is a LIFO, S will pop before E, resulting in A Y S E.

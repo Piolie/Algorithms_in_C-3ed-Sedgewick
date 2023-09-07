@@ -1,0 +1,75 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 4.6
+------------------------------------------------------------------------
+A letter means push and an asterisk means pop in the sequence
+  E A S * Y * Q U E * * * S T * * * I O * N * * *.
+Give the sequence of values returned by the pop operations.
+--------------------------------------------------------------------- */
+
+  Figure 4.1.
+  Pushdown stack (LIFO queue) example
+
+  This list shows the result of the sequence of operations in the left
+  column (top to bottom), where a letter denotes push and an asterisk
+  denotes pop. Each line displays the operation, the letter popped for
+  pop operations, and the contents of the stack after the operation, in
+  order from least recently inserted to most recently inserted, left to
+  right.
+
+  L       L
+  A       L A
+  *   A   L
+  S       L S
+  T       L S T
+  I       L S T I
+  *   I   L S T
+  N       L S T N
+  *   N   L S T
+  F       L S T F
+  I       L S T F I
+  R       L S T F I R
+  *   R   L S T F I
+  S       L S T F I S
+  T       L S T F I S T
+  *   T   L S T F I S
+  *   S   L S T F I
+  O       L S T F I O
+  U       L S T F I O U
+  *   U   L S T F I O
+  T       L S T F I O T
+  *   T   L S T F I O
+  *   O   L S T F I
+  *   I   L S T F
+  *   F   L S T
+  *   T   L S
+  *   S   L
+  *   L
+------------------------------------------------------------------------
+
+Using the method outlined in figure 4.1, the sequence is:
+  S Y E U Q T S A O N I E.
+  
+  E       E
+  A       E A
+  S       E A S
+  *   S   E A
+  Y       E A Y
+  *   Y   E A
+  Q       E A Q
+  U       E A Q U
+  E       E A Q U E
+  *   E   E A Q U
+  *   U   E A Q
+  *   Q   E A
+  S       E A S
+  T       E A S T
+  *   T   E A S
+  *   S   E A
+  *   A   E
+  I       E I
+  O       E I O
+  *   O   E I
+  N       E I N
+  *   N   E I
+  *   I   E
+  *   E

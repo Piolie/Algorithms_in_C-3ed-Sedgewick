@@ -1,0 +1,66 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 4.9
+------------------------------------------------------------------------
+Convert to postfix the expression
+( 5 * ( ( 9 * 8 ) + ( 7 * ( 4 + 6 ) ) ) ).
+--------------------------------------------------------------------- */
+
+  Figure 4.4
+  Conversion of an infix expression to postfix
+
+  This sequence shows the use of a stack to convert the infix
+  expression ( 5 * ( ( ( 9 + 8 ) * ( 4 * 6 ) ) + 7 ) ) to its postfix
+  form 5 9 8 + 4 6 * * 7 + *. We proceed from left to right through the
+  expression: If we encounter a number; we write it to the output; if
+  we encounter a left parenthesis, we ignore it; if we encounter an
+  operator; we push it on the stack; and if we encounter a right
+  parenthesis, we write the operator at the top of the stack to the
+  output.
+
+  (
+  5   5
+  *       *
+  (
+  (
+  (
+  9   9
+  +       * +
+  8   8
+  )   +   *
+  *       * *
+  (
+  4   4
+  *       * * *
+  6   6
+  )   *   * *
+  )   *   *
+  +       * +
+  7   7
+  )   +   *
+  )   *
+------------------------------------------------------------------------
+
+Using the method outlined in figure 4.4, the postfix expression results:
+  5 9 8 * 7 4 6 + * + *
+
+  (
+  5   5
+  *       *
+  (
+  (
+  9   9
+  *       * *
+  8   8
+  )   *   *
+  +       * +
+  (
+  7   7
+  *       * + *
+  (
+  4   4
+  +       * + * +
+  6   6
+  )   +   * + *
+  )   *   * +
+  )   +   *
+  )   *
