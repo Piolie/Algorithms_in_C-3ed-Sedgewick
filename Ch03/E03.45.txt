@@ -10,37 +10,36 @@ pointer to itself.
 
 initialize:
 
-    head = malloc(sizeof *head);
-    head->next = head;
+  head = malloc(sizeof *head);
+  head->next = head;
 
 insert t after x:
 
-    if (x->next == x)
-        t->next = t;
-    else
-        t->next = x->next;
-    x->next = t;
+  if (x->next == x)
+    t->next = t;
+  else
+    t->next = x->next;
+  x->next = t;
 
 delete after x:
 
-    t = x->next;
-    if (t != x)  // if x is not the last item
-    {
-        if (t->next == t)  // if x->next is last item
-            x->next = x;  // make x be the last item
-        else
-            x->next = x->next->next;  // skip one node
-    }
+  t = x->next;
+  if (t != x)  // if x is not the last item
+  {
+    if (t->next == t)  // if x->next is last item
+      x->next = x;  // make x be the last item
+    else
+      x->next = x->next->next;  // skip one node
+  }
 
 traversal loop:
 
-    t->next = head;
-    do
-    {
-        t = t->next;
-        ...
-    } while (t->next != t);
+  t->next = head;
+  do {
+    t = t->next;
+    ...
+  } while (t->next != t);
 
 test if one item:
 
-    if (head->next == head)
+  if (head->next == head)

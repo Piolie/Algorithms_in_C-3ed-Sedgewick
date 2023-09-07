@@ -5,15 +5,15 @@ Derive the factors given in Figure 2.5: For each function f(N) that
 appears on the left, find an asymptotic formula for f(2N)/f(N).
 --------------------------------------------------------------------- */
 
-Figure 2.5:
-1)  1       none
-2)  lg N    slight increase
-3)  N       double
-4)  N lg N  slightly more than double
-5)  N^(3/2) factor of 2sqrt(2)
-6)  N^2     factor of 4
-7)  N^3     factor of 8
-8)  2^N     square
+  Figure 2.5:
+  1)  1       none
+  2)  lg N    slight increase
+  3)  N       double
+  4)  N lg N  slightly more than double
+  5)  N^(3/2) factor of 2sqrt(2)
+  6)  N^2     factor of 4
+  7)  N^3     factor of 8
+  8)  2^N     square
 
 1)
   f(N) = 1

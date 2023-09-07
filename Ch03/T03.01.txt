@@ -10,26 +10,26 @@ applications where the list-processing code is inline.
 
 first insert:
 
-    head->next = head;
+  head->next = head;
 
 insert t after x:
 
-    t->next = x->next;
-    x->next = t;
+  t->next = x->next;
+  x->next = t;
 
 delete after x:
 
-    x->next = x->next->next;
+  x->next = x->next->next;
 
 traversal loop:
 
-    t = head;
-    do {... t = t->next;}
-    while (t != head);
+  t = head;
+  do {... t = t->next;}
+  while (t != head);
 
 test if one item:
 
-    if (head->next == head)
+  if (head->next == head)
 
 ---
 
@@ -37,33 +37,33 @@ test if one item:
 
 initialize:
 
-    head = NULL;
+  head = NULL;
 
 insert t after x:
 
-    if (x == NULL)
-    {
-        head = t;
-        head->next = NULL;
-    }
-    else
-    {
-        t->next = x->next;
-        x->next = t;
-    }
+  if (x == NULL)
+  {
+    head = t;
+    head->next = NULL;
+  }
+  else
+  {
+    t->next = x->next;
+    x->next = t;
+  }
 
 delete after x:
 
-    t = x->next;
-    x->next = t->next;
+  t = x->next;
+  x->next = t->next;
 
 traversal loop:
 
-    for (t = head; t != NULL; t = t->next)
+  for (t = head; t != NULL; t = t->next)
 
 test if empty:
 
-    if (head == NULL)
+  if (head == NULL)
 
 ---
 
@@ -71,26 +71,26 @@ test if empty:
 
 initialize:
 
-    head = malloc(sizeof *head);
-    head->next = NULL;
+  head = malloc(sizeof *head);
+  head->next = NULL;
 
 insert t after x:
 
-    t->next = x->next;
-    x->next = t;
+  t->next = x->next;
+  x->next = t;
 
 delete after x:
 
-    t = x->next;
-    x->next = t->next;
+  t = x->next;
+  x->next = t->next;
 
 traversal loop:
 
-    for (t = head->next; t != NULL; t = t->next)
+  for (t = head->next; t != NULL; t = t->next)
 
 test if empty:
 
-    if (head->next == NULL)
+  if (head->next == NULL)
 
 ---
 
@@ -98,24 +98,24 @@ test if empty:
 
 initialize:
 
-    head = malloc(sizeof *head);
-    z = malloc(sizeof *z);
-    head->next = z;
-    z->next = z;
+  head = malloc(sizeof *head);
+  z = malloc(sizeof *z);
+  head->next = z;
+  z->next = z;
 
 insert t after x:
 
-    t->next = x->next;
-    x->next = t;
+  t->next = x->next;
+  x->next = t;
 
 delete after x:
 
-    x->next = x->next->next;
+  x->next = x->next->next;
 
 traversal loop:
 
-    for (t = head->next; t != z; t = t->next)
+  for (t = head->next; t != z; t = t->next)
 
 test if empty:
 
-    if (head->next == z)
+  if (head->next == z)
