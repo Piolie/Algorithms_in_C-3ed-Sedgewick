@@ -1,0 +1,83 @@
+%!PS
+% ----------------------------------------------------------------------
+%                            EXERCISE 4.13
+% ----------------------------------------------------------------------
+% Write a PostScript program that draws this figure:
+%                                                        ____
+%                                                       |    |
+%                                                   ____|    |____
+% ----------------------------------------------------------------------
+%
+%   Figure 4.3
+%   Sample PostScript program
+%   The diagram at the top was drawn by the PostScript program below it.
+%
+%   The program is a postfix expression that uses the built-in functions
+%   moveto, rlineto, rotate, stroke and dup; and the user­defined
+%   function hill (see text). The graphics commands are instructions to
+%   a plotting device: moveto instructs that device to go to the
+%   specified position on the page (coordinates are in points, which are
+%   1/72 inch); rlineto instructs it to move to the specified position
+%   in coordinates relative to its current position, adding the line it
+%   makes to its current path; rotate instructs it to turn left the
+%   specified number of degrees; and stroke instructs it to draw the
+%   path that it has traced.
+%
+%       /\
+%   ___/  \___
+%            /\
+%           /  \
+%          /    \
+%   ______/      \______
+%
+%   /hill {
+%     dup 0 rlineto
+%     60 rotate
+%     dup 0 rlineto
+%     -120 rotate
+%     dup 0 rlineto
+%     60 rotate
+%     dup 0 rlineto
+%     pop
+%   } def
+%   0 0 moveto
+%   144 hill
+%   0 72 moveto
+%   72 hill
+%   stroke
+% ----------------------------------------------------------------------
+%
+% I'm using the MikTeX-provided ps2pdf command line tool to render the
+% postscript and be able to visualize the result. I've noticed that the
+% code from figure 4.3 above doesn't render as shown in the book, but
+% more like:
+%
+%      /\   /\
+%  ___/  \_/_ \
+%         /    \
+%  ______/      \______
+%
+%  I could more accurately reproduce it by changing the last moveto to:
+%    0 144 moveto
+%  Was it an bug in the program or my rendering stack? Who cares!.
+% ----------------------------------------------------------------------
+%
+%  My code for the exercise is: (you can check the output at E04.13.pdf)
+
+<< /PageSize [450 150] >> setpagedevice
+/square {
+  dup 0 rlineto
+  90 rotate
+  dup 0 rlineto
+  -90 rotate
+  dup 0 rlineto
+  -90 rotate
+  dup 0 rlineto
+  90 rotate
+  dup 0 rlineto
+  pop
+} def
+0 0 moveto
+150 square
+stroke
+% ----------------------------------------------------------------------
