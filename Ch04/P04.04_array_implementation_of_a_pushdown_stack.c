@@ -19,6 +19,7 @@ one).
 // #include "Item_char.h"
 // #include "Item_float.h"
 // #include "Item_int.h"
+// #include "Item_string.h"
 #include "STACK.h"
 #include <stdlib.h>
 
