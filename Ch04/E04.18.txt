@@ -1,0 +1,12 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 4.18
+------------------------------------------------------------------------
+Give the contents of s[0], ... , s[4] after the execution of the
+operations illustrated in Figure 4.1, using Program 4.4.
+--------------------------------------------------------------------- */
+
+The array implementation of the stack never removes elements (it only
+overwrites when pushing and moves the top index when popping). Since in
+figure 4.1 the last operations are all pops, the contents of the array
+are:
+  s = ['L', 'S', 'T', 'F', 'I', 'O', 'T', ...];
