@@ -11,7 +11,8 @@ malloc for a push.
 STACKerror is supposed to be defined somewhere else.
 
 The exercise does not specify what the return value of STACKpop should
-be in case of an empty stack. I've chosen NULL.
+be in case of an empty stack. I've chosen NULL, which may or may not
+work, depending on the concrete type of Item.
 --------------------------------------------------------------------- */
 
 #include "Item.h"
@@ -39,7 +40,7 @@ void STACKinit(int maxN) {
   head = NULL;
 }
 
-int STACKempty() { return head == NULL; }
+int STACKempty(void) { return head == NULL; }
 
 void STACKpush(Item item) {
   head = NEW(item, head);
@@ -47,7 +48,7 @@ void STACKpush(Item item) {
     STACKerror();
 }
 
-Item STACKpop() {
+Item STACKpop(void) {
   if (!head) {
     STACKerror();
     return NULL;
