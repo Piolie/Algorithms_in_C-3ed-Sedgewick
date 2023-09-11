@@ -23,16 +23,10 @@ int main(void) {
     sz[i] = 1;
   }
   while (scanf("%d %d", &p, &q) == 2) {
-    for (i = p; i != id[i]; i = id[i]) {
-      int t = i;
-      i = id[id[t]];
-      id[t] = i;
-    }
-    for (j = q; j != id[j]; j = id[j]) {
-      int t = j;
-      j = id[id[t]];
-      id[t] = j;
-    }
+    for (i = p; i != id[i]; i = id[i])
+      id[i] = id[id[i]];
+    for (j = q; j != id[j]; j = id[j])
+      id[j] = id[id[j]];
     if (i == j)
       continue;
     if (sz[i] < sz[j]) {
