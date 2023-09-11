@@ -1,0 +1,19 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 4.36
+------------------------------------------------------------------------
+Given two sequences, give an algorithm for determining whether or not it
+is possible to add plus signs and asterisks to make the first produce
+the second when interpreted as a sequence of deque operations in the
+sense of Exercise 4.35.
+--------------------------------------------------------------------- */
+
+I'll assume that all elements are unique and that sequence 2 is a
+permutation of sequence 1.
+
+do {
+  put next element from sequence 1;
+  if ((first element == next element in sequence 2) || (last element == next element in sequence 2))
+    get it;
+} until sequence 1 is exhausted
+
+if deque is empty => it can be done
