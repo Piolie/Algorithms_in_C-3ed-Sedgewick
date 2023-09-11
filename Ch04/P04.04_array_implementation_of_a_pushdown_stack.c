@@ -29,6 +29,6 @@ void STACKinit(int maxN) {
   s = malloc(maxN * sizeof(Item));
   N = 0;
 }
-int STACKempty() { return N == 0; }
+int STACKempty(void) { return N == 0; }
 void STACKpush(Item item) { s[N++] = item; }
-Item STACKpop() { return s[--N]; }
+Item STACKpop(void) { return s[--N]; }

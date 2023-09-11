@@ -34,9 +34,9 @@ void STACKinit(int maxN) {
   (void)maxN;
   head = NULL;
 }
-int STACKempty() { return head == NULL; }
+int STACKempty(void) { return head == NULL; }
 void STACKpush(Item item) { head = NEW(item, head); }
-Item STACKpop() {
+Item STACKpop(void) {
   Item item = head->item;
   link t = head->next;
   free(head);
