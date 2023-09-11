@@ -11,6 +11,6 @@ only in the specification, which is not reflected in the code.
 --------------------------------------------------------------------- */
 
 void QUEUEinit(int);
-int QUEUEempty();
+int QUEUEempty(void);
 void QUEUEput(Item);
-Item QUEUEget();
+Item QUEUEget(void);
