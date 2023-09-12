@@ -35,7 +35,7 @@ void QUEUEput(Item item) {
   }
 }
 
-Item QUEUEget() {
+Item QUEUEget(void) {
   if (QUEUEempty()) {
     QUEUEerror();
     return q[0];
