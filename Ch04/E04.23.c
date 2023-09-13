@@ -24,8 +24,8 @@ Just like P04.05, we don't handle the popping from an empty stack.
 typedef struct STACKnode *link;
 struct STACKnode {
   Item item;
-  link next;
   link prev;
+  link next;
 };
 
 static link head;
@@ -61,6 +61,10 @@ Item STACKpop() {
   Item item = tail->item;
   link t = tail->prev;
   free(tail);
+  if (t)
+    t->next = NULL;
+  else // this get empties the stack
+    head = NULL;
   tail = t;
   return item;
 }
