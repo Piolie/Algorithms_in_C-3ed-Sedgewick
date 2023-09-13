@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------
-        This code is from "Algorithms in C, Third Edition,
-        by Robert Sedgewick, Addison-Wesley, 1998.
+          This code is from "Algorithms in C, Third Edition,"
+              by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
                               PROGRAM 1.1
               Quick-find solution to connectivity problem

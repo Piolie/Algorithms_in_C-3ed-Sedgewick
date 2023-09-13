@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------
-        This code is from "Algorithms in C, Third Edition,
-        by Robert Sedgewick, Addison-Wesley, 1998.
+          This code is from "Algorithms in C, Third Edition,"
+              by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
                               PROGRAM 3.18
                       Sorting an array of strings
