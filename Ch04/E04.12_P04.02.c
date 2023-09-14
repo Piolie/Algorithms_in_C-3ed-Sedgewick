@@ -17,8 +17,6 @@ Item_float.h must be used in the implementation, and when compiling
 E04.12_P04.03, it is header Item_char.h.
 --------------------------------------------------------------------- */
 
-// #include "Item.h"
-#include "Item_float.h"
 #include "STACK.h"
 #include <math.h>
 #include <stdio.h>

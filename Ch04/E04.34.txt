@@ -9,8 +9,6 @@ Give the sequence of values returned by the get operations when this
 sequence of operations is performed on an initially empty deque.
 --------------------------------------------------------------------- */
 
-beggining   end
-
 E             E
 A           A E
 s           A E s

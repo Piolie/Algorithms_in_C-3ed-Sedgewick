@@ -17,7 +17,6 @@ list for each push/pop), but it works the same nonetheless.
 Just like P04.05, we don't handle the popping from an empty stack.
 --------------------------------------------------------------------- */
 
-#include "Item.h"
 #include "STACK.h"
 #include <stdlib.h>
 

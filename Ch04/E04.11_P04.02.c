@@ -19,8 +19,6 @@ must be used in the implementation, and when compiling E04.11_P04.03,
 it is header Item_char.h.
 --------------------------------------------------------------------- */
 
-// #include "Item.h"
-#include "Item_int.h"
 #include "STACK.h"
 #include <stdio.h>
 #include <string.h>

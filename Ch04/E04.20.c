@@ -15,7 +15,6 @@ The exercise does not specify what the return value of STACKpop should
 be in case of an empty stack. I've chosen the last valid element.
 --------------------------------------------------------------------- */
 
-#include "Item.h"
 #include "STACK.h"
 #include <stdlib.h>
 

@@ -37,8 +37,6 @@ I've switched to the linked-list implementation, on a whim.
 I've not bothered with '-', '/' or unary operations.
 --------------------------------------------------------------------- */
 
-// #include "Item.h"
-#include "Item_string.h"
 #include "STACK.h"
 #include <stdio.h>
 #include <stdlib.h>

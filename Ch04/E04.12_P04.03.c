@@ -25,8 +25,6 @@ work. The input we'll be using is:
   (((-(-1)) + (r(((-1) * (-1)) - (4 * (-1)))))/2)
 --------------------------------------------------------------------- */
 
-// #include "Item.h"
-#include "Item_char.h"
 #include "STACK.h"
 #include <stdio.h>
 #include <string.h>

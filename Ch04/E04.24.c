@@ -11,5 +11,5 @@ space than other alternatives.)
 /* ---------------------------------------------------------------------
 I won't. We simply have to duplicate the functions from STACK.h (P04.01)
 and for the implementation keep one index for each stack and index one
-with s[N1] and the other with s[maxN - 1 - N2], or the like.
+stack with s[N1] and the other with s[maxN - 1 - N2], or the like.
 --------------------------------------------------------------------- */
