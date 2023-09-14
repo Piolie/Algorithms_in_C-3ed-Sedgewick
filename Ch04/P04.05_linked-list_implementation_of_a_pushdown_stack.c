@@ -10,11 +10,6 @@ an auxiliary function NEW to allocate the memory for a node, set its
 fields from the function arguments, and return a link to the node.
 --------------------------------------------------------------------- */
 
-#include "Item.h"
-// #include "Item_char.h"
-// #include "Item_float.h"
-// #include "Item_int.h"
-// #include "Item_string.h"
 #include "STACK.h"
 #include <stdlib.h>
 

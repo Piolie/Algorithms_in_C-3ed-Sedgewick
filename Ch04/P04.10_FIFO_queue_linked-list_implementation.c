@@ -15,7 +15,6 @@ all identical to their counterparts for the linked-list pushdown-stack
 implementation of Program 4.5.
 --------------------------------------------------------------------- */
 
-#include "Item.h"
 #include "QUEUE.h"
 #include <stdlib.h>
 

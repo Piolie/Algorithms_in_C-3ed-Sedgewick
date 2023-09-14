@@ -29,11 +29,9 @@ implementation (see, for example, Program 4.4).
 Makefiles for the array and linked-list implementations are provided.
 The results will of course be the same.
 
-I've included Item_int.h, which is Item.h implemented for int.
+STACK.h must include Item_int.h, which is Item.h implemented for int.
 --------------------------------------------------------------------- */
 
-#include "Item.h"
-// #include "Item_int.h"
 #include "STACK.h"
 #include <stdio.h>
 #include <string.h>

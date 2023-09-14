@@ -15,11 +15,6 @@ check for errors such as pushing onto a full stack (or popping an empty
 one).
 --------------------------------------------------------------------- */
 
-#include "Item.h"
-// #include "Item_char.h"
-// #include "Item_float.h"
-// #include "Item_int.h"
-// #include "Item_string.h"
 #include "STACK.h"
 #include <stdlib.h>
 
