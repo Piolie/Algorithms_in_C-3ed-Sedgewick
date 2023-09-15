@@ -62,7 +62,7 @@ Item STACKpop() {
   free(tail);
   if (t)
     t->next = NULL;
-  else // this get empties the stack
+  else // this pop empties the stack
     head = NULL;
   tail = t;
   return item;
