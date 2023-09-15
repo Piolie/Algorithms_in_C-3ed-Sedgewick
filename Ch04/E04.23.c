@@ -27,8 +27,7 @@ struct STACKnode {
   link next;
 };
 
-static link head;
-static link tail;
+static link head, tail;
 
 link NEW(Item item, link prev) {
   link x = malloc(sizeof *x);

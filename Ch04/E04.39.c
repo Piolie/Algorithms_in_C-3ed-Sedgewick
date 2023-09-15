@@ -27,7 +27,8 @@ link NEW(Item item, link prev, link next) {
 
 void DQinit(int maxN) {
   (void)maxN;
-  head = tail = NULL;
+  head = NULL;
+  tail = NULL;
 }
 
 int DQempty(void) { return head == NULL; }

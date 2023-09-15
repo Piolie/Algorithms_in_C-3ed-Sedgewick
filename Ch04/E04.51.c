@@ -29,8 +29,7 @@ struct STACKnode {
   link next;
 };
 
-static link head;
-static link tail;
+static link head, tail;
 static link *p_array;
 
 link NEW(Item item, link prev) {
