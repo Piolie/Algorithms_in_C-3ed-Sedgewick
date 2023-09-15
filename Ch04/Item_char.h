@@ -1,2 +1,3 @@
 typedef char Item;
-#define ITEMshow(X) printf("%c", X);
+#define eq(A, B) ((A) == (B))
+#define ITEMshow(X) printf("%c", (X));

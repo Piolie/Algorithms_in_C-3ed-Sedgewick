@@ -20,7 +20,7 @@ typedef struct card {
 #define eq(A, B) ((A)->rank == (B)->rank && (A)->suit == (B)->suit)
 #define ITEMshow(X)                                                            \
   {                                                                            \
-    switch (X->rank) {                                                         \
+    switch ((X)->rank) {                                                       \
     case Ace:;                                                                 \
       printf("Ace");                                                           \
       break;                                                                   \
@@ -34,11 +34,11 @@ typedef struct card {
       printf("King");                                                          \
       break;                                                                   \
     default:                                                                   \
-      printf("%d", X->rank);                                                   \
+      printf("%d", (X)->rank);                                                 \
       break;                                                                   \
     };                                                                         \
     printf(" of ");                                                            \
-    switch (X->suit) {                                                         \
+    switch ((X)->suit) {                                                       \
     case Clubs:                                                                \
       printf("Clubs");                                                         \
       break;                                                                   \
