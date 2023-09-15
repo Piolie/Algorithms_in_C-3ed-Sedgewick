@@ -86,7 +86,7 @@ int main(int argc, char *argv[]) {
                                  OUTPUT
 ------------------------------------------------------------------------
 I've used Item_char for demonstration purposes.
-P04.12_stack_with_index_items_and_no_duplicates.exe 100 "L A * S T I * N * F I R * S T * * * O U * T * * *"
+./P04.12_stack_with_index_items_and_no_duplicates.exe 10 "L A * S T I * N * F I R * S T * * * O U * T * * *"
 L       L
 A       L A
 *   A   L

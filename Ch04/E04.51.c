@@ -134,7 +134,7 @@ int main(int argc, char *argv[]) {
                                  OUTPUT
 ------------------------------------------------------------------------
 Reproducing E04.49 (E04.47):
-E04.51.exe 100 "L A * S T I * N * F I R * S T * * * O U * T * * *"
+./E04.51.exe 100 "L A * S T I * N * F I R * S T * * * O U * T * * *"
 L       L
 A       L A
 *   A   L

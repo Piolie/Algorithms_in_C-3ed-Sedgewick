@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
                                  OUTPUT
 ------------------------------------------------------------------------
 Reproducing figure 4.9:
-E04.50_E04.48.exe 50 "L A * S T I * N * F I R * S T * * * O U * T * * *"
+./E04.50_E04.48.exe 10 "L A * S T I * N * F I R * S T * * * O U * T * * *"
 L       L
 A       A L
 *   A   L

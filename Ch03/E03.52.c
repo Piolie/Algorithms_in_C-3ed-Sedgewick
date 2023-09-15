@@ -154,7 +154,7 @@ int Item(link x) { return nodes[index(x)].item; }
 ------------------------------------------------------------------------
 #define TRACE
 
-E03.52.exe 9 5
+./E03.52.exe 9 5
 first free: 4
 deleted: 5
 nodes[] =   0  1  2  3  4  5  6  7  8  9

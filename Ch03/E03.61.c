@@ -37,22 +37,22 @@ line and pressing Enter. This outputs ^Z and makes getchar() return EOF.
 In mintty the equivalent is supposedly Ctrl+D, but it wouldn't work for
 me.
 ------------------------------------------------------------------------
-E03.61.exe long
+./E03.61.exe long
 this is a very long string
 ^Z
 15
 
-E03.61.exe long
+./E03.61.exe long
 long
 ^Z
 0
 
-E03.61.exe long
+./E03.61.exe long
  long
 ^Z
 1
 
-E03.61.exe long
+./E03.61.exe long
 lang
 ^Z
 --------------------------------------------------------------------- */

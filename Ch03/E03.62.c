@@ -76,18 +76,18 @@ int main(int argc, char *argv[]) {
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-E03.62.exe ""
+./E03.62.exe ""
 Length of the longest sequence of blanks: 0
 
-E03.62.exe " "
+./E03.62.exe " "
 Length of the longest sequence of blanks: 1
 
-E03.62.exe " 1  1   1    1"
+./E03.62.exe " 1  1   1    1"
 Length of the longest sequence of blanks: 4
 
-E03.62.exe "            1                 1   1    1"
+./E03.62.exe "            1                 1   1    1"
 Length of the longest sequence of blanks: 17
 
-E03.62.exe "$(cat E03.62.c)"
+./E03.62.exe "$(cat E03.62.c)"
 Length of the longest sequence of blanks: 33
 --------------------------------------------------------------------- */

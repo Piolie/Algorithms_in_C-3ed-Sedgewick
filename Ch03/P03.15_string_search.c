@@ -46,7 +46,7 @@ line and pressing Enter. This outputs ^Z and makes getchar() return EOF.
 In mintty the equivalent is supposedly Ctrl+D, but it wouldn't work for
 me.
 ------------------------------------------------------------------------
-P03.15_string_search.exe long
+./P03.15_string_search.exe long
 this is a very long string
 ^Z
 15

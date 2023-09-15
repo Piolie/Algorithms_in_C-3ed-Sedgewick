@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-E03.56.exe "This is the string to be counted."
+./E03.56.exe "This is the string to be counted."
 String: This is the string to be counted.
 char count
 ---- -----

@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-E03.75.exe 0 7 8
+./E03.75.exe 0 7 8
 0 6
 0 1
 0 2
@@ -81,7 +81,7 @@ E03.75.exe 0 7 8
 Nodes a and b: 0, 7
 There are 2 nodes that connect to both a and b.
 
-E03.75.exe 0 4 8
+./E03.75.exe 0 4 8
 0 6
 0 1
 0 2
@@ -99,7 +99,7 @@ E03.75.exe 0 4 8
 Nodes a and b: 0, 4
 There are 3 nodes that connect to both a and b.
 
-E03.75.exe 4 7 8
+./E03.75.exe 4 7 8
 0 6
 0 1
 0 2

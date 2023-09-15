@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-E03.59.exe "This is the argument string"
+./E03.59.exe "This is the argument string"
 Enter sequence of words: This is the argument string 
 ->This
 ->is
@@ -61,7 +61,7 @@ This is the argument string
 ->string
 ^Z
 
-E03.59.exe "This is the argument string"
+./E03.59.exe "This is the argument string"
 Enter sequence of words: this that argument strong string 
 ->argument
 ->string

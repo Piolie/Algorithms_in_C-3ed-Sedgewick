@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-E03.60.exe "       This is a   string with      many     spaces .     ."
+./E03.60.exe "       This is a   string with      many     spaces .     ."
 String           :        This is a   string with      many     spaces .     .
 Condensed string :  This is a string with many spaces . .
 --------------------------------------------------------------------- */

@@ -67,35 +67,35 @@ int main(int argc, char *argv[]) {
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-E03.57.exe "if i had a hifi"
+./E03.57.exe "if i had a hifi"
 Is palindrome1?: Yes
 Is palindrome2?: Yes
 
-E03.57.exe "12344321"
+./E03.57.exe "12344321"
 Is palindrome1?: Yes
 Is palindrome2?: Yes
 
-E03.57.exe "123454321"
+./E03.57.exe "123454321"
 Is palindrome1?: Yes
 Is palindrome2?: Yes
 
-E03.57.exe "  1 234 543 2 1        "
+./E03.57.exe "  1 234 543 2 1        "
 Is palindrome1?: Yes
 Is palindrome2?: Yes
 
-E03.57.exe ""
+./E03.57.exe ""
 Is palindrome1?: Yes
 Is palindrome2?: Yes
 
-E03.57.exe " "
+./E03.57.exe " "
 Is palindrome1?: Yes
 Is palindrome2?: Yes
 
-E03.57.exe "1234567890"
+./E03.57.exe "1234567890"
 Is palindrome1?: No
 Is palindrome2?: No
 
-E03.57.exe "1122"
+./E03.57.exe "1122"
 Is palindrome1?: No
 Is palindrome2?: No
 --------------------------------------------------------------------- */

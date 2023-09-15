@@ -143,27 +143,27 @@ int main(int argc, char *argv[]) {
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-E03.66.exe 1000 1
+./E03.66.exe 1000 1
 Can connect this set of 1000 points with edges less than 1.000? YES!
 
-E03.66.exe 1000 0.1
+./E03.66.exe 1000 0.1
 Can connect this set of 1000 points with edges less than 0.100? YES!
 
-E03.66.exe 1000 0.01
+./E03.66.exe 1000 0.01
 Can connect this set of 1000 points with edges less than 0.010? NO!
 
-E03.66.exe 10000 0.01
+./E03.66.exe 10000 0.01
 Can connect this set of 10000 points with edges less than 0.010? NO!
 
-E03.66.exe 100000 0.01
+./E03.66.exe 100000 0.01
 Can connect this set of 100000 points with edges less than 0.010? YES!
 
-E03.66.exe 100000 0.001
+./E03.66.exe 100000 0.001
 Can connect this set of 100000 points with edges less than 0.001? NO!
 
-E03.66.exe 1000000 0.001
+./E03.66.exe 1000000 0.001
 Can connect this set of 1000000 points with edges less than 0.001? NO!
 
-E03.66.exe 10000000 0.001
+./E03.66.exe 10000000 0.001
 Can connect this set of 10000000 points with edges less than 0.001? YES!
 --------------------------------------------------------------------- */

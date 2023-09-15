@@ -104,7 +104,7 @@ int main(int argc, char *argv[]) {
                                  OUTPUT
 ------------------------------------------------------------------------
 Reproducing figure 4.10 and E04.52_E04.48:
-E04.53_E04.48.exe 10 "F I R S * T * I N * * * F I * R S * * * T * O U T * * *"
+./E04.53_E04.48.exe 10 "F I R S * T * I N * * * F I * R S * * * T * O U T * * *"
 F       F
 I       F I
 R       F I R

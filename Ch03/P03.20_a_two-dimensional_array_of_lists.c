@@ -97,24 +97,24 @@ int main(int argc, char *argv[]) {
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-P03.20_a_two-dimensional_array_of_lists.exe 1000 1
+./P03.20_a_two-dimensional_array_of_lists.exe 1000 1
 488477 edges shorter than 1.000000
 
-P03.20_a_two-dimensional_array_of_lists.exe 1000 0.1
+./P03.20_a_two-dimensional_array_of_lists.exe 1000 0.1
 14293 edges shorter than 0.100000
 
-P03.20_a_two-dimensional_array_of_lists.exe 1000 0.01
+./P03.20_a_two-dimensional_array_of_lists.exe 1000 0.01
 130 edges shorter than 0.010000
 
-P03.20_a_two-dimensional_array_of_lists.exe 1000 0.001
+./P03.20_a_two-dimensional_array_of_lists.exe 1000 0.001
 2 edges shorter than 0.001000
 
-P03.20_a_two-dimensional_array_of_lists.exe 1000 0.0001
+./P03.20_a_two-dimensional_array_of_lists.exe 1000 0.0001
 0 edges shorter than 0.000100
 
-P03.20_a_two-dimensional_array_of_lists.exe 10000 0.0001
+./P03.20_a_two-dimensional_array_of_lists.exe 10000 0.0001
 3 edges shorter than 0.000100
 
-P03.20_a_two-dimensional_array_of_lists.exe 100000 0.0001
+./P03.20_a_two-dimensional_array_of_lists.exe 100000 0.0001
 kaput! see note at the beginning
 --------------------------------------------------------------------- */

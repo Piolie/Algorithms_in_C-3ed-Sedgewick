@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
                                  OUTPUT
 ------------------------------------------------------------------------
 Same as E04.34:
-E04.41.exe 5 "E A s + Y + Q U E * * + s t + * + I O * n + + *."
+./E04.41.exe 5 "E A s + Y + Q U E * * + s t + * + I O * n + + *."
 E       E
 A       A E
 s       A E s
@@ -86,7 +86,7 @@ n       O I n
 *   n
 
 Same as figure 4.6:
-E04.41.exe 5 "f i r s + t + i n + + + f i + r s + + + t + o u t + + + + +"
+./E04.41.exe 5 "f i r s + t + i n + + + f i + r s + + + t + o u t + + + + +"
 f       f
 i       f i
 r       f i r

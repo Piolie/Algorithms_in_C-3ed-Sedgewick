@@ -79,7 +79,7 @@ int main(void) {
 /* ---------------------------------------------------------------------
                                  OUTPUT
 ------------------------------------------------------------------------
-P03.17_Sorting_an_array_of_strings.exe
+./P03.17_Sorting_an_array_of_strings.exe
 this
 is
 a
@@ -92,7 +92,7 @@ string
 test
 this
 
-P03.17_Sorting_an_array_of_strings.exe
+./P03.17_Sorting_an_array_of_strings.exe
 This
 is
 yet
