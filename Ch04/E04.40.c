@@ -12,11 +12,12 @@ traverse and modify the value of each node, never touching the links.
 
 I've found this implementation to be the easiest to understand of all
 for a FIFO.
+
+The full and empty functions only work for lists with more than 2 nodes.
 --------------------------------------------------------------------- */
 
 #include "QUEUE.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 typedef struct QUEUEnode *link;
 struct QUEUEnode {
@@ -60,7 +61,7 @@ Item QUEUEget(void) {
   return item;
 }
 
-void DQdump(void) {
+void QUEUEprettydump(void) {
   const int digits = 10;
   link t = head;
 
