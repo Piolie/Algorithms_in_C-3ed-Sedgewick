@@ -1,0 +1,21 @@
+Definition 4.1
+- An abstract data type (ADT) is a data type (a set of values and a
+collection of operations on those values) that is accessed only through
+an interface. We refer to a program that uses an ADT as a client, and a
+program that specifies the data type as an implementation.
+
+Definition 4.2
+- A pushdown stack is an ADT that comprises two basic operations: insert
+(push) a new item, and delete (pop) the item that was most recently
+inserted.
+
+Definition 4.3
+- A FIFO queue is an ADT that comprises two basic operations: insert
+(put) a new item, and delete (get) the item that was least recently
+inserted.
+
+Definition 4.4
+- A first-class data type is one for which we can have potentially many
+different instances, and which we can assign to variables which we can
+declare to hold the instances.
+
