@@ -16,7 +16,8 @@ instead of integers, if desired (see Exercise 12.12).
 
 // #define DEBUG_P04_12
 
-#include "STACK.h" // with Item_int.h
+#include "Item.h"
+#include "STACK.h"
 #include <stdlib.h>
 
 static int *s, *t;

@@ -16,6 +16,7 @@ The heavy lifting was already done in E04.48.
 
 // #define DEBUG_E04_52_E04_48
 
+#include "Item.h"
 #include "QUEUE.h"
 #include <stdlib.h>
 

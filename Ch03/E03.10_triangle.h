@@ -12,8 +12,6 @@ The data type is just a struct containing three points corresponding to
 the three vertices of the triangle.
 --------------------------------------------------------------------- */
 
-#include "Point.h"
-
 typedef struct {
   point A;
   point B;

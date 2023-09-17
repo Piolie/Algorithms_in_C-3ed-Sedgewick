@@ -6,6 +6,7 @@ Write a client that picks numbers for a lottery by putting the numbers
 of them.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "QUEUE.h"
 #include <stdio.h>
 #include <stdlib.h>

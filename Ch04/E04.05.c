@@ -11,13 +11,12 @@ are defined.
 ITEMrand is not discussed until Program 6.9 further in the book and it's
 not needed here. (It simply returns a random key.)
 
-I've chosen float as the type and included Item_int.h, which is Item.h
-implemented for float. The type of number requires * and / defined, not
-+ and / as stated above.
+I've chosen float as the concrete type. The appropriate header has to be
+included. The type of number requires * and / defined, not + and / as
+stated above.
 --------------------------------------------------------------------- */
 
-// #include "Item.h"
-#include "Item_float.h"
+#include "Item.h"
 #include <stdio.h>
 
 Item lg(Item);

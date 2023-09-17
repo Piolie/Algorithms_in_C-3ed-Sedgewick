@@ -19,6 +19,7 @@ function that moves the new node to the top.
 
 // #define DEBUG_E04_51
 
+#include "Item.h"
 #include "STACK.h"
 #include <stdlib.h>
 

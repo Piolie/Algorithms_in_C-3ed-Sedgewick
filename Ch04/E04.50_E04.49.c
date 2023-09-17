@@ -25,6 +25,7 @@ I've used that approach in E04.52_E04.49.
 
 // #define DEBUG_E04_50_E04_49
 
+#include "Item.h"
 #include "STACK.h"
 #include <stdlib.h>
 

@@ -12,11 +12,12 @@ your program should print the value 1.618034.
 Since this program only works with postfix notation, the input should
 be first passed through E04.12_P04.03 to convert from infix to postfix.
 
-Keep in mind that when compiling E04.12_P04.02 (this program), header
-Item_float.h must be used in the implementation, and when compiling
-E04.12_P04.03, it is header Item_char.h.
+Keep in mind that when compiling E04.12_P04.02 (this program), the
+concrete type in Item.h has to be float, while when compiling
+E04.12_P04.03 it has to be char.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "STACK.h"
 #include <math.h>
 #include <stdio.h>

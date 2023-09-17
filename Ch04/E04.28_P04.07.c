@@ -6,7 +6,7 @@ provide a function that will return the number of nodes known to be
 connected to a given node.
 --------------------------------------------------------------------- */
 
-#include "E04.28_P04.06.h"
+#include "UF.h"
 #include <stdio.h>
 #include <stdlib.h>
 

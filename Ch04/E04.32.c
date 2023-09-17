@@ -10,6 +10,7 @@ get when the queue is empty or to put when the queue is full.
 This exercise is analogous to E04.20. I've followed similar strategies.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "QUEUE.h"
 #include <stdlib.h>
 

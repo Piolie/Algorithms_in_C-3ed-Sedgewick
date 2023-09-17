@@ -26,6 +26,7 @@ QUEUEmove_to_end) from E04.50_E04.49.
 
 #define DEBUG_E04_53_E04_49
 
+#include "Item.h"
 #include "QUEUE.h"
 #include <stdlib.h>
 

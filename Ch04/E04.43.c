@@ -23,6 +23,7 @@ swap the last node with the first. In the average case, half the nodes
 have to be traversed.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "QUEUE.h"
 #include <stdlib.h>
 

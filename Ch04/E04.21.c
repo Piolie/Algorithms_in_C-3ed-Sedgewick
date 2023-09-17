@@ -15,6 +15,7 @@ be in case of an empty stack. I've chosen NULL, which may or may not
 work, depending on the concrete type of Item.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "STACK.h"
 #include <stdlib.h>
 

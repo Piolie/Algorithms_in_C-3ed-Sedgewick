@@ -15,6 +15,7 @@ check for errors such as pushing onto a full stack (or popping an empty
 one).
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "STACK.h"
 #include <stdlib.h>
 

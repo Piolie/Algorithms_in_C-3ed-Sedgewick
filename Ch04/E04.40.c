@@ -16,6 +16,7 @@ for a FIFO.
 The full and empty functions only work for lists with more than 2 nodes.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "QUEUE.h"
 #include <stdio.h>
 

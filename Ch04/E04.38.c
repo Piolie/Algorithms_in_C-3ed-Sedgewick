@@ -16,6 +16,7 @@ tail, depending on the function.
 overflow")?](https://stackoverflow.com/questions/14785443/)
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "DEQUE.h"
 #include <stdio.h>
 #include <stdlib.h>

@@ -24,12 +24,11 @@ The book outlines the method:
   postf‌ix expression in this way, so no parentheses are necessary.
 
 To make this work, we'll need a stack of strings, since each operand
-can now be itself an expression. I'm adding the appropriate
-Item_string.h, which is a copy of E04.03. To build the strings, we'll be
-using the snprintf, provided by the standard library since C99, and
-assume a maximum string size of BUFSZ. (We could dynamically allocate
-the exact memory we need for each string using two calls to snprintf, as
-explained in: [Building Strings from variables in
+can now be itself an expression. E04.03 will come in handy for that. To
+build the strings, we'll be using the snprintf, provided by the standard
+library since C99, and assume a maximum string size of BUFSZ. (We could
+dynamically allocate the exact memory we need for each string using two
+calls to snprintf, as explained in: [Building Strings from variables in
 C](https://stackoverflow.com/questions/4881937/).)
 
 I've switched to the linked-list implementation, on a whim.
@@ -37,6 +36,7 @@ I've switched to the linked-list implementation, on a whim.
 I've not bothered with '-', '/' or unary operations.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "STACK.h"
 #include <stdio.h>
 #include <stdlib.h>

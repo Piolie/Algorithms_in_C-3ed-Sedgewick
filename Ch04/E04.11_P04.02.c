@@ -14,11 +14,12 @@ performed. Thus, we have to first pop an operand and store it in a
 temporary variable, before calling STACKpush.
 
 I've only included the makefile for the array implementation. Keep in
-mind that when compiling E04.11_P04.02 (this program), header Item_int.h
-must be used in the implementation, and when compiling E04.11_P04.03,
-it is header Item_char.h.
+mind that when compiling E04.11_P04.02 (this program), the concrete type
+in Item.h has to be int, while when compiling E04.11_P04.03 it has to be
+char.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "STACK.h"
 #include <stdio.h>
 #include <string.h>

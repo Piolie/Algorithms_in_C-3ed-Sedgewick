@@ -5,6 +5,7 @@ Provide an implementation for your deque interface (Exercise 4.37) that
 uses a doubly linked list for the underlying data structure.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "DEQUE.h"
 #include <stdio.h>
 #include <stdlib.h>

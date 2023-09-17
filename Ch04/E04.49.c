@@ -9,6 +9,7 @@ rearranging, the whole stack.
 
 // #define DEBUG_E04_49
 
+#include "Item.h"
 #include "STACK.h"
 #include <stdlib.h>
 

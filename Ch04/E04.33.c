@@ -11,6 +11,7 @@ malloc for a put.
 This exercise is analogous to E04.21. I've followed similar strategies.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "QUEUE.h"
 #include <stdlib.h>
 

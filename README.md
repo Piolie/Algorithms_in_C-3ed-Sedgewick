@@ -10,9 +10,9 @@ The copy I have available is of a 14th printing, dated January 2006. There have 
 
 Each chapter has its own folder and for convenience I've also included the original programs from the book ready to be compiled and run (where it makes sense).
 
-Files for the solutions are named `E<CC>.<XX>.<ext>`, where `<CC>` is the chapter number, `<XX>` is the exercise number and `<ext>` is the corresponding file extension: either `h`/`c` for code solutions or `txt` for the rest. Some solutions include output from the respective program at the bottom of the file and maybe some comments.
+Files for the solutions are named `E<CC>.<XX>.<ext>`, where `<CC>` is the chapter number, `<XX>` is the exercise number and `<ext>` is the corresponding file extension: either `h`/`c` for code solutions or `txt` for the rest. Some solutions include notes at the beginning and output from the respective program at the bottom of the file.
 
-Similarly, programs are named `P<CC>.<XX>_<description>.<ext>`, where the extra `<description>` is the title given in the book. Since the book calls some programs by one name (e.g. "Program 3.3") but then refers to a different filename (e.g. "Point.h"), I have included more than one copy of some files with different filenames, so as to be both easy to find and to include in other programs/solutions.
+Similarly, programs are named `P<CC>.<XX>_<description>.<ext>`, where the extra `<description>` is the title given in the book. Some programs are really headers to be included under a different filename (e.g. "Program 3.3" is then included as "Point.h"). Due to the existence of several iterations of the same file under the same name, in each case the user has to choose the correct header from among the programs/solutions.
 
 There are also some additional notes pertaining to the topics of the corresponding chapter, which I have taken to aid me in working out the solutions.
 
@@ -25,7 +25,7 @@ For those cases in which it is necessary to compile and link several files, I ha
 
     make -f <E/P>.<CC>.mak
 
-See [Makefile Tutorial](https://makefiletutorial.com/) for a nice introduction to makefiles.
+See [Makefile Tutorial](https://makefiletutorial.com/) for a nice introduction to makefiles [A Simple Makefile Tutorial](https://cs.colby.edu/maxwell/courses/tutorials/maketutor/) for the guide I mostly followed.
 
 # Warranty
 It goes without saying that the solutions are not guaranteed to be good or even working. Feel free to open an issue or file a pull request if you believe there is an addition/improvement/correction to make.

@@ -13,6 +13,7 @@ simply use a standard 52-card deck and pick five cards from there, N
 times.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "QUEUE.h"
 #include <stdio.h>
 #include <stdlib.h>

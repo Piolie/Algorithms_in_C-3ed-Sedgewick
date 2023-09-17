@@ -18,7 +18,7 @@ the +.
 Makefiles for the array and linked-list implementations are provided.
 The results will of course be the same.
 
-STACK.h must include Item_char.h, which is Item.h implemented for int.
+The stack implementation must also include Item.h defined for int.
 
 For the algorithm to work it's self-evident that the number of closing
 parenthesis must equal the number of operators. If we add extra pairs of
@@ -27,6 +27,7 @@ each operation is not surrounded by parenthesis, then some operators
 are never popped.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "STACK.h"
 #include <stdio.h>
 #include <string.h>

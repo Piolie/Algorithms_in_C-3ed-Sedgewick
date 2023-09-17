@@ -15,7 +15,7 @@ are collinear using the added collinear() function.
 Some internal information is printed for clarity.
 --------------------------------------------------------------------- */
 
-#include "E03.08_Point.h"
+#include "Point.h" // #include "E03.08_Point.h"
 #include <stdio.h>
 #include <stdlib.h>
 

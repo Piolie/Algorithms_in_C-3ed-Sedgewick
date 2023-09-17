@@ -7,7 +7,8 @@ program that generates random triples of pairs of floats between 0 and 1
 and computes empirically the average area of the triangles generated.
 --------------------------------------------------------------------- */
 
-#include "E03.10_triangle.h"
+#include "Point.h
+#include "triangle.h" // #include "E03.10_triangle.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>

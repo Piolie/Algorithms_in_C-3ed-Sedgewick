@@ -24,6 +24,7 @@ I'll be reusing the interface from QUEUE.h (P04.09), since a new ADT
 would only change the names of the functions.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "QUEUE.h"
 #include <stdlib.h>
 

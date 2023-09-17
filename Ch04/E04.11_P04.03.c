@@ -5,6 +5,7 @@ Extend Programs 4.2 and 4.3 to include the - (subtract) and / (divide)
 operations.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "STACK.h"
 #include <stdio.h>
 #include <string.h>

@@ -18,7 +18,7 @@ each node. We can avoid this double call by providing another function
 that does both things at the same time.
 --------------------------------------------------------------------- */
 
-#include "E04.27_P04.06.h"
+#include "UF.h"
 #include <stdio.h>
 #include <stdlib.h>
 

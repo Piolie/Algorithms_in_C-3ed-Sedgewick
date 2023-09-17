@@ -44,7 +44,7 @@ I don't know what the assumption that the points are all in the unit
 square would be used for.
 --------------------------------------------------------------------- */
 
-#include "E03.08_Point.h"
+#include "Point.h" // #include "E03.08_Point.h"
 #include <math.h>
 #include <stdio.h>
 

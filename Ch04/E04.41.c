@@ -19,6 +19,7 @@ at the end and get from the beginning. Thus, according to E04.37, we
 have to use lowercase and '+'.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "DEQUE.h"
 #include <stdio.h>
 #include <stdlib.h>

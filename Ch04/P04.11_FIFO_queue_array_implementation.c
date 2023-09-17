@@ -50,6 +50,7 @@ what the exercise states, the queue is empty not when head == tail, but
 when head % N == tail.
 --------------------------------------------------------------------- */
 
+#include "Item.h"
 #include "QUEUE.h"
 #include <stdlib.h>
 
