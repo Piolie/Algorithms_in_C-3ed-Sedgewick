@@ -7,5 +7,5 @@ the item on standard output.
 --------------------------------------------------------------------- */
 
 typedef int Item;
-#define eq(A, B) (A == B)
-#define ITEMshow(X) printf("%d", X);
+#define eq(A, B) ((A) == (B))
+#define ITEMshow(X) printf("%d", (X));

@@ -8,6 +8,6 @@ absolute value) of the two numbers is less than 10^-6.
 --------------------------------------------------------------------- */
 
 typedef float Item;
-#define eq(A, B) (abs(A - B) / max(abs(A), abs(B)) < 1e-6 ? 1 : 0)
-#define abs(X) (X > 0 ? (X) : (-X))
-#define max(A, B) (A > B ? (A) : (B))
+#define eq(A, B) (abs((A) - (B)) / max(abs((A)), abs((B))) < 1e-6 ? 1 : 0)
+#define abs(X) ((X) > 0 ? (X) : -(X))
+#define max(A, B) ((A) > (B) ? (A) : (B))
