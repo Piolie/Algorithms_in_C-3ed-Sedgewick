@@ -28,9 +28,9 @@ int main(int argc, char *argv[]) {
     printf("Mixing cards...\n");
     for (RANK rank = Ace; rank <= King; rank++)
       for (SUIT suit = Clubs; suit <= Spades; suit++) {
-        Item card = malloc(sizeof *card);
-        card->rank = rank;
-        card->suit = suit;
+        Item card;
+        card.rank = rank;
+        card.suit = suit;
         QUEUEput(card);
       }
 
