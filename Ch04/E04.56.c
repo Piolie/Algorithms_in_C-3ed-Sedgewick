@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-                             EXERCISE 4.57
+                             EXERCISE 4.56
 ------------------------------------------------------------------------
 Write a client program for your ADT from Exercise 4.55, which exercises
 a randomized queue with no duplicates.
