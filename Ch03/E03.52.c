@@ -42,7 +42,6 @@ Following the links, starting at 1, we see the items in the order 2 9 6
   item  | 1   2   3   4   5   6   7   8   9
   next  | 1   2   3   4   5   6   7   8   0
 
-
           1   2   3   4   5   6   7   8   9
   4       1   2   3   5   -   6   7   8   0
 

@@ -22,7 +22,6 @@ for any N_0 > 0:
   f(N) < c_0 f(N), for all N > N_0
 Which means that f(N) is O(f(N)).
 
-
 2)
 Suppose g(n) is cO(f(N)), then g(n)/c is O(f(N)):
   g(N)/c < c_0 f(N), for all N > N_0
@@ -31,13 +30,11 @@ then
     g(N) < (c_0 * c) f(N)
 which means that g(N) is O(f(N)).
 
-
 3)
 Suppose g(N) is O(cf(N)):
   g(N) < c_0 * c f(N), for all N > N0
   g(N) < (c_0 * c) f(N)
 which means that g(N) is O(f(N)).
-
 
 4)
 If f(N) - g(N) is O(h(N)), then:
@@ -45,7 +42,6 @@ If f(N) - g(N) is O(h(N)), then:
 then:
   f(N) < g(N) + c_0 h(N)
 which means f(N) is g(N) + O(h(N)).
-
 
 5)
 Suppose l(N) is O(f(N)) and m(N) is O(g(N)), then:
@@ -59,7 +55,6 @@ This way, both inequalities are satisfied for N > N_0. This means:
 Defining c_0 = c_1 * c_2:
   l(N) * m(N) < c_0 * f(N) * g(N), for N > N_0
 which means l(N) * m(N) is O(f(N)*g(N))
-
 
 6)
 Suppose l(N) is O(f(N)) and m(N) is O(g(N)), then:

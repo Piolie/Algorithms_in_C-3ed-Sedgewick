@@ -9,43 +9,43 @@ sequence exists.
 --------------------------------------------------------------------- */
 
 (i)
-E       E
-*   E
-a       a
-s       a s
-*   s   a
-*   a
-Y       Y
-*   Y
+  E       E
+  *   E
+  a       a
+  s       a s
+  *   s   a
+  *   a
+  Y       Y
+  *   Y
 
 (ii)
 This one can't be done, since we have to wait for the Y to be put, which
 fixes the positions of all the other letters. Once we get the 'Y', the
 'a' that we need next is trapped between 'E' and 's'.
 
-E       E
-a       E a
-s       E a s
-Y       Y E a s
-+   Y     E a s
-XXXXXXXXXXXXXXX
+  E       E
+  a       E a
+  s       E a s
+  Y       Y E a s
+  +   Y     E a s
+  XXXXXXXXXXXXXXX
 
 (iii)
-E         E
-a         E a
-*   a     E
-s         E s
-Y       Y E s
-+   Y     E s
-*   s     E
-*   E
+  E         E
+  a         E a
+  *   a     E
+  s         E s
+  Y       Y E s
+  +   Y     E s
+  *   s     E
+  *   E
 
 (iv)a s Y E
-E         E
-a         E a
-*   a     E
-s         E s
-*   s     E
-Y       Y E
-+   Y     E
-*   E
+  E         E
+  a         E a
+  *   a     E
+  s         E s
+  *   s     E
+  Y       Y E
+  +   Y     E
+  *   E

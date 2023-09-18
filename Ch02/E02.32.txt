@@ -20,7 +20,6 @@ appears on the left, find an asymptotic formula for f(2N)/f(N).
   f(2N) = 1
   f(2N)/f(N) = 1 (no increase)
 
-
 2)
   f(N) = lg N
   f(2N) = lg 2N = lg 2 + lg N

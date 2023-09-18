@@ -4,7 +4,6 @@ TARGET = E04.12_P04.03.exe
 OBJ = E04.12_P04.03.o P04.04_array_implementation_of_a_pushdown_stack.o
 DEPS = Item.h STACK.h
 
-
 all: $(OBJ)
 	$(CC) -o $(TARGET) $(OBJ)
 
