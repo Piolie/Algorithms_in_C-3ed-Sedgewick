@@ -11,25 +11,25 @@ because the distance function would have to accept point arguments with
 a variable number of dimensions. This could be done, but the typedef for
 point would have to be changed to something like this:
 
-typedef struct {
-  int dimensions;
-  float *coord;
-} point;
+  typedef struct {
+    int dimensions;
+    float *coord;
+  } point;
 
 and we would have to malloc (and free) enough space for the coordinates
 of each point. Parsing the input from argv[] would also take some work.
 
 Then, the distance function could be like this:
 
-float distance(point a, point b, int dimensions) {
-  float dx2 = 0;
-  for (int i = 0; i < dimensions; i++) {
-    float diff = a.coord[i] - b.coord[i];
-    dx2 += diff*diff;
-  }
+  float distance(point a, point b, int dimensions) {
+    float dx2 = 0;
+    for (int i = 0; i < dimensions; i++) {
+      float diff = a.coord[i] - b.coord[i];
+      dx2 += diff*diff;
+    }
 
-  return sqrt(dx2);
-}
+    return sqrt(dx2);
+  }
 
 If d is hard-coded, so that point has coordinates c1, c2, ..., cd, then
 we simply do:

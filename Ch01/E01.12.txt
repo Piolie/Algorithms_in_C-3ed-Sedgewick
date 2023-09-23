@@ -36,6 +36,7 @@ average depth. (Each node in level i has depth i.)
           2^n  /       \i/
                ---
               i = 0
+
            1
         = --- * n * 2^(n - 1) (see [Wiki] for this result)
           2^n

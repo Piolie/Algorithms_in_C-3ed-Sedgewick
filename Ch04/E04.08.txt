@@ -10,10 +10,10 @@ Exercise 4.7.
 I'll assume that all elements are unique and that sequence 2 is a
 permutation of sequence 1.
 
-do {
-  push next element from sequence 1;
-  if (top element == next element in sequence 2)
-    pop it;
-} until sequence 1 is exhausted
+  do {
+    push next element from sequence 1;
+    if (top element == next element in sequence 2)
+      pop it;
+  } until sequence 1 is exhausted
 
-if stack is empty => it can be done
+  if stack is empty => it can be done
