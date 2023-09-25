@@ -51,6 +51,6 @@ link delete(link x, Item v) {
     free(x);
     return t;
   }
-  x->next = delete (x->next, v);
+  x->next = delete(x->next, v);
   return x;
 }
