@@ -3,7 +3,7 @@
               by Robert Sedgewick, Addison-Wesley, 1998.
 ------------------------------------------------------------------------
                               PROGRAM 3.18
-                      Sorting an array of strings
+                 Adjacency-matrix graph representation
 ------------------------------------------------------------------------
 This program reads a set of edges that define an undirected graph and
 builds an adjacency-matrix representation for the graph, setting a[i][j]
