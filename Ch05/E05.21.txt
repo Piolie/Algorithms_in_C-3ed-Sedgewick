@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.21
+------------------------------------------------------------------------
+Prove that the recursive solution to the towers of Hanoi problem
+(Program 5.7) is optimal. That is, show that any solution requires at
+least 2^N - 1 moves.
+--------------------------------------------------------------------- */
+
+MISSING!
