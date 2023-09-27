@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.20
+------------------------------------------------------------------------
+Prove by induction that the number of function calls made by any divide-
+and-conquer algorithm that divides a problem into parts that constitute
+the whole, then solves the parts recursively, is linear.
+--------------------------------------------------------------------- */
+
+MISSING!
