@@ -1,0 +1,60 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.23
+------------------------------------------------------------------------
+Examine tables of n-bit numbers, such as Figure 5.9, to discover a
+property of the ith number that determines the direction of the ith move
+(indicated by the sign bit in Figure 5.7) for solving the towers of
+Hanoi problem.
+--------------------------------------------------------------------- */
+
+Here is figure 5.9, extended and with added signs for reference:
+
+  Figure 5.9
+  Binary counting and the ruler function
+
+  Computing the ruler function is equivalent to counting the number of
+  trailing zeros in the even N-bit numbers.
+
+  0 0 0 0 1
+  0 0 0 1 0   +1
+  0 0 0 1 1
+  0 0 1 0 0   -2
+  0 0 1 0 1
+  0 0 1 1 0   +1
+  0 0 1 1 1
+  0 1 0 0 0   +3
+  0 1 0 0 1
+  0 1 0 1 0   +1
+  0 1 0 1 1
+  0 1 1 0 0   -2
+  0 1 1 0 1
+  0 1 1 1 0   +1
+  0 1 1 1 1
+  1 0 0 0 0   -4
+  1 0 0 0 1
+  1 0 0 1 0   +1
+  1 0 0 1 1
+  1 0 1 0 0   -2
+  1 0 1 0 1
+  1 0 1 1 0   +1
+  1 0 1 1 1
+  1 1 0 0 0   +3
+  1 1 0 0 1
+  1 1 0 1 0   +1
+  1 1 0 1 1
+  1 1 1 0 0   -2
+  1 1 1 0 1
+  1 1 1 1 0   +1
+  1 1 1 1 1
+  0 0 0 0 0   +5
+  0 0 0 0 1
+  0 0 0 1 0   +1
+     ...
+
+Odd disks are moved right (+), even disks are moved left (-), and since
+the number of trailing zeros indicates the number of disk to be moved,
+we can conclude that the parity of the number of trailing zeros of the
+ith number indicates the direction of ith move.
+
+In this case, the number of disks is odd. These directions are reversed
+if the number of disks is even.
