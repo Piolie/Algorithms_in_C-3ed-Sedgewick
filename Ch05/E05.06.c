@@ -8,10 +8,9 @@ Euclid's algorithm for the inputs 89 and 55.
 #include <stdio.h>
 #include <stdlib.h>
 
-static int depth = 0;
-
 int gcd(int m, int n) {
-  printf("%*sgcd(%d, %d)\n", depth, "", m, n);
+  static int depth = 0;
+  printf("%*sgcd(%d, %d)\n", 2 * depth, "", m, n);
   depth++;
   if (n == 0)
     return m;
@@ -30,13 +29,13 @@ int main(int argc, char *argv[]) {
 ------------------------------------------------------------------------
 ./E05.06.exe 89 55
 gcd(89, 55)
- gcd(55, 34)
-  gcd(34, 21)
-   gcd(21, 13)
-    gcd(13, 8)
-     gcd(8, 5)
-      gcd(5, 3)
-       gcd(3, 2)
-        gcd(2, 1)
-         gcd(1, 0)
+  gcd(55, 34)
+    gcd(34, 21)
+      gcd(21, 13)
+        gcd(13, 8)
+          gcd(8, 5)
+            gcd(5, 3)
+              gcd(3, 2)
+                gcd(2, 1)
+                  gcd(1, 0)
 --------------------------------------------------------------------- */
