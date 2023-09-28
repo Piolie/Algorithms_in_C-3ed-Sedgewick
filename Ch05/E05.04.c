@@ -5,6 +5,11 @@ Find the value of N < 10^6 for which Program 5.2 makes the maximum
 number of recursive calls.
 --------------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------------
+This program counts the number of times puzzle() is called. I guess the
+number of "recursive calls" is one less than this.
+--------------------------------------------------------------------- */
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
