@@ -1,0 +1,49 @@
+%!PS
+% ----------------------------------------------------------------------
+%                            EXERCISE 5.32
+% ----------------------------------------------------------------------
+% Write a PostScript program that draws the bottom diagram in
+% Figure 5.12.
+% ----------------------------------------------------------------------
+%
+% The following is PostScript translation of E05.30. Probably a very
+% nasty one. The resulting figure is the same.
+
+<< /PageSize [907.086609 907.086609] >> setpagedevice
+/fractal { 7 dict begin
+  /h exch def
+  /u exch def
+  /d exch def
+  /r exch def
+  /l exch def
+  /mh l r add 2 div def
+  /mv d u add 2 div def
+  h 1 gt
+  {
+    l mh d mv h 2 div fractal
+    mh r d mv h 2 div fractal
+    l mh mv u h 2 div fractal
+    mh r mv u h 2 div fractal
+
+    /h h 2 div def
+    newpath
+      mh mv moveto
+      h 2 div h 2 div rmoveto
+      h neg 0 rlineto
+      0 h neg rlineto
+      h 0 rlineto
+    closepath
+    gsave
+    0.5 setgray
+    fill
+    grestore
+    0 setgray
+    stroke
+  }
+  if
+end } def
+
+28.346457 dup scale
+0.035278 setlinewidth
+
+0 32 0 32 32 fractal
