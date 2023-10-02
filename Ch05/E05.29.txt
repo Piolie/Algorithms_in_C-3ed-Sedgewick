@@ -1,0 +1,22 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.29
+------------------------------------------------------------------------
+How many squares are there in Figure 5.12 (counting the ones that are
+covered up by bigger squares)?
+--------------------------------------------------------------------- */
+
+I suppose the author refers to the bottom diagram of that figure.
+I can count five levels of recursion. Since each level has four times
+the number of squares of the previous level, the total number of squares
+is the following sum:
+
+      k = n
+      -----        z^i - z^(n + 1)
+  S = \     z^k = -----------------
+      /                1 - z
+      -----
+      k = i
+with i = 0, n = 4, z = 4:
+       1 - 4^5
+  S = ---------- = 341
+        1 - 4
