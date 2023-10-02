@@ -1,0 +1,27 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.27
+------------------------------------------------------------------------
+Prove the following fact about the ruler-drawing program (Program 5.8):
+If the difference between its first two arguments is a power of 2, then
+both of its recursive calls have this property also.
+--------------------------------------------------------------------- */
+
+If the function gets (l, r) its recursive calls get (l, m) and (m, r),
+where
+       r + l
+  m = ------- (this means that r - m = m - l)
+         2
+
+If
+  r - l = 2^k, for some integer k, then:
+
+  r + l = 2^k + 2l
+        = 2(2^(k - 1) + l)
+and
+       r + l
+  m = ------- = 2^(k - 1) + l
+         2
+so
+  r - m = m - l = 2^(k - 1) + l - l
+                = 2^(k - 1)
+and the property is proved.
