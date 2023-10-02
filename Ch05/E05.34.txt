@@ -1,0 +1,11 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.34
+------------------------------------------------------------------------
+Drawing a Koch star of order n amounts to executing a sequence of
+commands of the form "rotate α degrees, then draw a line segment of
+length 1/3^n." Find a correspondence with number systems that gives you
+a way to draw the star by incrementing a counter, then computing the
+angle α from the counter value.
+--------------------------------------------------------------------- */
+
+MISSING!
