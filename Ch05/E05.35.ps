@@ -1,0 +1,44 @@
+%!PS
+% ----------------------------------------------------------------------
+%                            EXERCISE 5.35
+% ----------------------------------------------------------------------
+% Modify the Koch star program in Figure 5.13 to produce a different
+% fractal based on a five-line figure for order 0, defined by 1-unit
+% moves east, north, east, south, and east, in that order (see
+% Figure 4.3).
+% ----------------------------------------------------------------------
+%
+% I've simply combined the kochR procedure from figure 5.13 (with minor
+% changes) with the solution to E04.13.
+%
+% According to [Wikipedia](https://en.wikipedia.org/wiki/Koch_snowflake)
+% this is called a quadratic Koch curve.
+
+<< /PageSize [125 300] >> setpagedevice
+/kochR {
+  2 copy gt {dup 0 rlineto}
+  {
+    3 div
+    2 copy kochR
+    90 rotate
+    2 copy kochR
+    -90 rotate
+    2 copy kochR
+    -90 rotate
+    2 copy kochR
+    90 rotate
+    2 copy kochR
+  } ifelse
+  pop pop
+} def
+
+0.2 setlinewidth
+0 0 moveto
+125 125 kochR
+0 75 moveto
+25 125 kochR
+0 150 moveto
+5 125 kochR
+0 225 moveto
+1 125 kochR
+stroke
