@@ -1,0 +1,12 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.50
+------------------------------------------------------------------------
+Prove Property 5.3.
+--------------------------------------------------------------------- */
+
+  Property 5.3 Dynamic programming reduces the running time of a
+  recursive function to be at most the time required to evaluate the
+  function for all arguments less than or equal to the given argument,
+  treating the cost of a recursive call as constant.
+
+MISSING!
