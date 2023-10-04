@@ -1,0 +1,10 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.46
+------------------------------------------------------------------------
+Draw the tree corresponding to Figure 5.15 for your function from
+Exercise 5.45, when invoked for N = 23.
+--------------------------------------------------------------------- */
+
+The trees for this function quickly grow impossibly large to draw,
+because the sum makes a lot of calls to C(). However, most of these
+calls hit one of the precomputed values and immediately return.
