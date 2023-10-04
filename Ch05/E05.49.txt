@@ -1,0 +1,8 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.49
+------------------------------------------------------------------------
+Give the tree corresponding to Figure 5.18 under the assumption that
+the items are considered in decreasing order of their size.
+--------------------------------------------------------------------- */
+
+MISSING! (too cumbersome to draw here)
