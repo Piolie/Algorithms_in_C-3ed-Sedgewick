@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.58
+------------------------------------------------------------------------
+Draw three ordered trees that are isomorphic to the ordered tree in
+Figure 5.20. That is, you should be able to transform the four trees to
+one another by exchanging children.
+--------------------------------------------------------------------- */
+
+MISSING!
