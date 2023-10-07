@@ -1,0 +1,13 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.62
+------------------------------------------------------------------------
+Binary trees are equivalent to binary strings that have one more 0 bit
+than 1 bit, with the additional constraint that, at any position k, the
+number of 0 bits that appear strictly to the left of k is no larger than
+the number of 1 bits strictly to the left of k. A binary tree is either
+a 0 or two such strings concatenated together, preceded by a 1. Draw the
+binary tree that corresponds to the string
+  1 1 1 0 0 1 0 1 1 0 0 0 1 0 1 1 0 0 0.
+--------------------------------------------------------------------- */
+
+MISSING!

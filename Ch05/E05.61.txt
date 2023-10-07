@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.61
+------------------------------------------------------------------------
+Draw the 3-ary and 4-ary trees corresponding to using k = 3 and k = 4 in
+the recursive construction suggested in Exercise 5.60, for an array of
+11 elements (see Figure 5.6).
+--------------------------------------------------------------------- */
+
+MISSING!

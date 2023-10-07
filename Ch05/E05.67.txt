@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.67
+------------------------------------------------------------------------
+Prove that, if a connected graph of N nodes has the property that
+removing any edge disconnects the graph, then the graph has N - 1 edges
+and no cycles.
+--------------------------------------------------------------------- */
+
+MISSING!

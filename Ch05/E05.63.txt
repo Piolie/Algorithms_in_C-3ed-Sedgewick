@@ -1,0 +1,10 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.63
+------------------------------------------------------------------------
+Ordered trees are equivalent to balanced strings of parentheses: An
+ordered tree either is null or is a sequence of ordered trees enclosed
+in parentheses. Draw the ordered tree that corresponds to the string
+  ( ( ( ) ( ( ) ( ) ) ( ) ) ( ( ) ( ) ( ) ) ).
+--------------------------------------------------------------------- */
+
+MISSING!
