@@ -1,0 +1,47 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.79
+------------------------------------------------------------------------
+Give preorder, inorder, postorder, and level-order traversals of the
+following binary trees:
+--------------------------------------------------------------------- */
+
+i)
+          D
+       ---+---
+      /       \
+     B         F
+    / \       / \
+   A   C     E   G
+  / \ / \   / \ / \
+
+preorder:  D - B - A - C - F - E - G
+inorder:   A - B - C - D - E - F - G
+postorder: A - C - B - E - G - F - D
+
+ii)
+          C
+       ---+---
+      /       \
+     B         D
+    / \       / \
+   A             E
+  / \           / \
+
+preorder:  C - B - A - D - E
+inorder:   A - B - C - D - E
+postorder: A - B - E - D - C
+
+iii)
+             E
+         ----+----
+        /         \
+       C           H
+      / \        /   \
+     B   D      F     I
+    / \ / \    / \   / \
+   A              G
+  / \            / \
+
+preorder:  E - C - B - A - D - H - F - G - I
+inorder:   A - B - C - D - E - F - G - H - I
+postorder: A - B - D - C - G - F - I - H - E
