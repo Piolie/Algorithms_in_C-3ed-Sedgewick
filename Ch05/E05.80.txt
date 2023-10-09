@@ -1,0 +1,42 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.80
+------------------------------------------------------------------------
+Show the contents of the queue during the level order traversal
+(Program 5.16) depicted in Figure 5.28, in the style of Figure 5.27.
+--------------------------------------------------------------------- */
+
+  Figure 5.28
+  Level-order traversal
+
+  This sequence depicts the result of visiting nodes in order from top
+  to bottom and left to right in the tree.
+
+           E
+         --+--
+        /     \
+       D       H
+      / \     / \
+     B       F
+    / \     / \
+   A   C       G
+  / \ / \     / \
+
+  E - D - H - B - F - A - C - G
+
+     |E|
+      E  |D| |H|
+  E  |D| |H|
+      D  |H| |B|
+  D  |H| |B|
+      H  |B| |F|
+  H  |B| |F|
+      B  |F| |A| |C|
+  B  |F| |A| |C|
+      F  |A| |C| |G|
+  F  |A| |C| |G|
+      A  |C| |G|
+  A  |C| |G|
+      C  |G|
+  C  |G|
+      G
+  G
