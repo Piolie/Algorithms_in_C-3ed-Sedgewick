@@ -1,0 +1,10 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.68
+------------------------------------------------------------------------
+How many external nodes are there in an M-ary tree with N internal
+nodes? Use your answer to give the amount of memory required to
+represent such a tree, assuming that links and items require one word of
+memory each.
+--------------------------------------------------------------------- */
+
+MISSING!

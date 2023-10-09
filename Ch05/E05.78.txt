@@ -1,0 +1,10 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.78
+------------------------------------------------------------------------
+A complete binary tree is one with all levels filled, except possibly
+the final one, which is filled from left to right, as illustrated in
+Figure 5.24. Prove that the internal path length of a complete tree with
+N nodes is between N lg(N) and N lg(N) + N.
+--------------------------------------------------------------------- */
+
+MISSING!

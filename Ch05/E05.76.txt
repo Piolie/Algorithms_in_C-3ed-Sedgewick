@@ -1,0 +1,11 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.76
+------------------------------------------------------------------------
+A combine-and-conquer tree of N nodes is a binary tree with a root
+labeled N, a combine-and-conquer tree of floor[N/2] nodes in one
+subtree, and a combine-and-conquer tree of ceil[N/2] nodes in the other
+subtree (see Exercise 5.18). Draw combine-and-conquer trees with 11, 15,
+16, and 23 nodes.
+--------------------------------------------------------------------- */
+
+MISSING!

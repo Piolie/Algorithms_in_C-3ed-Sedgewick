@@ -1,0 +1,13 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.73
+------------------------------------------------------------------------
+A Fibonacci tree of height n > 2 is a binary tree with a Fibonacci tree
+of height n - 1 in one subtree and a Fibonacci tree of height n - 2 in
+the other subtree. A Fibonacci tree of height 0 is a single external
+node, and a Fibonacci tree of height 1 is a single internal node with
+two external children (see Figure 5.14). Give the height and external
+path length of a Fibonacci tree of height n, as a function of N, the
+number of nodes in the tree.
+--------------------------------------------------------------------- */
+
+MISSING!

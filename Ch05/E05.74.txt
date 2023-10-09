@@ -1,0 +1,11 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.74
+------------------------------------------------------------------------
+A divide-and-conquer tree of N nodes is a binary tree with a root
+labeled N, a divide-and-conquer tree of floor[N/2] nodes in one subtree,
+and a divide-and-conquer tree of ceil[N/2] nodes in the other subtree.
+(Figure 5.6 depicts a divide-and-conquer tree.) Draw divide-and-conquer
+trees with 11, 15, 16, and 23 nodes.
+--------------------------------------------------------------------- */
+
+MISSING!
