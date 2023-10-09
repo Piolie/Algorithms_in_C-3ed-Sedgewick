@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.81
+------------------------------------------------------------------------
+Show that preorder for a forest is the same as preorder for the
+corresponding binary tree (see Property 5.4), and that postorder for a
+forest is the same as inorder for the binary tree.
+--------------------------------------------------------------------- */
+
+MISSING!
