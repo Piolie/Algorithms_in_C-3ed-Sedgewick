@@ -1,0 +1,37 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.92
+------------------------------------------------------------------------
+Show how recursive depth-f‌irst search visits the nodes in the graph
+built for the edge sequence 0-2, 1-4, 2-5, 3-6, 0-4, 6-0, and 1-3 (see
+Exercise 3.70), by giving diagrams corresponding to Figures 5.33 (left)
+and 5.34 (right).
+--------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------
+I think the letter of the exercise should instead refer to
+Figure 5.34 (left). However, I've been unable to decipher its
+interpretation.
+--------------------------------------------------------------------- */
+
+The graph looks like this:
+     -- 0 --
+    /   |   \
+   /    2    \
+  4     |     6
+   \    5    /
+    \       /
+     1 --- 3
+
+The adjacency lists are:
+0: 6 -> 4 -> 2
+1: 3 -> 4
+2: 5 -> 0
+3: 1 -> 6
+4: 0 -> 1
+5: 2
+6: 0 -> 3
+
+Figure 5.33 (left):
+  0 - 6 - 3 - 1 - 4 - 2 - 5
+
+Figure 5.34 (right): ?
