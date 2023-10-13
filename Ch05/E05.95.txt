@@ -1,0 +1,12 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.95
+------------------------------------------------------------------------
+Why is the running time in Property 5.10 quoted as V + E and not
+simply E?
+--------------------------------------------------------------------- */
+
+From right below the Property statement (p. 242):
+  In the adjacency lists representation, there is one list node
+  corresponding to each edge in the graph, and one list head pointer
+  corresponding to each vertex in the graph. Depth-first search touches
+  all of them, at most once. 
