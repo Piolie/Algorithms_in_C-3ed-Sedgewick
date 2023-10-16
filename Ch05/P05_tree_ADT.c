@@ -34,7 +34,7 @@ link new_tree(Item item) {
 
 Item get_item(link node) { return node->item; }
 
-void set_item(link node, Item item) { node->item = item;}
+void set_item(link node, Item item) { node->item = item; }
 
 link next_l(link node) { return node->l; }
 
@@ -170,7 +170,7 @@ void traverse_level(link h, void (*visit)(link)) {
   }
 }
 
-void print_node(link node) { printf("%c - ", node->item); }
+void print_node(link node) { printf("%c - ", get_item(node));}
 
 #ifdef DEBUG_TREE_ADT
 int main(void) {
@@ -258,6 +258,10 @@ int main(void) {
   printf("levelorder: ");
   traverse_level(E, print_node);
   printf("\n");
+
+  (void)A;
+  (void)G;
+  (void)I;
 }
 #endif // #ifdef DEBUG_TREE_ADT
 
