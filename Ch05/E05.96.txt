@@ -1,0 +1,63 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 5.96
+------------------------------------------------------------------------
+Show how stack-based depth-first search visits the nodes in the example
+graph in the text (Figure 3.15) when using a forget-the-old-item policy,
+by giving diagrams corresponding to Figures 5.33 (left) and
+5.35 (right).
+--------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------
+From the book (p. 245):
+  The visit-the-top-node-and-push-all-its-neighbors algorithm is a
+  simple formulation of depth-first search, but it is clear from
+  Figure 5.34 that it suffers the disadvantage of possibly leaving
+  multiple copies of each node on the stack. It does so even if we test
+  whether each node that is about to go on the stack has been visited
+  and refrain from putting the node in the stack if it has been. To
+  avoid this problem, we can use a stack implementation that disallows
+  duplicates by using a forget-the-old-item policy, because the copy
+  nearest the top of the stack is always the first one visited, so the
+  others are simply popped.
+and Figure 5.35 (p. 246)
+  [...] With duplicates disallowed with an ignore-the-new-item policy
+  (right), we get the same result without any extraneous queue entries.
+
+The figure on the right not only applies a forget-the-old-item policy,
+but also a "don't-push-already-visited-elements", as explained in the
+previous quote. These are different things, and the exercise only
+mentions the first one. In the solution, I've applied both policies.
+--------------------------------------------------------------------- */
+
+The adjacency lists are:
+0: 7 -> 5 -> 2 -> 1 -> 6
+1: 7 -> 0
+2: 7 -> 0
+3: 5 -> 4
+4: 6 -> 5 -> 7 -> 3
+5: 0 -> 4 -> 3
+6: 4 -> 0
+7: 1 -> 2 -> 0 -> 4
+
+The graph looks like this:
+  5 ---- 0 ---- 6
+  |\   / | \   /
+  | \ 1--7--2 /
+  |  \   |   /
+  |   \  |  /
+  |    \ | /
+  3 ---- 4
+
+Figure 5.33 (left):
+  0 - 7 - 1 - 2 - 4 - 6 - 5 - 3
+
+Figure 5.35 (left):
+     0
+  0  7 5 2 1 6
+  7  1 2 4 5 6
+  1  2 4 5 6
+  2  4 5 6
+  4  6 5 3
+  6  5 3
+  5  3
+  3
