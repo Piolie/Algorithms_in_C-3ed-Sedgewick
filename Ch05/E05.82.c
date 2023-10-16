@@ -26,7 +26,7 @@ void traverse(link h, void (*visit)(link)) {
     else {
       if (next_r(h) != NULL)
         STACKpush(next_r(h));
-      STACKpush(new_tree(h->item));
+      STACKpush(new_tree(get_item(h)));
       if (next_l(h) != NULL)
         STACKpush(next_l(h));
     }
@@ -91,6 +91,10 @@ int main(void) {
   printf("\ninorder (iterative): ");
   traverse(E, print_node);
   printf("\n");
+
+  (void)A;
+  (void)G;
+  (void)I;
 }
 #endif // #ifdef DEBUG_E05_82
 
