@@ -1,0 +1,30 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.12
+------------------------------------------------------------------------
+What is the maximum number of exchanges involving any particular element
+during selection sort? What is the average number of exchanges involving
+an element?
+--------------------------------------------------------------------- */
+
+From [Algorithms, 4E. 2.1 Elementary Sorts](https://algs4.cs.princeton.edu/21elementary/)
+
+The average number of exchanges is exactly 2 because there are exactly n
+exchanges and n items (and each exchange involves two items). The
+maximum number of exchanges is n, as in the following example.
+
+  Z  A  B  C  D  E  F  G  H  I  J  K
+
+  Z |A| B  C  D  E  F  G  H  I  J  K
+  A  Z |B| C  D  E  F  G  H  I  J  K
+  A  B  Z |C| D  E  F  G  H  I  J  K
+  A  B  C  Z |D| E  F  G  H  I  J  K
+  A  B  C  D  Z |E| F  G  H  I  J  K
+  A  B  C  D  E  Z |F| G  H  I  J  K
+  A  B  C  D  E  F  Z |G| H  I  J  K
+  A  B  C  D  E  F  G  Z |H| I  J  K
+  A  B  C  D  E  F  G  H  Z |I| J  K
+  A  B  C  D  E  F  G  H  I  Z |J| K
+  A  B  C  D  E  F  G  H  I  J  Z |K|
+  A  B  C  D  E  F  G  H  I  J  K |Z|
+
+  A  B  C  D  E  F  G  H  I  J  K  Z
