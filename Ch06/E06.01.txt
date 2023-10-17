@@ -1,0 +1,14 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 6.1
+------------------------------------------------------------------------
+A child's sorting toy has i cards that fit on a peg in position i for i
+from 1 to 5. Write down the method that you use to put the cards on the
+pegs, assuming that you cannot tell from the card whether it fits on a
+peg (you have to try fitting it on).
+--------------------------------------------------------------------- */
+
+for each peg
+  for each remaining card
+    try to fit the card
+    if it fits
+      break
