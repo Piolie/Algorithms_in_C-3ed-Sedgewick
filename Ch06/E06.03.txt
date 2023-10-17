@@ -1,0 +1,13 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 6.3
+------------------------------------------------------------------------
+Explain how you would sort a deck of cards with the restriction that the
+cards must be laid out face down in a row, and the only allowed
+operations are to check the values of two cards and (optionally) to
+exchange them.
+--------------------------------------------------------------------- */
+
+for each card position
+  for each next position
+  if next card < current card
+    exchange places
