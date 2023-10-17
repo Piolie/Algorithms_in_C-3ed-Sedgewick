@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.13
+------------------------------------------------------------------------
+Give an example of a file of N elements that maximizes the number of
+times the test less(a[j], a[min]) fails (and, therefore, min gets
+updated) during the operation of selection sort.
+--------------------------------------------------------------------- */
+
+In P06.12, min is updated when less() succeeds...
