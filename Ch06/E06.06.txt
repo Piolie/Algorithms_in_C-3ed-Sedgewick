@@ -1,0 +1,13 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 6.6
+------------------------------------------------------------------------
+Give a sequence of five compare-exchange operations that will sort
+four elements.
+--------------------------------------------------------------------- */
+
+a b c d:
+  compexch(a, b)
+  compexch(c, d)
+  compexch(a, c)
+  compexch(b, d)
+  compexch(b, c)
