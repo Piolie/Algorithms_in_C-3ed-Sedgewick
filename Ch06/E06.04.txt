@@ -1,0 +1,10 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 6.4
+------------------------------------------------------------------------
+Explain how you would sort a deck of cards with the restriction that the
+cards must be kept stacked in the deck, and the only allowed operations
+are to look at the value of the top two cards, to exchange the top two
+cards, and to move the top card to the bottom of the deck.
+--------------------------------------------------------------------- */
+
+MISSING! (Too early in the morning to figure this out.)
