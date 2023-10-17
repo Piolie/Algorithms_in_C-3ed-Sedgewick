@@ -1,0 +1,17 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.20
+------------------------------------------------------------------------
+Show, in the style of Figure 6.4, how bubble sort sorts the sample file
+E A S Y Q U E S T I O N.
+--------------------------------------------------------------------- */
+
+  E  A  S  Y  Q  U  E  S  T  I  O  N
+
+ |A| E |E| S  Y  Q  U |I| S  T |N| O
+  A  E  E |I| S  Y  Q  U |N| S  T  O
+  A  E  E  I |N| S  Y  Q  U |O| S  T
+  A  E  E  I  N |O| S  Y  Q  U  S  T
+  A  E  E  I  N  O |Q| S  Y |S| U  T
+  A  E  E  I  N  O  Q  S |S| Y |T| U
+  A  E  E  I  N  O  Q  S  S |T| Y  U
+  A  E  E  I  N  O  Q  S  S  T |U| Y
