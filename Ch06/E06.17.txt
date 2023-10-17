@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.17
+------------------------------------------------------------------------
+For each of the conditions in the while loop in Exercise 6.16, describe
+a file of N elements where that condition is always false when the loop
+terminates.
+--------------------------------------------------------------------- */
+
+MISSING! (Can't figure out what to do with this.)
