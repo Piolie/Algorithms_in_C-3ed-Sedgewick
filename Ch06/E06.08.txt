@@ -1,0 +1,11 @@
+/* ---------------------------------------------------------------------
+                              EXERCISE 6.8
+------------------------------------------------------------------------
+Checking that the array is sorted after sort provides no guarantee that
+the sort works. Why not?
+--------------------------------------------------------------------- */
+
+Because it must be true for all possible arrays. For example, if our
+sorting algorithm does nothing and is fed an ordered array, then the
+result will be correct (for that particular case), but the algorithm
+will obviously be flawed.
