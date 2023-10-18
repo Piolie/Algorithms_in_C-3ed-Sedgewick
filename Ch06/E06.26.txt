@@ -1,0 +1,15 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.26
+------------------------------------------------------------------------
+Which of the three elementary methods (selection sort, insertion sort,
+or bubble sort) runs fastest for a file with all keys identical?
+--------------------------------------------------------------------- */
+
+If all keys are identical, then they are already at its final positions.
+From the book (p. 268):
+  [...] insertion sort and bubble sort work well for certain types of
+  nonrandom files that often arise in practice. [...] For example,
+  consider the operation of insertion sort on a file that is already
+  sorted. Each element is immediately determined to be in its proper
+  place in the file, and the total running time is linear. The same is
+  true for bubble sort, but selection sort is still quadratic.
