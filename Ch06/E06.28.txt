@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.28
+------------------------------------------------------------------------
+Give an example of a file of 10 elements (use the keys A through J) for
+which bubble sort uses fewer comparisons than insertion sort, or prove
+that no such file exists.
+--------------------------------------------------------------------- */
+
+MISSING!
