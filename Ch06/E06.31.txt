@@ -1,0 +1,13 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.31
+------------------------------------------------------------------------
+Show that Property 6.5 does not hold for shaker sort (see
+Exercise 6.30).
+--------------------------------------------------------------------- */
+
+  Property 6.5: Insertion sort uses a linear number of comparisons and
+                exchanges for files with at most a constant number of
+                elements having more than a constant number of
+                corresponding inversions.
+
+MISSING!
