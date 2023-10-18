@@ -1,0 +1,21 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.27
+------------------------------------------------------------------------
+Which of the three elementary methods runs fastest for a file in reverse
+order?
+--------------------------------------------------------------------- */
+
+From the book:
+  Property 6.1: Selection sort uses about N^2/2 comparisons and N
+                exchanges.
+
+  Property 6.2: Insertion sort uses about N^2/4 comparisons and N^2/4
+                half-exchanges (moves) on the average, and twice that
+                many at worst.
+
+  Property 6.3: Bubble sort uses about N^2/2 comparisons and N^2/2
+                exchanges on the average and in the worst case.
+
+Selection sort. While all methods require N^2/2 comparisons in the worst
+case, selection sort requires only N exchanges, with the other two
+requiring N^2/2.
