@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.29
+------------------------------------------------------------------------
+Show that each bubble sort pass reduces by precisely 1 the number of
+elements to the left of each element that are greater (unless that
+number was already 0).
+--------------------------------------------------------------------- */
+
+MISSING!
