@@ -1,0 +1,8 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.23
+------------------------------------------------------------------------
+Explain how bubble sort is preferable to the nonadaptive version of
+selection sort described in Exercise 6.19.
+--------------------------------------------------------------------- */
+
+Bubble sort is stable, while selection sort is not?
