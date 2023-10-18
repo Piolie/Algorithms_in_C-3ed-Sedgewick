@@ -1,0 +1,8 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.21
+------------------------------------------------------------------------
+Give an example of a file for which the number of exchanges done by
+bubble sort is maximized.
+--------------------------------------------------------------------- */
+
+Any reverse ordered sequence will do.
