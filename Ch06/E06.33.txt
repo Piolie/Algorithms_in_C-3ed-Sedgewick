@@ -1,0 +1,8 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.33
+------------------------------------------------------------------------
+Is shell sort stable?
+--------------------------------------------------------------------- */
+
+No. Unlike in insertion sort, equal elements that start in different
+subfiles can be moved past one another and loose their original order.
