@@ -1,0 +1,145 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.35
+------------------------------------------------------------------------
+Give diagrams corresponding to Figures 6.8 and 6.9 for the keys E A S Y
+Q U E S T I O N.
+--------------------------------------------------------------------- */
+
+  Figure 6.8
+  Interleaving 4-sorts
+
+  The top part of this diagram shows the process of 4-sorting a file of
+  15 elements by first insertion sorting the subfile at positions 0, 4,
+  8, 12, then insertion sorting the subfile at positions 1, 5, 9, 13,
+  then insertion sorting the subfile at positions 2, 6, 10, 14, then
+  insertion sorting the subfile at positions 3, 7, 11. But the four
+  subfiles are independent, so we can achieve the same result by
+  inserting each element into position into its subfile, going back four
+  at a time (bottom). Taking the first row in each section of the top
+  diagram, then the second row in each section, and so forth, gives the
+  bottom diagram.
+
+  A  S  O  R |T| I  N  G  E  X  A  M  P  L  E
+  A  S  O  R |E| I  N  G |T| X  A  M  P  L  E
+  A  S  O  R  E  I  N  G |P| X  A  M |T| L  E
+
+  A |I| O  R  E |S| N  G  P  X  A  M  T  L  E
+  A  I  O  R  E  S  N  G  P |X| A  M  T  L  E
+  A  I  O  R  E |L| N  G  P |S| A  M  T |X| E
+
+  A  I |N| R  E  L |O| G  P  S  A  M  T  X  E
+  A  I |A| R  E  L |N| G  P  S |O| M  T  X  E
+  A  I  A  R  E  L |E| G  P  S |N| M  T  X |O|
+
+  A  I  A |G| E  L  E |R| P  S  N  M  T  X  O
+  A  I  A  G  E  L  E |M| P  S  N |R| T  X  O
+
+  A  S  O  R |T| I  N  G  E  X  A  M  P  L  E
+  A |I| O  R  T |S| N  G  E  X  A  M  P  L  E
+  A  I |N| R  T  S |O| G  E  X  A  M  P  L  E
+  A  I  N |G| T  S  O |R| E  X  A  M  P  L  E
+  A  I  N  G |E| S  O  R |T| X  A  M  P  L  E
+  A  I  N  G  E  S  O  R  T |X| A  M  P  L  E
+  A  I |A| G  E  S |N| R  T  X |O| M  P  L  E
+  A  I  A  G  E  S  N |M| T  X  O |R| P  L  E
+  A  I  A  G  E  S  N  M |P| X  O  R |T| L  E
+  A  I  A  G  E |L| N  M  P |S| O  R  T |X| E
+  A  I  A  G  E  L |E| M  P  S |N| R  T  X |O|
+
+I think the last part of this figure description is plain wrong: "Taking
+the first row in each section of the top diagram, then the second row in
+each section, and so forth, gives the bottom diagram" is clearly not
+true just by inspecting the figure. For example, there are 3 'O's in the
+last column from the top diagram, but only 1 in the last column from the
+bottom diagram. The last row ends up being the same in both cases, but
+the intermediate steps are not. I've checked the 4th edition of the book
+and there's no mention of this similarity, so maybe this is why it was
+removed.
+
+  Figure 6.9
+  Shell sort example
+
+  Sorting a file by 13-sorting (top), then 4-sorting (center); then
+  1­sorting (bottom) does not involve many comparisons (as indicated by
+  the unshaded elements). The final pass is just insertion sort, but no
+  element has to move far because of the order in the file due to the
+  first two passes.
+
+  A  S  O  R  T  I  N  G  E  X  A  M  P  L  E
+  A  S  O  R  T  I  N  G  E  X  A  M  P |L| E
+  A |E| O  R  T  I  N  G  E  X  A  M  P  L |S|
+
+  A  E  O  R |T| I  N  G  E  X  A  M  P  L  S
+  A  E  O  R  T |I| N  G  E  X  A  M  P  L  S
+  A  E |N| R  T  I |O| G  E  X  A  M  P  L  S
+  A  E  N |G| T  I  O |R| E  X  A  M  P  L  S
+  A  E  N  G |E| I  O  R |T| X  A  M  P  L  S
+  A  E  N  G  E  I  O  R  T |X| A  M  P  L  S
+  A  E |A| G  E  I |N| R  T  X |O| M  P  L  S
+  A  E  A  G  E  I  N |M| T  X  O |R| P  L  S
+  A  E  A  G  E  I  N  M |P| X  O  R |T| L  S
+  A  E  A  G  E  I  N  M  P |L| O  R  T |X| S
+  A  E  A  G  E  I  N  M  P  L  O  R  T  X |S|
+
+  A |E| A  G  E  I  N  M  P  L  O  R  T  X  S
+  A||A||E| G  E  I  N  M  P  L  O  R  T  X  S
+  A  A  E |G| E  I  N  M  P  L  O  R  T  X  S
+  A  A |E||E||G| I  N  M  P  L  O  R  T  X  S
+  A  A  E  E  G |I| N  M  P  L  O  R  T  X  S
+  A  A  E  E  G  I |N| M  P  L  O  R  T  X  S
+  A  A  E  E  G  I |M||N| P  L  O  R  T  X  S
+  A  A  E  E  G  I  M  N |P| L  O  R  T  X  S
+  A  A  E  E  G  I |L||M||N||P| O  R  T  X  S
+  A  A  E  E  G  I  L  M  N |O||P| R  T  X  S
+  A  A  E  E  G  I  L  M  N  O  P |R| T  X  S
+  A  A  E  E  G  I  L  M  N  O  P  R |T| X  S
+  A  A  E  E  G  I  L  M  N  O  P  R  T |X| S
+  A  A  E  E  G  I  L  M  N  O  P  R |S||T||X|
+  A  A  E  E  G  I  L  M  N  O  P  R  S  T  X
+
+Diagram for figure 6.8:
+  E  A  S  Y |Q| U  E  S  T  I  O  N
+  E  A  S  Y  Q  U  E  S |T| I  O  N
+
+  E  A  S  Y  Q |U| E  S  T  I  O  N
+  E  A  S  Y  Q |I| E  S  T |U| O  N
+
+  E  A |E| Y  Q  I |S| S  T  U  O  N
+  E  A  E  Y  Q  I |O| S  T  U |S| N
+
+  E  A  E |S| Q  I  O |Y| T  U  S  N
+  E  A  E |N| Q  I  O |S| T  U  S |Y|
+
+  E  A  S  Y |Q| U  E  S  T  I  O  N
+  E  A  S  Y  Q |U| E  S  T  I  O  N
+  E  A |E| Y  Q  U |S| S  T  I  O  N
+  E  A  E |S| Q  U  S |Y| T  I  O  N
+  E  A  E  S  Q  U  S  Y |T| I  O  N
+  E  A  E  S  Q |I| S  Y  T |U| O  N
+  E  A  E  S  Q  I |O| Y  T  U |S| N
+  E  A  E |N| Q  I  O |S| T  U  S |Y|
+
+Diagram for figure 6.9:
+
+  E  A  S  Y  Q  U  E  S  T  I  O  N
+
+  E  A  S  Y |Q| U  E  S  T  I  O  N
+  E  A  S  Y  Q |U| E  S  T  I  O  N
+  E  A |E| Y  Q  U |S| S  T  I  O  N
+  E  A  E |S| Q  U  S |Y| T  I  O  N
+  E  A  E  S  Q  U  S  Y |T| I  O  N
+  E  A  E  S  Q |I| S  Y  T |U| O  N
+  E  A  E  S  Q  I |O| Y  T  U |S| N
+  E  A  E |N| Q  I  O |S| T  U  S |Y|
+
+ |A||E| E  N  Q  I  O  S  T  U  S  Y
+  A  E |E| N  Q  I  O  S  T  U  S  Y
+  A  E  E |N| Q  I  O  S  T  U  S  Y
+  A  E  E  N |Q| I  O  S  T  U  S  Y
+  A  E  E |I||N||Q| O  S  T  U  S  Y
+  A  E  E  I  N |O||Q| S  T  U  S  Y
+  A  E  E  I  N  O  Q |S| T  U  S  Y
+  A  E  E  I  N  O  Q  S |T| U  S  Y
+  A  E  E  I  N  O  Q  S  T |U| S  Y
+  A  E  E  I  N  O  Q  S |S||T||U| Y
+  A  E  E  I  N  O  Q  S  S  T  U |Y|
