@@ -1,0 +1,9 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.73
+------------------------------------------------------------------------
+Suppose that we use insertion sort on a randomly ordered file where
+elements have only one of three values. Is the running time linear,
+quadratic, or something in between?
+--------------------------------------------------------------------- */
+
+MISSING!
