@@ -1,0 +1,11 @@
+/* ---------------------------------------------------------------------
+                             EXERCISE 6.68
+------------------------------------------------------------------------
+The insertion-sort method used in Program 3.11 makes the linked-list
+insertion sort run significantly slower than the array version for some
+input files. Describe one such file, and explain the problem.
+--------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------
+MISSING!
+--------------------------------------------------------------------- */
